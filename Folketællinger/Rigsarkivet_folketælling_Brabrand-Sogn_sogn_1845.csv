@@ -1,0 +1,686 @@
+Kilde$løbenr_i_indtastning$Stednavn$Husstands_familienr$Matr_nr_adresse$navn$Alder$Civilstand$nr_ægteskab$Erhverv$Kommentarer$Stilling_i_husstanden$Antal_familier_hus$fødested$trossamfund$køn$midlertid_oph_sted$KIPNr$parish$Type$county$Herred$sex$age$household_id$marital_status$age_full_years
+FT-1845$100.0$Brabrand By$1$gård, 21$Ane Marie Sørensen$16$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$16.0$261384$Ugift$15.0
+FT-1845$577.0$True By$4$fattighus, 26$Anne Nielsdatter$34$Ugift$$almisselem$Fødesogn: Balle$$$Balle, Wiborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$34.0$261388$Ugift$33.0
+FT-1845$612.0$True By$1$gård, 30$Anne Petrine Jacobssen$11$Ugift$$tjenestepige$Fødesogn: Framlev$$$Framlev, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$11.0$261389$Ugift$10.0
+FT-1845$354.0$Gjellerup By$1$gård, 2$Beathe Andersdatter$42$Gift$$hans kone$Fødesogn: Trige$$$Trige, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$42.0$261390$Gift$41.0
+FT-1845$534.0$True By$2$gård, 20$Anne Maria Knudsen$2$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$2.0$261397$Ugift$1.0
+FT-1845$555.0$True By$1$gård, 24$Niels Sørensen$53$Gift$$gårdmand$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$53.0$261399$Gift$52.0
+FT-1845$340.0$Brabrand By$1$boelsted, 59$Nielssine Olesen$4$Ugift$$deres datter$Fødesogn: Søften$$$Zeuthen, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$4.0$261400$Ugift$3.0
+FT-1845$198.0$Brabrand By$1$gård, 35$Ole Pedersen$20$Ugift$$tjenestekarl$Fødesogn: Veng$$$Wenge, Skanderborg$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$20.0$261410$Ugift$19.0
+FT-1845$455.0$True By$1$hus, 11$Christen Nielsen$30$Gift$$smed, grovsmed$Fødesogn: Nr Galten$$$Nr. Galthen, Randers$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$30.0$261411$Gift$29.0
+FT-1845$231.0$Brabrand By$1$hus, 40$Peder Hansen$44$Gift$$lever af sin jordlod$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$44.0$261412$Gift$43.0
+FT-1845$471.0$True By$1$gård, 13$Niels Pedersen$32$Ugift$$hendes søn, medhjælper til gårdens drift$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$32.0$261421$Ugift$31.0
+FT-1845$114.0$Brabrand By$1$gård, 24$Niels Rasmussen Bering$32$Gift$$gårdmand$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$32.0$261422$Gift$31.0
+FT-1845$654.0$True By$1$gård, 39$Lads Sørensen$36$Gift$$gårdmand$Fødesogn: Brabrand Noter: Eldalstedet$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$36.0$261432$Gift$35.0
+FT-1845$160.0$Brabrand By$2$hus, 30$Ditlev Nielsen$79$Gift$$aftægtsmand$Fødesogn: Linå$$$Linaae, Skanderborg$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$79.0$261447$Gift$78.0
+FT-1845$666.0$True By$1$gård, 40$Rasmus Jensen$58$Ugift$$røgter$Fødesogn: Brabrand$$$Brabrand$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$58.0$261448$Ugift$57.0
+FT-1845$356.0$Gjellerup By$1$gård, 2$Anders Nielsen$19$Ugift$$deres søn$Fødesogn: Grundfør$$$Grundfør, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$19.0$261390$Ugift$18.0
+FT-1845$488.0$True By$1$gård, 16$Anne Maria Nielsdatter$44$Gift$$hans kone$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$44.0$261455$Gift$43.0
+FT-1845$233.0$Brabrand By$1$hus, 40$Christen Pedersen$16$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$16.0$261412$Ugift$15.0
+FT-1845$222.0$Brabrand By$1$gård, 39$Mette Buch$43$Enke$$gårdbruger$Fødesogn: Føvling$$$Failing, Ribe$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$43.0$261468$Enke$42.0
+FT-1845$664.0$True By$1$gård, 40$Dorthe Pedersen$19$Ugift$$malkepige$Fødesogn: Them$$$Them, Skanderborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$19.0$261448$Ugift$18.0
+FT-1845$52.0$Brabrand By$1$hus, 11$Edela Marie Erichsdatter$64$Enke$$almisselem$Fødesogn: Linå$$$Linaae, Skanderborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$64.0$261471$Enke$63.0
+FT-1845$5.0$Brabrand By$1$præstegård, 1$Edele Cathrine Hansen$24$Ugift$$tjenestepige$Fødesogn: Galten$$$Galthen, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$24.0$261472$Ugift$23.0
+FT-1845$535.0$True By$2$gård, 20$Maren Nielsdatter$74$Enke$$konens moder$Fødesogn: Vellev$$$Wellev, Wiborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$74.0$261397$Enke$73.0
+FT-1845$492.0$True By$1$gård, 16$Dorthe Pedersen$13$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$13.0$261455$Ugift$12.0
+FT-1845$120.0$Brabrand By$1$gård, 24$Søren Sørensen$19$Ugift$$plejesøn$Fødesogn: Åby$$$Aabye, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$19.0$261422$Ugift$18.0
+FT-1845$571.0$True By$1$fattighus, 26$Anne Maria Pedersen$1$Ugift$$datterens datter, uægte$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$1.0$261480$Ugift$0.0
+FT-1845$284.0$Brabrand By$1$hus, 48$Maren Andersen$15$Ugift$$deres datter$Fødesogn: Brabrand$$$Brabrand$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$15.0$261487$Ugift$14.0
+FT-1845$308.0$Brabrand By$1$boelsted, 53$Christine Jensen$13$Ugift$$hans datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$13.0$261492$Ugift$12.0
+FT-1845$279.0$Brabrand By$1$gård, 47$Søren Jensen$41$Ugift$$tjenestekarl$Fødesogn: Vitten$$$Witthen, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$41.0$261497$Ugift$40.0
+FT-1845$201.0$Brabrand By$1$gård, 36$Karen Jørgensdatter$31$Gift$$hans kone$Fødesogn: Hasle$$$Hasle, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$31.0$261499$Gift$30.0
+FT-1845$273.0$Brabrand By$1$gård, 47$Mathilde Christine Mathiesen$28$Gift$$hans kone$Fødesogn: Aarhus$$$Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$28.0$261497$Gift$27.0
+FT-1845$652.0$True By$1$gård, 38$Anne Andersen$1$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$1.0$261502$Ugift$0.0
+FT-1845$432.0$True By$1$gård, 7$Anne Maria Rasmussen$13$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$13.0$261504$Ugift$12.0
+FT-1845$665.0$True By$1$gård, 40$Christine Jensen$21$Ugift$$malkepige$Fødesogn: Horsens$$$Horsens$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$21.0$261448$Ugift$20.0
+FT-1845$382.0$Gjellerup By$1$gård, 5$Hela Anina Ulriche Tolstrup$4$Ugift$$deres datter$Fødesogn: Aarhus$$$Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$4.0$261512$Ugift$3.0
+FT-1845$609.0$True By$1$gård, 30$Peder Jensen$8$Ugift$$plejesøn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$8.0$261389$Ugift$7.0
+FT-1845$280.0$Brabrand By$1$gård, 47$Inger Helene Rasmussen$23$Ugift$$tjenestepige$Fødesogn: Horsens$$$Horsens$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$23.0$261497$Ugift$22.0
+FT-1845$174.0$Brabrand By$1$gård, 32$Inger Marie Bonesdatter$26$Gift$$hans kone$Fødesogn: Søften$$$Zeuthen, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$26.0$261520$Gift$25.0
+FT-1845$627.0$True By$1$gård, 34$Jens Peder Andersen$31$Gift$$gårdmand$Fødesogn: Framlev Noter: Lauritzminde$$$Framlev, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$31.0$261521$Gift$30.0
+FT-1845$583.0$True By$1$gård, 27$Maren Jensen$14$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$14.0$261525$Ugift$13.0
+FT-1845$349.0$Brabrand By$1$hus, 61$Maren Sørensdatter$39$Gift$$hans kone$Fødesogn: Veng Noter: alder usikker$$$Wenge, Skanderborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$39.0$261528$Gift$38.0
+FT-1845$615.0$True By$1$hus, 31$Anne Jensdatter$65$Gift$$hans kone$Fødesogn: Årslev$$$Aarslev, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$65.0$261530$Gift$64.0
+FT-1845$655.0$True By$1$gård, 39$Anne Maria Thommasdatter$29$Gift$$hans kone$Fødesogn: Tilst$$$Tiilst, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$29.0$261432$Gift$28.0
+FT-1845$293.0$Brabrand By$1$hus, 50$Augusta Bennedicta Thommesen$6$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$6.0$261531$Ugift$5.0
+FT-1845$54.0$Brabrand By$1$hus, 12$Maren Pedersdatter$33$Gift$$hans kone$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$33.0$261537$Gift$32.0
+FT-1845$289.0$Brabrand By$1$hus, 50$Cay Thommesen$39$Gift$$væver$Fødesogn: Kappel$$$Kappel, Slesvig$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$39.0$261531$Gift$38.0
+FT-1845$640.0$True By$1$gård, 36$Rasmus Pedersen$4$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$4.0$261539$Ugift$3.0
+FT-1845$616.0$True By$1$hus, 31$Rasmus Rasmussen$31$Enke$$deres søn, hjulmand$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$31.0$261530$Enke$30.0
+FT-1845$72.0$Brabrand By$3$hus, 15$Anders Knudsen$1$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$1.0$261540$Ugift$0.0
+FT-1845$158.0$Brabrand By$1$hus, 29$Ane Sophie Lauersen$1$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$1.0$261545$Ugift$0.0
+FT-1845$485.0$True By$1$hus, 15$Jensine Kjerstine Nielsdatter$57$Gift$$hans kone, jordmoder$Fødesogn: Aarhus$$$Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$57.0$261548$Gift$56.0
+FT-1845$203.0$Brabrand By$1$gård, 37$Frans Nielsen$49$Gift$$gårdmand$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$49.0$261554$Gift$48.0
+FT-1845$305.0$Brabrand By$2$hus, 52$Søren Peter Pedersen$28$Ugift$$snedker$Fødesogn: Hørup$$$Hørup, Wiborg$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$28.0$261560$Ugift$27.0
+FT-1845$410.0$True By$1$gård, 3$Karen Andersen$21$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$21.0$261561$Ugift$20.0
+FT-1845$82.0$Brabrand By$1$hus, 18$Mette Marie Jørgensdatter$36$Gift$$hans kone$Fødesogn: Foldby$$$Foldby, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$36.0$261564$Gift$35.0
+FT-1845$674.0$True By$1$hovedgård, 41$Cathrine Hansen$22$Ugift$$tjenestepige$Fødesogn: Horsens$$$Horsens$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$22.0$261565$Ugift$21.0
+FT-1845$425.0$True By$1$gård, 5$Søren Sørensen$25$Ugift$$tjenestekarl$Fødesogn: Galten$$$Sr. Galthen, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$25.0$261566$Ugift$24.0
+FT-1845$637.0$True By$1$gård, 36$Maria Kjerstine Pedersen$35$Gift$$hans kone$Fødesogn: Skivholme$$$Skivholme, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$35.0$261539$Gift$34.0
+FT-1845$63.0$Brabrand By$1$hus, 15$Christian Jensen$5$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$5.0$261570$Ugift$4.0
+FT-1845$409.0$True By$1$gård, 3$Maren Andersen$25$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$25.0$261561$Ugift$24.0
+FT-1845$36.0$Brabrand By$1$gård, 7$Ane Sophie Michelsdatter$18$Ugift$$tjenestepige$Fødesogn: Storring$$$Storring, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$18.0$261577$Ugift$17.0
+FT-1845$663.0$True By$1$gård, 40$Gjertrud Kjerstine Bertelsdatter$44$Enke$$malkepige$Fødesogn: Aarhus$$$Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$44.0$261448$Enke$43.0
+FT-1845$439.0$True By$1$gård, 7$Søren Peter Rasmussen$25$Ugift$$tjenestekarl$Fødesogn: Hørning$$$Hørning, Skanderborg$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$25.0$261504$Ugift$24.0
+FT-1845$392.0$Gjellerup By$1$gård, 6$Johannes Hansen$23$Ugift$$tjenestekarl$Fødesogn: Dover$$$Dover, Skanderborg$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$23.0$261588$Ugift$22.0
+FT-1845$45.0$Brabrand By$1$hus, 9$Ane Kjerstine Jensdatter$51$Gift$$hans kone$Fødesogn: Lemming$$$Lemming, Wiborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$51.0$261592$Gift$50.0
+FT-1845$486.0$True By$1$hus, 15$Anne Nielsen$18$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$18.0$261548$Ugift$17.0
+FT-1845$558.0$True By$1$gård, 24$Anne Nielsen$10$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$10.0$261399$Ugift$9.0
+FT-1845$402.0$True By$1$gård, 2$Adam Pedersen$40$Gift$$gårdmand$Fødesogn: Tilst$$$Tiilst, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$40.0$261595$Gift$39.0
+FT-1845$143.0$Brabrand By$1$hus, 27$Jens Jacobsen$75$Enke$$aftægtsmand$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$75.0$261598$Enke$74.0
+FT-1845$653.0$True By$1$gård, 38$Johanne Mette Andersen$16$Ugift$$tjenestepige$Fødesogn: Låsby$$$Laasbye, Skanderborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$16.0$261502$Ugift$15.0
+FT-1845$445.0$True By$1$gård, 9$Albreth Johansen$50$Gift$$gårdmand$Fødesogn: Adslev$$$Adslev, Skanderborg$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$50.0$261606$Gift$49.0
+FT-1845$391.0$Gjellerup By$1$gård, 6$Ane Magrethe Pedersdatter$19$Ugift$$tjenestepige$Fødesogn: Tilst$$$Tiilst, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$19.0$261588$Ugift$18.0
+FT-1845$258.0$Brabrand By$1$hus, 45$Rasmus Rasmussen$39$Gift$$daglejer$Fødesogn: Låsby$$$Laasbye, Skanderborg$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$39.0$261609$Gift$38.0
+FT-1845$67.0$Brabrand By$2$hus, 15$Jens Jespersen$11$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$11.0$261610$Ugift$10.0
+FT-1845$267.0$Brabrand By$1$gård, 46$Ane Kjerstine Jensen$2$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$2.0$261611$Ugift$1.0
+FT-1845$371.0$Gjellerup By$1$gård, 4$Ane Kjerstine Jensen$17$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$17.0$261612$Ugift$16.0
+FT-1845$262.0$Brabrand By$1$hus, 45$Rasmus Rasmussen$7$Ugift$$deres søn$Fødesogn: Sjelle$$$Sjelle, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$7.0$261609$Ugift$6.0
+FT-1845$398.0$True By$1$skolen, 1$Johannes Hansen Thiesen$19$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$19.0$261616$Ugift$18.0
+FT-1845$592.0$True By$1$gård, 28$Morten Jensen$17$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$17.0$261620$Ugift$16.0
+FT-1845$148.0$Brabrand By$1$hus, 28$Hendrich Jørgensen$4$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$4.0$261622$Ugift$3.0
+FT-1845$506.0$True By$1$hus, 18$Jacob Hansen$3$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$3.0$261623$Ugift$2.0
+FT-1845$240.0$Brabrand By$1$hus, 41$Jens Jacobsen$3$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$3.0$261624$Ugift$2.0
+FT-1845$515.0$True By$1$gård, 19$Jens Jespersen$25$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$25.0$261625$Ugift$24.0
+FT-1845$519.0$True By$1$gård, 19$Jens Jespersen$15$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$15.0$261625$Ugift$14.0
+FT-1845$192.0$Brabrand By$1$gård, 35$Anders Jensen$70$Gift$$gårdmand$Fødesogn: Tilst$$$Tiilst, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$70.0$261410$Gift$69.0
+FT-1845$474.0$True By$1$gård, 13$Anne Bentesdatter$17$Ugift$$tjenestepige$Fødesogn: Sporup$$$Sporup, Skanderborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$17.0$261421$Ugift$16.0
+FT-1845$295.0$Brabrand By$1$hus, 50$Marie Kjerstine Sørensdatter$78$Enke$$aftægtskone$Fødesogn: Lyngby$$$Lyngbye, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$78.0$261531$Enke$77.0
+FT-1845$87.0$Brabrand By$1$hus, 19$Marie Kjerstine Sørensen$3$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$3.0$261634$Ugift$2.0
+FT-1845$220.0$Brabrand By$1$gård, 38$Mette Cathrine Christensdatter$23$Ugift$$tjenestepige$Fødesogn: Årslev$$$Aarslev, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$23.0$261635$Ugift$22.0
+FT-1845$542.0$True By$2$hus, 21$Anne Sørensen$2$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$2.0$261636$Ugift$1.0
+FT-1845$417.0$True By$1$gård, 4$Anne Sørensen$22$Ugift$$tjenestepige$Fødesogn: Skanderup$$$Skanderup, Skanderborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$22.0$261637$Ugift$21.0
+FT-1845$206.0$Brabrand By$1$gård, 37$Niels Fransen$17$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$17.0$261554$Ugift$16.0
+FT-1845$80.0$Brabrand By$1$boelsted, 17$Christen Jensen$40$Ugift$$$Fødesogn: Brabrand Noter: fjollet i 40 år$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$40.0$261639$Ugift$39.0
+FT-1845$88.0$Brabrand By$1$gård, 20$Poul Jørgensen$44$Gift$$gårdmand$Fødesogn: Hasle$$$Hasle, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$44.0$261640$Gift$43.0
+FT-1845$217.0$Brabrand By$1$gård, 38$Jens Hansen$51$Ugift$$mandens broder$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$51.0$261635$Ugift$50.0
+FT-1845$292.0$Brabrand By$1$hus, 50$Marie Kjerstine Wilh. Thommesen$9$Ugift$$deres datter$Fødesogn: Brabrand Noter: Wilhelmine$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$9.0$261531$Ugift$8.0
+FT-1845$661.0$True By$1$gård, 40$Cathrine Jahnsen$38$Ugift$$hans søster og medhjælper$Fødesogn: Oldenburg$$$Oldenburg, Holsten$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$38.0$261448$Ugift$37.0
+FT-1845$81.0$Brabrand By$1$hus, 18$Rasmus Pedersen$39$Gift$$daglejer$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$39.0$261564$Gift$38.0
+FT-1845$50.0$Brabrand By$1$hus, 10$Mariane Jensdatter$28$Ugift$$væverlærling$Fødesogn: Årslev$$$Aarslev, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$28.0$261642$Ugift$27.0
+FT-1845$407.0$True By$1$gård, 3$Mette Johanne Pedersdatter$57$Gift$$hans kone$Fødesogn: Tilst$$$Tiilst, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$57.0$261561$Gift$56.0
+FT-1845$408.0$True By$1$gård, 3$Peder Andersen$27$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$27.0$261561$Ugift$26.0
+FT-1845$307.0$Brabrand By$1$boelsted, 53$Ane Jensen$20$Ugift$$hans datter$Fødesogn: Årslev$$$Aarslev, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$20.0$261492$Ugift$19.0
+FT-1845$551.0$True By$1$gård, 23$Mette Johanne Pedersen$2$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$2.0$261643$Ugift$1.0
+FT-1845$310.0$Brabrand By$1$hus, 54$Maren Pedersdatter$30$Gift$$hans kone$Fødesogn: Holme$$$Holme, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$30.0$261648$Gift$29.0
+FT-1845$539.0$True By$1$hus, 21$Niels Olesen Witved$3$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$3.0$261649$Ugift$2.0
+FT-1845$223.0$Brabrand By$1$gård, 39$Peter Marius Buch$12$Ugift$$hendes søn$Fødesogn: Dover$$$Dover, Schanderborg$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$12.0$261468$Ugift$11.0
+FT-1845$658.0$True By$1$gård, 39$Dorthe Maria Ladsen$1$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$1.0$261432$Ugift$0.0
+FT-1845$361.0$Gjellerup By$1$gård, 3$Rasmus Lauersen$64$Enke$$gårdmand$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$64.0$261655$Enke$63.0
+FT-1845$479.0$True By$1$gård, 14$Jens Simmonsen$59$Gift$$gårdmand$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$59.0$261656$Gift$58.0
+FT-1845$106.0$Brabrand By$1$gård, 22$Karen Pedersdatter$20$Ugift$$plejedatter$Fødesogn: Aarhus$$$Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$20.0$261657$Ugift$19.0
+FT-1845$224.0$Brabrand By$1$gård, 39$Antonette Janusmine Buch$11$Ugift$$hendes datter$Fødesogn: Dover$$$Dover, Schanderborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$11.0$261468$Ugift$10.0
+FT-1845$670.0$True By$1$hovedgård, 41$Hanne Petersen$2$Ugift$$deres datter$Fødesogn: Rislev$$$Rislev, Præstøe$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$2.0$261565$Ugift$1.0
+FT-1845$649.0$True By$1$gård, 37$Jensine Maria Jensen$24$Ugift$$tjenestepige$Fødesogn: Framlev$$$Framlev, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$24.0$261659$Ugift$23.0
+FT-1845$322.0$Brabrand By$1$boelsted, 57$Maren Pedersdatter$27$Gift$$hans kone$Fødesogn: Ormslev$$$Ormslev, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$27.0$261660$Gift$26.0
+FT-1845$150.0$Brabrand By$2$hus, 28$Ane Kjerstine Nielsdatter$33$Gift$$hans kone$Fødesogn: Framlev$$$Framlev, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$33.0$261661$Gift$32.0
+FT-1845$604.0$True By$1$gård, 29$Mette Maria Christensen$25$Ugift$$husholder$Fødesogn: Borum$$$Borum, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$25.0$261662$Ugift$24.0
+FT-1845$646.0$True By$1$gård, 37$Mogens Pedersen$5$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$5.0$261659$Ugift$4.0
+FT-1845$620.0$True By$1$hus, 32$Jacobine Pedersen$15$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$15.0$261664$Ugift$14.0
+FT-1845$26.0$Brabrand By$1$hus, 6$Jørgen Andersen$35$Gift$$bysmed$Fødesogn: Veng$$$Wenge, Skanderborg$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$35.0$261666$Gift$34.0
+FT-1845$626.0$True By$1$hus, 33$Karen Hansdatter$17$Ugift$$tjenestepige$Fødesogn: Tilst$$$Tiilst, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$17.0$261667$Ugift$16.0
+FT-1845$336.0$Brabrand By$1$boelsted, 59$Maren Pedersdatter$40$Gift$$hans kone$Fødesogn: Trige$$$Trige, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$40.0$261400$Gift$39.0
+FT-1845$420.0$True By$1$gård, 5$Maren Sørensen$18$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$18.0$261566$Ugift$17.0
+FT-1845$190.0$Brabrand By$1$gård, 34$Mariane Sørensdatter$31$Ugift$$tjenestepige$Fødesogn: Lemming$$$Lemming, Wiborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$31.0$261671$Ugift$30.0
+FT-1845$253.0$Brabrand By$1$hus, 43$Ole Peter Michelsen$12$Ugift$$plejesøn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$12.0$261672$Ugift$11.0
+FT-1845$412.0$True By$1$gård, 4$Niels Lauritzen$22$Gift$$gårdmand$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$22.0$261637$Gift$21.0
+FT-1845$40.0$Brabrand By$1$hus, 8$Peder Nielsen$39$Gift$$daglejer$Fødesogn: Brabrand$$$Her i Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$39.0$261675$Gift$38.0
+FT-1845$302.0$Brabrand By$1$hus, 52$Peder Pedersen$33$Gift$$jordbruger$Fødesogn: Beder$$$Beder, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$33.0$261676$Gift$32.0
+FT-1845$108.0$Brabrand By$1$gård, 22$Rasmus Pedersen$30$Ugift$$tjenestekarl$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$30.0$261657$Ugift$29.0
+FT-1845$512.0$True By$3$hus, 18$Søren Olesen$1$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$1.0$261678$Ugift$0.0
+FT-1845$109.0$Brabrand By$1$gård, 22$Peder Sørensen$17$Ugift$$tjenestekarl$Fødesogn: Åby$$$Aabye, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$17.0$261657$Ugift$16.0
+FT-1845$43.0$Brabrand By$1$hus, 8$Anders Pedersen$2$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$2.0$261675$Ugift$1.0
+FT-1845$662.0$True By$1$gård, 40$Anne Dorthea Knudsen$22$Ugift$$mejerilærling$Fødesogn: Fruering$$$Fruering, Skanderborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$22.0$261448$Ugift$21.0
+FT-1845$556.0$True By$1$gård, 24$Mette Maria Jensdatter$38$Gift$$hans kone$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$38.0$261399$Gift$37.0
+FT-1845$44.0$Brabrand By$1$hus, 9$Morthen Jacobsen$44$Gift$$slagter$Fødesogn: Beder$$$Fulden, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$44.0$261592$Gift$43.0
+FT-1845$619.0$True By$1$hus, 32$Sidsel Jacobsdatter$45$Gift$$hans kone$Fødesogn: Lyngby$$$Lyngbye, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$45.0$261664$Gift$44.0
+FT-1845$125.0$Brabrand By$1$boelsted, 25$Karen Pedersdatter$39$Gift$$hans kone$Fødesogn: Storring$$$Storring, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$39.0$261684$Gift$38.0
+FT-1845$530.0$True By$1$gård, 20$Anne Kjerstine Christensen$25$Ugift$$tjenestepige$Fødesogn: Linå$$$Linaae, Skanderborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$25.0$261685$Ugift$24.0
+FT-1845$157.0$Brabrand By$1$hus, 29$Peder Lauersen$3$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$3.0$261545$Ugift$2.0
+FT-1845$348.0$Brabrand By$1$hus, 61$Alexander Wulff$29$Gift$$snedker$Fødesogn: Lading Noter: alder usikker$$$Ladding, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$29.0$261528$Gift$28.0
+FT-1845$283.0$Brabrand By$1$hus, 48$Magrethe Christensdatter$52$Gift$$hans kone$Fødesogn: Vejlby$$$Wejlbye, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$52.0$261487$Gift$51.0
+FT-1845$53.0$Brabrand By$1$hus, 12$Anders Rasmussen$29$Gift$$daglejer$Fødesogn: Kolt$$$Koldt, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$29.0$261537$Gift$28.0
+FT-1845$459.0$True By$1$hus, 11$Mette Maria Jespersen$6$Ugift$$hendes datter$Fødesogn: Brabrand Noter: i FT: deres datter$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$6.0$261411$Ugift$5.0
+FT-1845$514.0$True By$1$gård, 19$Anne Kjerstine Jensdatter$54$Gift$$hans kone$Fødesogn: Galten$$$S. Galthen, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$54.0$261625$Gift$53.0
+FT-1845$544.0$True By$1$hus, 22$Rasmus Laursen$38$Gift$$husmand, væver$Fødesogn: Sabro$$$Sabroe, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$38.0$261688$Gift$37.0
+FT-1845$508.0$True By$2$hus, 18$Rasmus Pedersen$68$Gift$$røgter på Holmstrupgaard$Fødesogn: Fårup$$$Faarup, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$68.0$261689$Gift$67.0
+FT-1845$245.0$Brabrand By$1$hus, 41$Ane Kjerstine Pedersen$1$Ugift$$hendes datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$1.0$261624$Ugift$0.0
+FT-1845$126.0$Brabrand By$1$boelsted, 25$Peder Sørensen$14$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$14.0$261684$Ugift$13.0
+FT-1845$533.0$True By$2$gård, 20$Jens Peder Knudsen$13$Ugift$$deres søn$Fødesogn: Skivholme$$$Skivholme, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$13.0$261397$Ugift$12.0
+FT-1845$684.0$True By$1$hovedgård, 41$Anders Mogensen$35$Ugift$$tjenestekarl$Fødesogn: Hundslund$$$Hundslund, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$35.0$261565$Ugift$34.0
+FT-1845$121.0$Brabrand By$1$gård, 24$Ane Marie Ludvigsdatter$25$Ugift$$tjenestepige$Fødesogn: Svostrup$$$Svostrup, Wiborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$25.0$261422$Ugift$24.0
+FT-1845$397.0$True By$1$skolen, 1$Mette Maria Lauritzen$45$Gift$$hans kone$Fødesogn: Hvidbjerg Vesten Å$$$Hvidbjerg, Thisted$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$45.0$261616$Gift$44.0
+FT-1845$385.0$Gjellerup By$1$gård, 5$Mogens Poulsen$25$Ugift$$tjenestekarl$Fødesogn: Tilst$$$Tiilst, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$25.0$261512$Ugift$24.0
+FT-1845$275.0$Brabrand By$1$gård, 47$Rasmus Rasmussen$35$Ugift$$tjenestekarl$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$35.0$261497$Ugift$34.0
+FT-1845$668.0$True By$1$hovedgård, 41$Larsine Petersen$27$Gift$$hans kone$Fødesogn: Nykøbing M Noter: født Møller$$$Nykjøbing Morsøe$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$27.0$261565$Gift$26.0
+FT-1845$270.0$Brabrand By$1$gård, 46$Ane Kjerstine Poulsdatter$73$Gift$$hans kone$Fødesogn: Svostrup$$$Svostrup, Wiborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$73.0$261611$Gift$72.0
+FT-1845$90.0$Brabrand By$1$gård, 20$Ane Kjerstine Poulsen$18$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$18.0$261640$Ugift$17.0
+FT-1845$321.0$Brabrand By$1$boelsted, 57$Rasmus Rasmussen$37$Gift$$jordbruger$Fødesogn: Ormslev$$$Ormslev, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$37.0$261660$Gift$36.0
+FT-1845$579.0$True By$6$fattighus, 26$Jens Nielsen$63$Enke$$almisselem$Fødesogn: Vester Velling Noter: Vester el. Øster Velling$$$Welling, Wiborg$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$63.0$261704$Enke$62.0
+FT-1845$599.0$True By$1$gård, 29$Jens Nielsen$66$Enke$$gårdmand$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$66.0$261662$Enke$65.0
+FT-1845$559.0$True By$1$gård, 24$Anne Kjerstine Nielsen$7$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$7.0$261399$Ugift$6.0
+FT-1845$525.0$True By$1$gård, 20$Anne Kjerstine Poulsen$10$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$10.0$261685$Ugift$9.0
+FT-1845$547.0$True By$1$hus, 22$Anne Kjerstine Rasmussen$2$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$2.0$261688$Ugift$1.0
+FT-1845$365.0$Gjellerup By$1$gård, 3$Ane Kjerstine Rasmussen$16$Ugift$$hans datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$16.0$261655$Ugift$15.0
+FT-1845$423.0$True By$1$gård, 5$Anne Kjerstine Sørensen$10$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$10.0$261566$Ugift$9.0
+FT-1845$433.0$True By$1$gård, 7$Rasmus Rasmussen$11$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$11.0$261504$Ugift$10.0
+FT-1845$507.0$True By$1$hus, 18$Peder Hansen$1$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$1.0$261623$Ugift$0.0
+FT-1845$477.0$True By$2$gård, 13$Christiane Frandsen$5$Ugift$$hendes datter$Fødesogn: Brabrand Noter: i FT: deres datter$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$5.0$261716$Ugift$4.0
+FT-1845$441.0$True By$1$gård, 8$Mette Cathrine Laursdatter$29$Gift$$hans kone$Fødesogn: Åby$$$Aaebye, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$29.0$261721$Gift$28.0
+FT-1845$155.0$Brabrand By$1$hus, 29$Poul Lauersen$6$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$6.0$261545$Ugift$5.0
+FT-1845$493.0$True By$1$gård, 16$Mette Maria Pedersen$10$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$10.0$261455$Ugift$9.0
+FT-1845$524.0$True By$1$gård, 20$Niels Poulsen$13$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$13.0$261685$Ugift$12.0
+FT-1845$170.0$Brabrand By$2$hus, 31$Johane Marie Jensen$15$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$15.0$261733$Ugift$14.0
+FT-1845$549.0$True By$1$gård, 23$Peder Lauritzen$47$Gift$$gårdmand$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$47.0$261643$Gift$46.0
+FT-1845$497.0$True By$1$gård, 16$Peder Sørensen$22$Ugift$$tjenestekarl$Fødesogn: Galten$$$S. Galthen, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$22.0$261455$Ugift$21.0
+FT-1845$93.0$Brabrand By$1$gård, 20$Jens Poulsen$23$Ugift$$tjenestekarl$Fødesogn: Storring$$$Storring, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$23.0$261640$Ugift$22.0
+FT-1845$298.0$Brabrand By$1$boelsted, 51$Jensine Michelsen$11$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$11.0$261739$Ugift$10.0
+FT-1845$597.0$True By$1$gård, 28$Anne Johanne Christensen$17$Ugift$$tjenestepige$Fødesogn: Lyngby$$$Lyngbye, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$17.0$261620$Ugift$16.0
+FT-1845$643.0$True By$1$gård, 37$Peder Sørensen$33$Gift$$gårdmand$Fødesogn: Brabrand Noter: Skjoldhøjgård$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$33.0$261659$Gift$32.0
+FT-1845$30.0$Brabrand By$1$hus, 6$Niels Christensen$19$Ugift$$smedelærling$Fødesogn: Vejlby$$$Wejlbye, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$19.0$261666$Ugift$18.0
+FT-1845$518.0$True By$1$gård, 19$Søren Jespersen$18$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$18.0$261625$Ugift$17.0
+FT-1845$631.0$True By$3$gård, 34$Søren Poulsen$76$Enke$$$Fødesogn: Brabrand Noter: stilling mangler i FT$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$76.0$261747$Enke$75.0
+FT-1845$89.0$Brabrand By$1$gård, 20$Maren Jespersdatter$45$Gift$$hans kone$Fødesogn: Galten$$$Galthen, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$45.0$261640$Gift$44.0
+FT-1845$610.0$True By$1$gård, 30$Anne Johanne Erichsdatter$70$Enke$$husfaderens moder, der af ham forsørges$Fødesogn: Lyngby$$$Lyngbye, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$70.0$261389$Enke$69.0
+FT-1845$97.0$Brabrand By$1$gård, 21$Søren Michelsen$51$Gift$$gårdmand$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$51.0$261384$Gift$50.0
+FT-1845$134.0$Brabrand By$1$gård, 26$Karen Jensen$20$Ugift$$væverlærling$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$20.0$261749$Ugift$19.0
+FT-1845$123.0$Brabrand By$1$gård, 24$Anders Jensen$16$Ugift$$tjenestekarl$Fødesogn: Dover$$$Dover, Skanderborg$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$16.0$261422$Ugift$15.0
+FT-1845$34.0$Brabrand By$1$gård, 7$Ane Jørgensdatter$53$Gift$$hans kone$Fødesogn: Randers$$$Randers$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$53.0$261577$Gift$52.0
+FT-1845$215.0$Brabrand By$1$gård, 38$Niels Hansen$62$Gift$$gårdmand$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$62.0$261635$Gift$61.0
+FT-1845$636.0$True By$1$gård, 36$Peder Rasmussen$35$Gift$$gårdmand$Fødesogn: Brabrand Noter: Lundagergård$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$35.0$261539$Gift$34.0
+FT-1845$520.0$True By$1$gård, 19$Maren Jespersen$11$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$11.0$261625$Ugift$10.0
+FT-1845$103.0$Brabrand By$1$gård, 22$Michel Andersen$60$Gift$$gårdmand$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$60.0$261657$Gift$59.0
+FT-1845$7.0$Brabrand By$1$præstegård, 1$Peder Pedersen$28$Ugift$$tjenestekarl$Fødesogn: Tilst$$$Tiilst, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$28.0$261472$Ugift$27.0
+FT-1845$683.0$True By$1$hovedgård, 41$Søren Michelsen$36$Ugift$$tjenestekarl$Fødesogn: Holme$$$Holme, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$36.0$261565$Ugift$35.0
+FT-1845$458.0$True By$1$hus, 11$Maren Jespersen$10$Ugift$$hendes datter$Fødesogn: Brabrand Noter: i FT: deres datter$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$10.0$261411$Ugift$9.0
+FT-1845$372.0$Gjellerup By$1$gård, 4$Sidsel Jensen$10$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$10.0$261612$Ugift$9.0
+FT-1845$226.0$Brabrand By$1$gård, 39$Axel Gerhardt Buch$3$Ugift$$hendes søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$3.0$261468$Ugift$2.0
+FT-1845$529.0$True By$1$gård, 20$Niels Poulsen$80$Enke$$mandens fader, der af ham forsørges$Fødesogn: Lisbjerg$$$Lisbjerg, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$80.0$261685$Enke$79.0
+FT-1845$335.0$Brabrand By$1$boelsted, 59$Ole Christian Secher Madsen$41$Gift$$jordbruger$Fødesogn: Søften$$$Zeuthen, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$41.0$261400$Gift$40.0
+FT-1845$574.0$True By$3$fattighus, 26$Johannes Johansen$8$Ugift$$hendes søn, uægte$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$8.0$261760$Ugift$7.0
+FT-1845$213.0$Brabrand By$2$gård, 37$Ane Nielsdatter$84$Enke$$aftægtskone$Fødesogn: Framlev$$$Framlev, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$84.0$261765$Enke$83.0
+FT-1845$216.0$Brabrand By$1$gård, 38$Ane Nielsdatter$53$Gift$$hans kone$Fødesogn: Sahl$$$Sahl, Randers$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$53.0$261635$Gift$52.0
+FT-1845$278.0$Brabrand By$1$gård, 47$Daniel Danielsen$25$Ugift$$tjenestekarl$Fødesogn: Frederiks$$$Hausdall, Wiborg$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$25.0$261497$Ugift$24.0
+FT-1845$345.0$Brabrand By$1$hus, 60$Rasmus Nielsen$26$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$26.0$261775$Ugift$25.0
+FT-1845$351.0$Gjellerup By$1$hus, 1$Rasmus Nielsen$80$Enke$$lever af sin formue$Fødesogn: Tilst$$$Tiilst, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$80.0$261776$Enke$79.0
+FT-1845$330.0$Brabrand By$1$boelsted, 58$Søren Johansen$31$Gift$$jordbruger$Fødesogn: Kolt$$$Koldt, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$31.0$261777$Gift$30.0
+FT-1845$578.0$True By$5$fattighus, 26$Johanne Jacobsdatter$57$Enke$$almisselem$Fødesogn: Odder$$$Odder, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$57.0$261778$Enke$56.0
+FT-1845$6.0$Brabrand By$1$præstegård, 1$Anders Rasmussen Krog$58$Enke$$tjenestetyende som gartner$Fødesogn: Lyngby$$$Lyngbye, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$58.0$261472$Enke$57.0
+FT-1845$573.0$True By$3$fattighus, 26$Anne Johanne Johansen$30$Ugift$$almisselem$Fødesogn: Gødvad$$$Gjødvad, Wiborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$30.0$261760$Ugift$29.0
+FT-1845$113.0$Brabrand By$1$hus, 23$Else Marie Jensen$18$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$18.0$261781$Ugift$17.0
+FT-1845$13.0$Brabrand By$1$gård, 3$Karen Rasmusdatter$44$Gift$$hans kone$Fødesogn: Borum$$$Borum, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$44.0$261784$Gift$43.0
+FT-1845$269.0$Brabrand By$1$gård, 46$Niels Christensen$55$Gift$$aftægtsmand$Fødesogn: Hasle$$$Hasle, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$55.0$261611$Gift$54.0
+FT-1845$49.0$Brabrand By$1$hus, 10$Peder Sørensen Pedersen$2$Ugift$$hendes søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$2.0$261642$Ugift$1.0
+FT-1845$393.0$Gjellerup By$1$gård, 6$Rasmus Nielsen$16$Ugift$$tjenestekarl$Fødesogn: Skørring$$$Schjørring, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$16.0$261588$Ugift$15.0
+FT-1845$169.0$Brabrand By$2$hus, 31$Niels Jensen$21$Ugift$$skrædder, deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$21.0$261733$Ugift$20.0
+FT-1845$473.0$True By$1$gård, 13$Christopher Jensen$16$Ugift$$tjenestekarl$Fødesogn: Storring$$$Storring, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$16.0$261421$Ugift$15.0
+FT-1845$378.0$Gjellerup By$1$gård, 5$Peter Andreas Holm Tolstrup$36$Gift$$gårdbruger$Fødesogn: Skanderborg$$$Skanderborg$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$36.0$261512$Gift$35.0
+FT-1845$168.0$Brabrand By$2$hus, 31$Dorthe Marie Jensen$23$Ugift$$deres datter, væverlærling$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$23.0$261733$Ugift$22.0
+FT-1845$313.0$Brabrand By$1$hus, 54$Anders Enevoldsen$2$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$2.0$261648$Ugift$1.0
+FT-1845$517.0$True By$1$gård, 19$Ane Jespersen$21$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$21.0$261625$Ugift$20.0
+FT-1845$286.0$Brabrand By$1$hus, 49$Ane Nielsdatter$49$Gift$$hans kone$Fødesogn: Mårslet$$$Moerslet, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$49.0$261797$Gift$48.0
+FT-1845$621.0$True By$1$hus, 32$Peder Jensen Pedersen$13$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$13.0$261664$Ugift$12.0
+FT-1845$353.0$Gjellerup By$1$gård, 2$Niels Christensen$54$Gift$$gårdmand$Fødesogn: Trige$$$Trige, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$54.0$261390$Gift$53.0
+FT-1845$209.0$Brabrand By$1$gård, 37$Lauers Fransen$3$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$3.0$261554$Ugift$2.0
+FT-1845$251.0$Brabrand By$1$hus, 43$Mette Marie Møldrup$77$Enke$$pastor Møldrups enke$Fødesogn: Brabrand Noter: præsteenkesæde$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$77.0$261672$Enke$76.0
+FT-1845$324.0$Brabrand By$1$boelsted, 57$Christine Marie Christensen$13$Ugift$$plejedatter$Fødesogn: Aarhus$$$Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$13.0$261660$Ugift$12.0
+FT-1845$76.0$Brabrand By$1$boelsted, 17$Lauers Jensen$33$Gift$$jordbruger$Fødesogn: Kasted$$$Casted, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$33.0$261639$Gift$32.0
+FT-1845$390.0$Gjellerup By$1$gård, 6$Lauers Mariussen$6$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$6.0$261588$Ugift$5.0
+FT-1845$153.0$Brabrand By$1$hus, 29$Lauers Pedersen$32$Gift$$væver$Fødesogn: Åby Noter: FT anfører 2 husstande$$$Aabye, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$32.0$261545$Gift$31.0
+FT-1845$384.0$Gjellerup By$1$gård, 5$Lauers Rasmussen$23$Ugift$$tjenestekarl$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$23.0$261512$Ugift$22.0
+FT-1845$234.0$Brabrand By$1$hus, 40$Maria Petrea Poulina Tverskou$9$Ugift$$plejedatter$Fødesogn: Aarhus$$$Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$9.0$261412$Ugift$8.0
+FT-1845$448.0$True By$1$gård, 9$Søren Mogensen$23$Ugift$$tjenestekarl$Fødesogn: Årslev$$$Aarslev, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$23.0$261606$Ugift$22.0
+FT-1845$576.0$True By$3$fattighus, 26$Inger Jensine Maria Johansen$2$Ugift$$hendes datter, uægte$Fødesogn: Gødvad$$$Gjødvad, Wiborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$2.0$261760$Ugift$1.0
+FT-1845$10.0$Brabrand By$1$skolen, 2$Abellone Herskind$25$Ugift$$deres datter$Fødesogn: Brabrand$$$Brabrand$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$25.0$261804$Ugift$24.0
+FT-1845$461.0$True By$1$hus, 11$Niels Christensen$1$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$1.0$261411$Ugift$0.0
+FT-1845$406.0$True By$1$gård, 3$Anders Olesen$41$Gift$$gårdmand$Fødesogn: Onsbjerg$$$Onsbjerg, Samsø, Holbæk$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$41.0$261561$Gift$40.0
+FT-1845$163.0$Brabrand By$1$hus, 31$Christiane Sophie Nielsdatter$23$Gift$$hans kone$Fødesogn: Storring$$$Storring, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$23.0$261814$Gift$22.0
+FT-1845$17.0$Brabrand By$1$gård, 3$Abellone Sørensen$27$Ugift$$tjenestepige$Fødesogn: Skanderup$$$Skanderup, Skanderborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$27.0$261784$Ugift$26.0
+FT-1845$195.0$Brabrand By$1$gård, 35$Ane Cathrine Sørensen$29$Gift$$hans kone$Fødesogn: Skanderup Noter: rettet stilling, jfr. KB$$$Schanderup, Skanderborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$29.0$261410$Gift$28.0
+FT-1845$614.0$True By$1$hus, 31$Rasmus Severiin Remte$55$Gift$$husmand med jord, bødker$Fødesogn: Grenå$$$Grenaae$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$55.0$261530$Gift$54.0
+FT-1845$465.0$True By$1$hus, 12$Simmon Jensen$4$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$4.0$261816$Ugift$3.0
+FT-1845$37.0$Brabrand By$1$gård, 7$Hans Pedersen$25$Ugift$$tjenestekarl$Fødesogn: Brabrand$$$Her i Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$25.0$261577$Ugift$24.0
+FT-1845$229.0$Brabrand By$2$gård, 39$Ane Marie Jensdatter$26$Ugift$$hendes datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$26.0$261821$Ugift$25.0
+FT-1845$119.0$Brabrand By$1$gård, 24$Peder Rasmussen$81$Enke$$aftægtsmand$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$81.0$261422$Enke$80.0
+FT-1845$266.0$Brabrand By$1$gård, 46$Ane Marie Jensdatter$7$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$7.0$261611$Ugift$6.0
+FT-1845$184.0$Brabrand By$2$hus, 33$Niels Morthensen$59$Enke$$daglejer$Fødesogn: Framlev$$$Framlev, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$59.0$261825$Enke$58.0
+FT-1845$341.0$Brabrand By$1$boelsted, 59$Jens Halling Olesen$1$Ugift$$deres søn$Fødesogn: Søften$$$Zeuthen, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$1.0$261400$Ugift$0.0
+FT-1845$218.0$Brabrand By$1$gård, 38$Jens Pedersen$17$Ugift$$plejesøn$Fødesogn: Skødstrup$$$Skjødstrup, Randers$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$17.0$261635$Ugift$16.0
+FT-1845$376.0$Gjellerup By$1$gård, 4$Mads Pedersen$23$Ugift$$tjenestekarl$Fødesogn: Veng$$$Wenge, Skanderborg$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$23.0$261612$Ugift$22.0
+FT-1845$191.0$Brabrand By$1$gård, 34$Ane Marie Pedersen$18$Ugift$$tjenestepige$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$18.0$261671$Ugift$17.0
+FT-1845$606.0$True By$1$gård, 30$Ole Jensen$51$Gift$$gårdmand$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$51.0$261389$Gift$50.0
+FT-1845$75.0$Brabrand By$1$hus, 16$Thomas Pedersen$21$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$21.0$261841$Ugift$20.0
+FT-1845$580.0$True By$1$gård, 27$Jens Mogensen$54$Gift$$gårdmand$Fødesogn: Foldby$$$Folbye, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$54.0$261525$Gift$53.0
+FT-1845$550.0$True By$1$gård, 23$Karen Maria Andersen$29$Gift$$hans kone$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$29.0$261643$Gift$28.0
+FT-1845$132.0$Brabrand By$1$gård, 26$Karen Marie Pedersen$22$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$22.0$261749$Ugift$21.0
+FT-1845$504.0$True By$1$hus, 18$Niels Hansen$9$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$9.0$261623$Ugift$8.0
+FT-1845$623.0$True By$1$hus, 33$Jens Mogensen$50$Gift$$husmand med jord$Fødesogn: Årslev$$$Aarslev, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$50.0$261667$Gift$49.0
+FT-1845$502.0$True By$1$hus, 18$Anne Jacobsdatter$42$Gift$$hans kone$Fødesogn: Vejlby$$$Weilbye, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$42.0$261623$Gift$41.0
+FT-1845$430.0$True By$1$gård, 7$Anne Rasmussen$26$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$26.0$261504$Ugift$25.0
+FT-1845$680.0$True By$1$hovedgård, 41$Jacob Pedersen$24$Ugift$$tjenestekarl$Fødesogn: Mårslet$$$Maarslet, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$24.0$261565$Ugift$23.0
+FT-1845$62.0$Brabrand By$1$hus, 15$Karen Marie Pedersen$32$Gift$$hans kone$Fødesogn: Tilst$$$Tiilst, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$32.0$261570$Gift$31.0
+FT-1845$323.0$Brabrand By$1$boelsted, 57$Peder Rasmussen$2$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$2.0$261660$Ugift$1.0
+FT-1845$659.0$True By$1$gård, 39$Anne Elisabeth Sørensen$21$Ugift$$tjenestepige$Fødesogn: Svostrup$$$Svostrup, Wiborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$21.0$261432$Ugift$20.0
+FT-1845$678.0$True By$1$hovedgård, 41$Niels Svendsen$28$Ugift$$tjenestekarl$Fødesogn: Søften$$$Zeuthen, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$28.0$261565$Ugift$27.0
+FT-1845$73.0$Brabrand By$1$hus, 16$Peder Thomesen$70$Gift$$væver$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$70.0$261841$Gift$69.0
+FT-1845$210.0$Brabrand By$1$gård, 37$Niels Andersen$18$Ugift$$tjenestekarl$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$18.0$261554$Ugift$17.0
+FT-1845$483.0$True By$1$gård, 14$Peder Pedersen$28$Ugift$$tjenestekarl$Fødesogn: Tilst$$$Tiilst, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$28.0$261656$Ugift$27.0
+FT-1845$487.0$True By$1$gård, 16$Peder Pedersen$57$Gift$$gårdmand$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$57.0$261455$Gift$56.0
+FT-1845$536.0$True By$1$hus, 21$Ole Rasmussen Witved$52$Gift$$husmand, musikant$Fødesogn: Vitved$$$Witved, Skanderborg$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$52.0$261649$Gift$51.0
+FT-1845$660.0$True By$1$gård, 40$Otte August Jahnsen$39$Ugift$$forpagter af mejeriet$Fødesogn: Oldenburg Noter: Dorthealund el. Truegaard$$$Oldenburg, Holsten$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$39.0$261448$Ugift$38.0
+FT-1845$491.0$True By$1$gård, 16$Peder Pedersen$15$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$15.0$261455$Ugift$14.0
+FT-1845$294.0$Brabrand By$1$hus, 50$Peder Thommesen$3$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$3.0$261531$Ugift$2.0
+FT-1845$55.0$Brabrand By$1$hus, 12$Rasmus Andersen$1$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$1.0$261537$Ugift$0.0
+FT-1845$434.0$True By$1$gård, 7$Magdalene Rasmussen$9$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$9.0$261504$Ugift$8.0
+FT-1845$221.0$Brabrand By$1$gård, 38$Christiane Sørensen$16$Ugift$$tjenestepige$Fødesogn: Lemming$$$Lemming, Wiborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$16.0$261635$Ugift$15.0
+FT-1845$475.0$True By$2$gård, 13$Peder Rasmussen$25$Gift$$inderste, skrædder$Fødesogn: Brabrand$$$Brabrand$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$25.0$261716$Gift$24.0
+FT-1845$595.0$True By$1$gård, 28$Karen Maria Jensen$6$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$6.0$261620$Ugift$5.0
+FT-1845$96.0$Brabrand By$1$gård, 20$Jacob Pedersen$16$Ugift$$tjenestekarl$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$16.0$261640$Ugift$15.0
+FT-1845$255.0$Brabrand By$1$hus, 44$Rasmus Andersen$51$Gift$$drejer$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$51.0$261854$Gift$50.0
+FT-1845$381.0$Gjellerup By$1$gård, 5$Henriette Sophie Frederic Tolstrup$6$Ugift$$deres datter$Fødesogn: Hørning Noter: Fredericke$$$Hørning, Skanderborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$6.0$261512$Ugift$5.0
+FT-1845$352.0$Gjellerup By$1$hus, 1$Ane Catrine Christensen$18$Ugift$$tjenestepige$Fødesogn: Grundfør$$$Grundfør, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$18.0$261776$Ugift$17.0
+FT-1845$358.0$Gjellerup By$1$gård, 2$Bodil Rasmusdatter$21$Ugift$$tjenestepige$Fødesogn: Kolt$$$Koldt, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$21.0$261390$Ugift$20.0
+FT-1845$117.0$Brabrand By$1$gård, 24$Peder Nielsen$7$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$7.0$261422$Ugift$6.0
+FT-1845$596.0$True By$1$gård, 28$Søren Jacobsen$27$Ugift$$tjenestekarl$Fødesogn: Harlev$$$Harlev, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$27.0$261620$Ugift$26.0
+FT-1845$624.0$True By$1$hus, 33$Inger Sørensdatter$47$Gift$$hans kone$Fødesogn: Dover$$$Dover, Skanderborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$47.0$261667$Gift$46.0
+FT-1845$447.0$True By$1$gård, 9$Johan Albrethsen$19$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$19.0$261606$Ugift$18.0
+FT-1845$380.0$Gjellerup By$1$gård, 5$Petra Marie Tolstrup$9$Ugift$$deres datter$Fødesogn: Hørning$$$Hørning, Skanderborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$9.0$261512$Ugift$8.0
+FT-1845$277.0$Brabrand By$1$gård, 47$Jens Bonesen$28$Ugift$$tjenestekarl$Fødesogn: Søften$$$Zeuthen, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$28.0$261497$Ugift$27.0
+FT-1845$68.0$Brabrand By$3$hus, 15$Knud Michelsen$41$Gift$$daglejer$Fødesogn: Adslev$$$Adslev, Skanderborg$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$41.0$261540$Gift$40.0
+FT-1845$122.0$Brabrand By$1$gård, 24$Dorthe Marie Pedersdatter$17$Ugift$$tjenestepige$Fødesogn: Tilst$$$Tiilst, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$17.0$261422$Ugift$16.0
+FT-1845$399.0$True By$1$skolen, 1$Jørgen Marius Thiesen$14$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$14.0$261616$Ugift$13.0
+FT-1845$259.0$Brabrand By$1$hus, 45$Christiane Thøgersdatter$34$Gift$$hans kone$Fødesogn: Tulstrup$$$Tulstrup, Skanderborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$34.0$261609$Gift$33.0
+FT-1845$61.0$Brabrand By$1$hus, 15$Jens Christiansen$39$Gift$$træskomand$Fødesogn: Harlev$$$Harlev, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$39.0$261570$Gift$38.0
+FT-1845$561.0$True By$1$hus, 25$Peder Nielsen$33$Gift$$væver$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$33.0$261860$Gift$32.0
+FT-1845$338.0$Brabrand By$1$boelsted, 59$Ane Marie Mørk Olesen$11$Ugift$$deres datter$Fødesogn: Søften$$$Zeuthen, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$11.0$261400$Ugift$10.0
+FT-1845$538.0$True By$1$hus, 21$Rasmus Olesen Witved$8$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$8.0$261649$Ugift$7.0
+FT-1845$167.0$Brabrand By$2$hus, 31$Karen Marie Jensen$25$Ugift$$deres datter, væverlærling$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$25.0$261733$Ugift$24.0
+FT-1845$84.0$Brabrand By$2$hus, 18$Peder Rasmussen Riber$80$Enke$$almisselem$Fødesogn: Hasle$$$Hasle, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$80.0$261863$Enke$79.0
+FT-1845$235.0$Brabrand By$1$hus, 41$Jacob Jensen$41$Gift$$skrædder$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$41.0$261624$Gift$40.0
+FT-1845$598.0$True By$1$gård, 28$Karen Maria Pedersen$18$Ugift$$tjenestepige$Fødesogn: Hasle$$$Hasle, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$18.0$261620$Ugift$17.0
+FT-1845$565.0$True By$1$hus, 25$Karen Pedersen$4$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$4.0$261860$Ugift$3.0
+FT-1845$587.0$True By$1$gård, 27$Peder Jespersen$19$Ugift$$tjenestekarl$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$19.0$261525$Ugift$18.0
+FT-1845$325.0$Brabrand By$1$boelsted, 57$Frederich Ferdinant Tverschou$10$Ugift$$plejesøn$Fødesogn: Aarhus$$$Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$10.0$261660$Ugift$9.0
+FT-1845$593.0$True By$1$gård, 28$Johan Jensen$14$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$14.0$261620$Ugift$13.0
+FT-1845$22.0$Brabrand By$1$hus, 4$Karen Marie Jensen$5$Ugift$$deres plejedatter$Fødesogn: Årslev$$$Aarslev, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$5.0$261864$Ugift$4.0
+FT-1845$197.0$Brabrand By$1$gård, 35$Kiersten Andersdatter$35$Ugift$$tjenestepige$Fødesogn: Mårslet$$$Morslet, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$35.0$261410$Ugift$34.0
+FT-1845$208.0$Brabrand By$1$gård, 37$Ane Johanne Fransen$7$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$7.0$261554$Ugift$6.0
+FT-1845$521.0$True By$1$gård, 20$Poul Nielsen$47$Gift$$gårdmand$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$47.0$261685$Gift$46.0
+FT-1845$489.0$True By$1$gård, 16$Sidsel Maria Pedersen$19$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$19.0$261455$Ugift$18.0
+FT-1845$260.0$Brabrand By$1$hus, 45$Thøger Rasmussen$9$Ugift$$deres søn$Fødesogn: Tulstrup$$$Tulstrup, Skanderborg$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$9.0$261609$Ugift$8.0
+FT-1845$630.0$True By$2$gård, 34$Rasmus Andersen$28$Ugift$$musikant$Fødesogn: Lyngby$$$Lyngbye, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$28.0$261868$Ugift$27.0
+FT-1845$309.0$Brabrand By$1$hus, 54$Envold Andersen$42$Gift$$jordbruger$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$42.0$261648$Gift$41.0
+FT-1845$589.0$True By$1$gård, 27$Karen Maria Sørensen$19$Ugift$$tjenestepige$Fødesogn: Framlev$$$Framlev, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$19.0$261525$Ugift$18.0
+FT-1845$554.0$True By$2$gård, 23$Mette Kjerstine Jensdatter$68$Enke$$inderste, lever af sin aftægt af gården$Fødesogn: Årslev$$$Aarslev, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$68.0$261870$Enke$67.0
+FT-1845$300.0$Brabrand By$1$boelsted, 51$Cathrine Marie Michelsen$3$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$3.0$261739$Ugift$2.0
+FT-1845$605.0$True By$1$gård, 29$Karen Laursen$19$Ugift$$tjenestepige$Fødesogn: Skanderup$$$Skanderup, Skanderborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$19.0$261662$Ugift$18.0
+FT-1845$451.0$True By$1$hus, 10$Ole Nielsen$34$Gift$$inderste, skrædder$Fødesogn: Borum$$$Borum, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$34.0$261873$Gift$33.0
+FT-1845$187.0$Brabrand By$1$gård, 34$Søren Rasmussen$10$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$10.0$261671$Ugift$9.0
+FT-1845$257.0$Brabrand By$1$hus, 44$Mette Sophie Rasmussen$20$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$20.0$261854$Ugift$19.0
+FT-1845$607.0$True By$1$gård, 30$El Christensdatter$43$Gift$$hans kone$Fødesogn: Sporup$$$Sporup, Skanderborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$43.0$261389$Gift$42.0
+FT-1845$611.0$True By$1$gård, 30$El Maria Pedersdatter$30$Ugift$$tjenestepige$Fødesogn: Storring$$$Storring, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$30.0$261389$Ugift$29.0
+FT-1845$645.0$True By$1$gård, 37$El Maria Pedersen$6$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$6.0$261659$Ugift$5.0
+FT-1845$526.0$True By$1$gård, 20$Bodil Maria Poulsen$7$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$7.0$261685$Ugift$6.0
+FT-1845$175.0$Brabrand By$1$gård, 32$Rasmus Michelsen$3$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$3.0$261520$Ugift$2.0
+FT-1845$78.0$Brabrand By$1$boelsted, 17$Mette Kjerstine Lauersen$8$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$8.0$261639$Ugift$7.0
+FT-1845$523.0$True By$1$gård, 20$Christen Poulsen$15$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$15.0$261685$Ugift$14.0
+FT-1845$540.0$True By$2$hus, 21$Søren Andersen$26$Gift$$inderste, daglejer$Fødesogn: Sabro$$$Sabroe, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$26.0$261636$Gift$25.0
+FT-1845$281.0$Brabrand By$1$gård, 47$Else Madsdatter$22$Ugift$$tjenestepige$Fødesogn: Skive$$$Skive, Viborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$22.0$261497$Ugift$21.0
+FT-1845$291.0$Brabrand By$1$hus, 50$Hans Adolph Thommesen$10$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$10.0$261531$Ugift$9.0
+FT-1845$306.0$Brabrand By$1$boelsted, 53$Rasmus Michelsen$38$Enke$$jordbruger$Fødesogn: Grønbæk$$$Grønbæk, Wiborg$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$38.0$261492$Enke$37.0
+FT-1845$166.0$Brabrand By$2$hus, 31$Erasmine Rasmusdatter$54$Gift$$hans kone$Fødesogn: Aarhus$$$Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$54.0$261733$Gift$53.0
+FT-1845$200.0$Brabrand By$1$gård, 36$Frederich Jensen$34$Gift$$gårdmand$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$34.0$261499$Gift$33.0
+FT-1845$161.0$Brabrand By$2$hus, 30$Maren Olesdatter$81$Gift$$hans kone$Fødesogn: Galten$$$Galthen, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$81.0$261447$Gift$80.0
+FT-1845$428.0$True By$1$gård, 7$Rasmus Michelsen$58$Gift$$gårdmand$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$58.0$261504$Gift$57.0
+FT-1845$159.0$Brabrand By$1$hus, 30$Else Pedersdatter$32$Ugift$$væver$Fødesogn: Kasted$$$Casted, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$32.0$261904$Ugift$31.0
+FT-1845$318.0$Brabrand By$1$hus, 55$Søren Rasmussen$13$Ugift$$deres søn$Fødesogn: Odder$$$Odder, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$13.0$261907$Ugift$12.0
+FT-1845$413.0$True By$1$gård, 4$Helle Andersen$22$Gift$$hans kone$Fødesogn: Årslev$$$Aarslev, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$22.0$261637$Gift$21.0
+FT-1845$236.0$Brabrand By$1$hus, 41$Ane Elisabeth Jensdatter$40$Gift$$hans kone$Fødesogn: Foldby$$$Fohlbye, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$40.0$261624$Gift$39.0
+FT-1845$569.0$True By$1$fattighus, 26$Gjertrud Pedersdatter$65$Ugift$$almisselem$Fødesogn: Låsby$$$Laasbye, Skanderborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$65.0$261480$Ugift$64.0
+FT-1845$364.0$Gjellerup By$1$gård, 3$Søren Rasmussen$17$Ugift$$hans søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$17.0$261655$Ugift$16.0
+FT-1845$671.0$True By$1$hovedgård, 41$Jacob Petersen$1$Ugift$$deres søn$Fødesogn: Herlufsholm$$$Herlufsholm, Sorøe$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$1.0$261565$Ugift$0.0
+FT-1845$296.0$Brabrand By$1$boelsted, 51$Michel Jensen$40$Gift$$jordbruger$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$40.0$261739$Gift$39.0
+FT-1845$440.0$True By$1$gård, 8$Søren Rasmussen$42$Gift$$gårdmand$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$42.0$261721$Gift$41.0
+FT-1845$172.0$Brabrand By$2$hus, 31$Karen Marie Rasmusdatter$29$Ugift$$væverlærling$Fødesogn: Balle$$$Balle, Wiborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$29.0$261733$Ugift$28.0
+FT-1845$462.0$True By$1$hus, 12$Jens Jensen$38$Gift$$husmand, daglejer$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$38.0$261816$Gift$37.0
+FT-1845$237.0$Brabrand By$1$hus, 41$Jens Christian Jacobsen$13$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$13.0$261624$Ugift$12.0
+FT-1845$470.0$True By$1$gård, 13$Jens Pedersen$28$Ugift$$hendes søn, medhjælper til gårdens drift$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$28.0$261421$Ugift$27.0
+FT-1845$476.0$True By$2$gård, 13$Karen Sørensen$37$Gift$$hans kone$Fødesogn: Dover$$$Dover, Skanderborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$37.0$261716$Gift$36.0
+FT-1845$91.0$Brabrand By$1$gård, 20$Ane Marie Poulsen$16$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$16.0$261640$Ugift$15.0
+FT-1845$383.0$Gjellerup By$1$gård, 5$Frederich Ludvig Tolstrup$1$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$1.0$261512$Ugift$0.0
+FT-1845$261.0$Brabrand By$1$hus, 45$Karen Rasmussen$16$Ugift$$deres datter$Fødesogn: Tulstrup$$$Tulstrup, Skanderborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$16.0$261609$Ugift$15.0
+FT-1845$316.0$Brabrand By$1$hus, 55$Ane Rasmussen$18$Ugift$$deres datter$Fødesogn: Odder$$$Odder, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$18.0$261907$Ugift$17.0
+FT-1845$129.0$Brabrand By$1$boelsted, 25$Ane Sørensdatter$19$Ugift$$tjenestepige$Fødesogn: Lemming$$$Lemming, Wiborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$19.0$261684$Ugift$18.0
+FT-1845$31.0$Brabrand By$1$hus, 6$Jens Jensen$75$Gift$$aftægtsmand$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$75.0$261666$Gift$74.0
+FT-1845$138.0$Brabrand By$1$hus, 27$Maren Pedersen$10$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$10.0$261598$Ugift$9.0
+FT-1845$9.0$Brabrand By$1$skolen, 2$Ane Sørensdatter$59$Gift$$hans kone$Fødesogn: Stjær$$$Stjær, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$59.0$261804$Gift$58.0
+FT-1845$204.0$Brabrand By$1$gård, 37$Helle Jensdatter$47$Gift$$hans kone$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$47.0$261554$Gift$46.0
+FT-1845$498.0$True By$1$hus, 17$Jens Jensen$53$Gift$$husmand, lever af sin jordlod$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$53.0$261940$Gift$52.0
+FT-1845$676.0$True By$1$hovedgård, 41$Karen Nielsen$24$Ugift$$tjenestepige$Fødesogn: Veng$$$Wenge, Skanderborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$24.0$261565$Ugift$23.0
+FT-1845$118.0$Brabrand By$1$gård, 24$Mette Nielsen$5$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$5.0$261422$Ugift$4.0
+FT-1845$79.0$Brabrand By$1$boelsted, 17$Jens Peter Lauersen$6$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$6.0$261639$Ugift$5.0
+FT-1845$290.0$Brabrand By$1$hus, 50$Inger Marie Pedersdatter$43$Gift$$hans kone$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$43.0$261531$Gift$42.0
+FT-1845$246.0$Brabrand By$1$hus, 42$Andreas Møller$43$Gift$$snedker$Fødesogn: Ørting$$$Ørting, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$43.0$261959$Gift$42.0
+FT-1845$297.0$Brabrand By$1$boelsted, 51$Inger Marie Pedersdatter$34$Gift$$hans kone$Fødesogn: Hørning$$$Hørning, Skanderborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$34.0$261739$Gift$33.0
+FT-1845$585.0$True By$1$gård, 27$Jens Jensen$5$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$5.0$261525$Ugift$4.0
+FT-1845$339.0$Brabrand By$1$boelsted, 59$Maren Olesen$7$Ugift$$deres datter$Fødesogn: Søften$$$Zeuthen, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$7.0$261400$Ugift$6.0
+FT-1845$176.0$Brabrand By$1$gård, 32$Bone Michelsen$2$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$2.0$261520$Ugift$1.0
+FT-1845$375.0$Gjellerup By$1$gård, 4$Ane Marie Erichsdatter$39$Ugift$$tjenestepige$Fødesogn: Tilst$$$Tiilst, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$39.0$261612$Ugift$38.0
+FT-1845$41.0$Brabrand By$1$hus, 8$Mariane Andersdatter$42$Gift$$hans kone$Fødesogn: Skejby$$$Scheibye, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$42.0$261675$Gift$41.0
+FT-1845$214.0$Brabrand By$2$gård, 37$Ane Sørensdatter$49$Enke$$hendes datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$49.0$261765$Enke$48.0
+FT-1845$634.0$True By$1$hus, 35$Christine Pedersen$3$Ugift$$deres datter$Fødesogn: Harlev$$$Harlev, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$3.0$261971$Ugift$2.0
+FT-1845$625.0$True By$1$hus, 33$Helle Maria Nielsen$11$Ugift$$plejedatter$Fødesogn: Framlev$$$Framlev, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$11.0$261667$Ugift$10.0
+FT-1845$332.0$Brabrand By$1$boelsted, 58$Peder Johansen$3$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$3.0$261777$Ugift$2.0
+FT-1845$144.0$Brabrand By$1$hus, 28$Jørgen Sørensen$41$Gift$$jordbruger$Fødesogn: Skørring$$$Skjørring, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$41.0$261622$Gift$40.0
+FT-1845$182.0$Brabrand By$1$hus, 33$Ane Marie Espensdatter$54$Gift$$hans kone$Fødesogn: Skejby$$$Scheibye, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$54.0$261976$Gift$53.0
+FT-1845$71.0$Brabrand By$3$hus, 15$Mette Knudsen$9$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$9.0$261540$Ugift$8.0
+FT-1845$404.0$True By$1$gård, 2$Niels Nielsen$25$Ugift$$tjenestekarl$Fødesogn: Vejlby$$$Weilby, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$25.0$261595$Ugift$24.0
+FT-1845$510.0$True By$3$hus, 18$Ole Sørensen$38$Gift$$inderste, daglejer$Fødesogn: Åby$$$Aabye, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$38.0$261678$Gift$37.0
+FT-1845$373.0$Gjellerup By$1$gård, 4$Helle Marie Jensen$7$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$7.0$261612$Ugift$6.0
+FT-1845$186.0$Brabrand By$1$gård, 34$Kjersten Andersdatter$39$Gift$$hans kone$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$39.0$261671$Gift$38.0
+FT-1845$414.0$True By$1$gård, 4$Niels Nielsen$3$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$3.0$261637$Ugift$2.0
+FT-1845$11.0$Brabrand By$1$skolen, 2$Inger Marie Poulsen$17$Ugift$$tjenestepige$Fødesogn: Årslev$$$Aarslev, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$17.0$261804$Ugift$16.0
+FT-1845$608.0$True By$1$gård, 30$Jens Olesen$7$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$7.0$261389$Ugift$6.0
+FT-1845$183.0$Brabrand By$1$hus, 33$Helle Marie Pedersen$23$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$23.0$261976$Ugift$22.0
+FT-1845$70.0$Brabrand By$3$hus, 15$Michel Knudsen$13$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$13.0$261540$Ugift$12.0
+FT-1845$185.0$Brabrand By$1$gård, 34$Rasmus Sørensen$47$Gift$$gårdmand$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$47.0$261671$Gift$46.0
+FT-1845$602.0$True By$1$gård, 29$Jens Jensen$9$Ugift$$plejesøn, dattersøn$Fødesogn: Brabrand Noter: tilnavn: Graver$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$9.0$261662$Ugift$8.0
+FT-1845$446.0$True By$1$gård, 9$Birthe Maria Jensdatter$44$Gift$$hans kone$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$44.0$261606$Gift$43.0
+FT-1845$500.0$True By$1$hus, 17$Birthe Maria Jensen$26$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$26.0$261940$Ugift$25.0
+FT-1845$219.0$Brabrand By$1$gård, 38$Thomas Sørensen$21$Ugift$$tjenestekarl$Fødesogn: Lemming$$$Lemming, Wiborg$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$21.0$261635$Ugift$20.0
+FT-1845$590.0$True By$1$gård, 28$Jens Mortensen$40$Gift$$gårdmand$Fødesogn: Sjelle$$$Sjelle, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$40.0$261620$Gift$39.0
+FT-1845$328.0$Brabrand By$2$boelsted, 57$Ane Catrine Pedersen$14$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$14.0$261986$Ugift$13.0
+FT-1845$496.0$True By$1$gård, 16$Else Pedersen$4$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$4.0$261455$Ugift$3.0
+FT-1845$588.0$True By$1$gård, 27$Helle Mortensen$20$Ugift$$tjenestepige$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$20.0$261525$Ugift$19.0
+FT-1845$672.0$True By$1$hovedgård, 41$Severine Due$27$Ugift$$husjomfru$Fødesogn: Aarhus$$$Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$27.0$261565$Ugift$26.0
+FT-1845$51.0$Brabrand By$1$hus, 10$Margrethe Christensdatter$24$Ugift$$væverlærling$Fødesogn: Ormslev$$$Ormslev, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$24.0$261642$Ugift$23.0
+FT-1845$601.0$True By$1$gård, 29$Niels Jensen$17$Ugift$$hans søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$17.0$261662$Ugift$16.0
+FT-1845$225.0$Brabrand By$1$gård, 39$Christian Wilhelm Buch$5$Ugift$$hendes søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$5.0$261468$Ugift$4.0
+FT-1845$116.0$Brabrand By$1$gård, 24$Rasmus Bering Nielsen$8$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$8.0$261422$Ugift$7.0
+FT-1845$194.0$Brabrand By$1$gård, 35$Jørgen Mørk Sørensen$33$Gift$$deres søn$Fødesogn: Tilst$$$Tiilst$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$33.0$261410$Gift$32.0
+FT-1845$232.0$Brabrand By$1$hus, 40$Maren Christensdatter$44$Gift$$hans kone$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$44.0$261412$Gift$43.0
+FT-1845$250.0$Brabrand By$1$hus, 42$Anders Peter Jensen$7$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$7.0$261959$Ugift$6.0
+FT-1845$23.0$Brabrand By$1$hus, 4$Frederiche Christensen$22$Ugift$$væverlærling$Fødesogn: Ormslev$$$Ormslev, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$22.0$261864$Ugift$21.0
+FT-1845$537.0$True By$1$hus, 21$Ingeborg Jørgensdatter$30$Gift$$hans kone$Fødesogn: Hasle$$$Hasle, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$30.0$261649$Gift$29.0
+FT-1845$95.0$Brabrand By$1$gård, 20$Ane Pedersdatter$47$Ugift$$tjenestepige$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$47.0$261640$Ugift$46.0
+FT-1845$256.0$Brabrand By$1$hus, 44$Maren Rasmusdatter$49$Gift$$hans kone$Fødesogn: Borum$$$Borum, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$49.0$261854$Gift$48.0
+FT-1845$656.0$True By$1$gård, 39$Mette Ladsen$5$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$5.0$261432$Ugift$4.0
+FT-1845$567.0$True By$1$hus, 25$Jens Clemmensen$35$Ugift$$væversvend$Fødesogn: Onsbjerg$$$Onsbjerg, Samsø, Holbæk$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$35.0$261860$Ugift$34.0
+FT-1845$633.0$True By$1$hus, 35$Maren Jensdatter$32$Gift$$hans kone$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$32.0$261971$Gift$31.0
+FT-1845$673.0$True By$1$hovedgård, 41$Maren Jensdatter$31$Ugift$$tjenestepige$Fødesogn: Næstelsø$$$Næstelsøe, Præstøe$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$31.0$261565$Ugift$30.0
+FT-1845$543.0$True By$3$hus, 21$Anne Cathrine Jacobsen$38$Ugift$$inderste, spinderske$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$38.0$262010$Ugift$37.0
+FT-1845$101.0$Brabrand By$1$gård, 21$Rasmus Sørensen$13$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$13.0$261384$Ugift$12.0
+FT-1845$35.0$Brabrand By$1$gård, 7$Kjersten Christophersdatter$29$Ugift$$tjenestepige$Fødesogn: Skovby$$$Skovby, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$29.0$261577$Ugift$28.0
+FT-1845$104.0$Brabrand By$1$gård, 22$Ane Pedersdatter$55$Gift$$hans kone$Fødesogn: Ormslev$$$Ormslev, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$55.0$261657$Gift$54.0
+FT-1845$442.0$True By$1$gård, 8$Rasmus Sørensen$1$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$1.0$261721$Ugift$0.0
+FT-1845$638.0$True By$1$gård, 36$Helle Pedersen$7$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$7.0$261539$Ugift$6.0
+FT-1845$311.0$Brabrand By$1$hus, 54$Kjersten Enevoldsen$8$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$8.0$261648$Ugift$7.0
+FT-1845$495.0$True By$1$gård, 16$Maren Pedersen$6$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$6.0$261455$Ugift$5.0
+FT-1845$107.0$Brabrand By$1$gård, 22$Ane Pedersdatter$47$Ugift$$tjenestepige$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$47.0$261657$Ugift$46.0
+FT-1845$403.0$True By$1$gård, 2$Anne Lauritzdatter$51$Gift$$hans kone$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$51.0$261595$Gift$50.0
+FT-1845$454.0$True By$1$hus, 10$Rasmus Peder Olesen$3$Ugift$$deres søn$Fødesogn: Årslev$$$Aarslev, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$3.0$261873$Ugift$2.0
+FT-1845$115.0$Brabrand By$1$gård, 24$Sidsel Marie Pedersdatter$37$Gift$$hans kone$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$37.0$261422$Gift$36.0
+FT-1845$248.0$Brabrand By$1$hus, 42$Inger Kjerstine Møller$12$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$12.0$261959$Ugift$11.0
+FT-1845$586.0$True By$1$gård, 27$Niels Jensen$2$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$2.0$261525$Ugift$1.0
+FT-1845$127.0$Brabrand By$1$boelsted, 25$Rasmus Sørensen$12$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$12.0$261684$Ugift$11.0
+FT-1845$478.0$True By$2$gård, 13$Sidsel Marie Pedersen$1$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$1.0$261716$Ugift$0.0
+FT-1845$130.0$Brabrand By$1$gård, 26$Peder Nielsen Klog$58$Gift$$gårdmand$Fødesogn: Hasle$$$Hasle, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$58.0$261749$Gift$57.0
+FT-1845$613.0$True By$1$gård, 30$Rasmus Sørensen$32$Ugift$$tjenestekarl$Fødesogn: Borum$$$Borum, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$32.0$261389$Ugift$31.0
+FT-1845$56.0$Brabrand By$1$hus, 13$Birthe Marie Carlsdatter$34$Enke$$spinderske$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$34.0$262023$Enke$33.0
+FT-1845$379.0$Gjellerup By$1$gård, 5$Hyleborg Nicoline Cathrin Sole$27$Gift$$hans kone$Fødesogn: Skanderup Noter: Cathrine$$$Skanderup, Skanderborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$27.0$261512$Gift$26.0
+FT-1845$193.0$Brabrand By$1$gård, 35$Maren Nielsdatter$66$Gift$$hans kone$Fødesogn: Kasted$$$Casted, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$66.0$261410$Gift$65.0
+FT-1845$272.0$Brabrand By$1$gård, 47$Carl Frederich Engberg$27$Gift$$bestyrer$Fødesogn: As$$$As, Vejle$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$27.0$261497$Gift$26.0
+FT-1845$564.0$True By$1$hus, 25$Søren Pedersen$6$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$6.0$261860$Ugift$5.0
+FT-1845$437.0$True By$1$gård, 7$Helle Rasmussen$4$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$4.0$261504$Ugift$3.0
+FT-1845$140.0$Brabrand By$1$hus, 27$Johannes Pedersen$1$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$1.0$261598$Ugift$0.0
+FT-1845$657.0$True By$1$gård, 39$Karen Ladsen$4$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$4.0$261432$Ugift$3.0
+FT-1845$344.0$Brabrand By$1$hus, 60$Maren Rasmusdatter$53$Gift$$hans kone$Fødesogn: Dallerup$$$Dallerup, Skanderborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$53.0$261775$Gift$52.0
+FT-1845$334.0$Brabrand By$1$boelsted, 58$Mette Otto Jørgensen$17$Ugift$$tjenestepige$Fødesogn: Skovby$$$Schoubye, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$17.0$261777$Ugift$16.0
+FT-1845$33.0$Brabrand By$1$gård, 7$Peder Nielsen Loft$61$Gift$$gårdmand$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$61.0$261577$Gift$60.0
+FT-1845$503.0$True By$1$hus, 18$Kjersten Hansen$12$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$12.0$261623$Ugift$11.0
+FT-1845$648.0$True By$1$gård, 37$Niels Pedersen$58$Ugift$$husfaderens farbroder, der af ham forsørges$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$58.0$261659$Ugift$57.0
+FT-1845$156.0$Brabrand By$1$hus, 29$Anders Lauersen$5$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$5.0$261545$Ugift$4.0
+FT-1845$42.0$Brabrand By$1$hus, 8$Niels Pedersen$15$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$15.0$261675$Ugift$14.0
+FT-1845$622.0$True By$1$hus, 32$Christian Pedersen$10$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$10.0$261664$Ugift$9.0
+FT-1845$252.0$Brabrand By$1$hus, 43$Jens Møldrup$50$Ugift$$hendes søn$Fødesogn: Brabrand Noter: stilling mangler i FT$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$50.0$261672$Ugift$49.0
+FT-1845$181.0$Brabrand By$1$hus, 33$Peder Nielsen Nørgaard$71$Gift$$lever af sin jordlod$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$71.0$261976$Gift$70.0
+FT-1845$86.0$Brabrand By$1$hus, 19$Else Rasmine Jensen$29$Gift$$hans kone$Fødesogn: Låsby$$$Laasbye, Skanderborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$29.0$261634$Gift$28.0
+FT-1845$128.0$Brabrand By$1$boelsted, 25$Hans Peter Sørensen$8$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$8.0$261684$Ugift$7.0
+FT-1845$207.0$Brabrand By$1$gård, 37$Lucie Fransen$9$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$9.0$261554$Ugift$8.0
+FT-1845$327.0$Brabrand By$2$boelsted, 57$Ane Pedersdatter$56$Gift$$hans kone$Fødesogn: Lyngby$$$Lyngbye, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$56.0$261986$Gift$55.0
+FT-1845$368.0$Gjellerup By$1$gård, 3$Mette Marie Pedersen$25$Ugift$$tjenestepige$Fødesogn: Viby$$$Wibye, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$25.0$261655$Ugift$24.0
+FT-1845$83.0$Brabrand By$1$hus, 18$Peder Jørgen Rasmussen$4$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$4.0$261564$Ugift$3.0
+FT-1845$347.0$Brabrand By$1$hus, 60$Jens Peter Nielsen$8$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$8.0$261775$Ugift$7.0
+FT-1845$685.0$True By$1$hovedgård, 41$Johannes Peter Brøndum$26$Ugift$$tjenestekarl$Fødesogn: Aarhus Noter: i FT: 138 fam. = 685 pers.$$$Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$26.0$261565$Ugift$25.0
+FT-1845$212.0$Brabrand By$2$gård, 37$Maren Nielsdatter$75$Enke$$aftægtskone$Fødesogn: Aarhus$$$Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$75.0$261765$Enke$74.0
+FT-1845$343.0$Brabrand By$1$hus, 60$Niels Jensen$63$Gift$$daglejer$Fødesogn: Hadsten$$$Hadsten, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$63.0$261775$Gift$62.0
+FT-1845$333.0$Brabrand By$1$boelsted, 58$Johannes Peter Johansen$1$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$1.0$261777$Ugift$0.0
+FT-1845$27.0$Brabrand By$1$hus, 6$Kjersten Jensdatter$46$Gift$$hans kone$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$46.0$261666$Gift$45.0
+FT-1845$453.0$True By$1$hus, 10$Christence Olesen$5$Ugift$$deres datter$Fødesogn: Årslev$$$Aarslev, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$5.0$261873$Ugift$4.0
+FT-1845$635.0$True By$1$hus, 35$Jens Pedersen$1$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$1.0$261971$Ugift$0.0
+FT-1845$99.0$Brabrand By$1$gård, 21$Anders Sørensen$19$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$19.0$261384$Ugift$18.0
+FT-1845$603.0$True By$1$gård, 29$Jens Jensen$7$Ugift$$plejesøn, dattersøn$Fødesogn: Brabrand Noter: tilnavn: Engkjær$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$7.0$261662$Ugift$6.0
+FT-1845$271.0$Brabrand By$1$gård, 47$Marie Hoffman$56$Enke$$ejer af Tousgaard$Fødesogn: Hamborg Noter: Tousgård$$$Hamborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$56.0$261497$Enke$55.0
+FT-1845$14.0$Brabrand By$1$gård, 3$Søren Pedersen$16$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$16.0$261784$Ugift$15.0
+FT-1845$112.0$Brabrand By$1$hus, 23$Kjersten Jensen$27$Ugift$$deres datter, væver$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$27.0$261781$Ugift$26.0
+FT-1845$464.0$True By$1$hus, 12$Kjersten Jensen$11$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$11.0$261816$Ugift$10.0
+FT-1845$629.0$True By$1$gård, 34$Kjersten Jensen$2$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$2.0$261521$Ugift$1.0
+FT-1845$594.0$True By$1$gård, 28$Kjersten Jensen$13$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$13.0$261620$Ugift$12.0
+FT-1845$516.0$True By$1$gård, 19$Kjersten Jespersen$24$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$24.0$261625$Ugift$23.0
+FT-1845$4.0$Brabrand By$1$præstegård, 1$Mette Christensdatter$24$Ugift$$tjenestepige$Fødesogn: Gjern$$$Gjern, Skanderborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$24.0$261472$Ugift$23.0
+FT-1845$632.0$True By$1$hus, 35$Peder Christensen Haugaard$32$Gift$$husmand med jord, møllebygger og valkemøller$Fødesogn: Harlev Noter: valkemølle$$$Harlev, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$32.0$261971$Gift$31.0
+FT-1845$444.0$True By$2$gård, 8$Sophia Nissen$41$Ugift$$inderste, spinderske$Fødesogn: Ålborg$$$Aalborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$41.0$262058$Ugift$40.0
+FT-1845$60.0$Brabrand By$1$hus, 14$Maren Nielsdatter$53$Gift$$hans kone$Fødesogn: Fårup$$$Faarup, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$53.0$262062$Gift$52.0
+FT-1845$147.0$Brabrand By$1$hus, 28$Niels Hendrichsen$6$Ugift$$hendes søn$Fødesogn: Brabrand Noter: i FT: deres søn$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$6.0$261622$Ugift$5.0
+FT-1845$135.0$Brabrand By$1$hus, 27$Peder Jensen$35$Gift$$skrædder$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$35.0$261598$Gift$34.0
+FT-1845$314.0$Brabrand By$1$hus, 55$Rasmus Nicolaisen$58$Gift$$jordbruger$Fødesogn: Odder$$$Odder, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$58.0$261907$Gift$57.0
+FT-1845$141.0$Brabrand By$1$hus, 27$Ane Marie Jørgensdatter$24$Ugift$$skrædderlærling$Fødesogn: Foldby$$$Foldbye, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$24.0$261598$Ugift$23.0
+FT-1845$74.0$Brabrand By$1$hus, 16$Ane Olesdatter$56$Gift$$hans kone$Fødesogn: Røgen$$$Røgen, Skanderborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$56.0$261841$Gift$55.0
+FT-1845$265.0$Brabrand By$1$gård, 46$Ane Marie Jørgensdatter$33$Gift$$hans kone$Fødesogn: Hasle$$$Hasle, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$33.0$261611$Gift$32.0
+FT-1845$457.0$True By$1$hus, 11$Mathias Jespersen$12$Ugift$$hendes søn$Fødesogn: Brabrand Noter: i FT: deres søn$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$12.0$261411$Ugift$11.0
+FT-1845$552.0$True By$1$gård, 23$Jens Nielsen$17$Ugift$$tjenestekarl$Fødesogn: Dover$$$Dover, Skanderborg$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$17.0$261643$Ugift$16.0
+FT-1845$560.0$True By$1$gård, 24$Jens Nielsen$1$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$1.0$261399$Ugift$0.0
+FT-1845$205.0$Brabrand By$1$gård, 37$Maren Fransen$21$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$21.0$261554$Ugift$20.0
+FT-1845$450.0$True By$1$gård, 9$Anne Cathrine Laursdatter$20$Ugift$$tjenestepige$Fødesogn: Skivholme$$$Skivholme, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$20.0$261606$Ugift$19.0
+FT-1845$499.0$True By$1$hus, 17$Maren Jensdatter$57$Gift$$hans kone$Fødesogn: Tilst$$$Tiilst, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$57.0$261940$Gift$56.0
+FT-1845$57.0$Brabrand By$1$hus, 13$Ane Marie Schmidt$8$Ugift$$hendes datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$8.0$262023$Ugift$7.0
+FT-1845$641.0$True By$1$gård, 36$Just Rasmussen$19$Ugift$$tjenestekarl$Fødesogn: Hasle$$$Hasle, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$19.0$261539$Ugift$18.0
+FT-1845$15.0$Brabrand By$1$gård, 3$Niels Pedersen$12$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$12.0$261784$Ugift$11.0
+FT-1845$92.0$Brabrand By$1$gård, 20$Karen Poulsen$7$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$7.0$261640$Ugift$6.0
+FT-1845$254.0$Brabrand By$1$hus, 43$Maren Knudsdatter$40$Ugift$$tjenestepige$Fødesogn: Foldby$$$Fohlbye, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$40.0$261672$Ugift$39.0
+FT-1845$244.0$Brabrand By$1$hus, 41$Kjersten Madsdatter$25$Ugift$$tjenestepige$Fødesogn: Storring$$$Storring, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$25.0$261624$Ugift$24.0
+FT-1845$456.0$True By$1$hus, 11$Kjersten Madsdatter$39$Gift$$hans kone$Fødesogn: Lyngby$$$Lyngbye, Randers$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$39.0$261411$Gift$38.0
+FT-1845$591.0$True By$1$gård, 28$Maren Jensdatter$41$Gift$$hans kone$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$41.0$261620$Gift$40.0
+FT-1845$263.0$Brabrand By$1$hus, 45$Johannes Rasmussen$3$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$3.0$261609$Ugift$2.0
+FT-1845$481.0$True By$1$gård, 14$Kjersten Maria Jensen$27$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$27.0$261656$Ugift$26.0
+FT-1845$429.0$True By$1$gård, 7$Maren Rasmusdatter$43$Gift$$hans kone$Fødesogn: Kolt$$$Koldt, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$43.0$261504$Gift$42.0
+FT-1845$331.0$Brabrand By$1$boelsted, 58$Marie Magdalene Wulff$31$Gift$$hans kone$Fødesogn: Lading$$$Ladding, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$31.0$261777$Gift$30.0
+FT-1845$522.0$True By$1$gård, 20$Mette Christensdatter$40$Gift$$hans kone$Fødesogn: Lading$$$Lading, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$40.0$261685$Gift$39.0
+FT-1845$162.0$Brabrand By$1$hus, 31$Peder Jensen$32$Gift$$væver$Fødesogn: Hasle Noter: bygningsnr 31 er opført 2 gang$$$Hasle, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$32.0$261814$Gift$31.0
+FT-1845$137.0$Brabrand By$1$hus, 27$Jens Peter Pedersen$11$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$11.0$261598$Ugift$10.0
+FT-1845$644.0$True By$1$gård, 37$Kjersten Maria Mogensdatter$26$Gift$$hans kone$Fødesogn: Framlev$$$Framlev, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$26.0$261659$Gift$25.0
+FT-1845$527.0$True By$1$gård, 20$Kjersten Maria Poulsen$5$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$5.0$261685$Ugift$4.0
+FT-1845$581.0$True By$1$gård, 27$Kjersten Maria Rasmusdatter$40$Gift$$hans kone$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$40.0$261525$Gift$39.0
+FT-1845$69.0$Brabrand By$3$hus, 15$Kjersten Marie Andersdatter$43$Gift$$hans kone$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$43.0$261540$Gift$42.0
+FT-1845$650.0$True By$1$gård, 38$Anders Andersen$31$Gift$$gårdmand$Fødesogn: Søften Noter: Stillinggård$$$Zeuthen, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$31.0$261502$Gift$30.0
+FT-1845$32.0$Brabrand By$1$hus, 6$Maren Frederichsdatter$67$Gift$$hans kone$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$67.0$261666$Gift$66.0
+FT-1845$480.0$True By$1$gård, 14$Bodil Jensdatter$59$Gift$$hans kone$Fødesogn: Galten$$$S. Galthen, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$59.0$261656$Gift$58.0
+FT-1845$171.0$Brabrand By$2$hus, 31$Peder Jensen$11$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$11.0$261733$Ugift$10.0
+FT-1845$396.0$True By$1$skolen, 1$Hans Hansen Thiesen$49$Gift$$skolelærer$Fødesogn: Tandslet$$$Tandslet, Augustenborg$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$49.0$261616$Gift$48.0
+FT-1845$370.0$Gjellerup By$1$gård, 4$Kjersten Marie Erichsdatter$44$Gift$$hans kone$Fødesogn: Tilst$$$Tiilst, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$44.0$261612$Gift$43.0
+FT-1845$438.0$True By$1$gård, 7$Søren Ernstsen$32$Ugift$$tjenestekarl$Fødesogn: Veng$$$Wenge, Skanderborg$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$32.0$261504$Ugift$31.0
+FT-1845$165.0$Brabrand By$2$hus, 31$Jens Nielsen$55$Gift$$væver$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$55.0$261733$Gift$54.0
+FT-1845$411.0$True By$1$gård, 3$Anders Andersen$17$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$17.0$261561$Ugift$16.0
+FT-1845$177.0$Brabrand By$1$gård, 32$Mogens Bonesen$36$Ugift$$tjenestekarl$Fødesogn: Søften$$$Zeuthen, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$36.0$261520$Ugift$35.0
+FT-1845$452.0$True By$1$hus, 10$Anne Sophie Rasmussen$26$Gift$$hans kone$Fødesogn: Årslev$$$Aarslev, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$26.0$261873$Gift$25.0
+FT-1845$29.0$Brabrand By$1$hus, 6$Jens Jørgensen$9$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$9.0$261666$Ugift$8.0
+FT-1845$651.0$True By$1$gård, 38$Johanne Maria Nielsen$29$Gift$$hans kone$Fødesogn: Tilst$$$Tiilst, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$29.0$261502$Gift$28.0
+FT-1845$415.0$True By$1$gård, 4$Lauritz Nielsen$1$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$1.0$261637$Ugift$0.0
+FT-1845$136.0$Brabrand By$1$hus, 27$Kjersten Marie Johansen$26$Gift$$hans kone$Fødesogn: Sabro$$$Sabroe, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$26.0$261598$Gift$25.0
+FT-1845$164.0$Brabrand By$1$hus, 31$Ane Pedersen$1$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$1.0$261814$Ugift$0.0
+FT-1845$48.0$Brabrand By$1$hus, 10$Dorthe Andersdatter$37$Enke$$væver$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$37.0$261642$Enke$36.0
+FT-1845$124.0$Brabrand By$1$boelsted, 25$Søren Pedersen$50$Gift$$jordbruger$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$50.0$261684$Gift$49.0
+FT-1845$264.0$Brabrand By$1$gård, 46$Jens Andersen$34$Gift$$gårdmand$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$34.0$261611$Gift$33.0
+FT-1845$541.0$True By$2$hus, 21$Johanne Maria Rasmusdatter$29$Gift$$hans kone$Fødesogn: Voldby$$$Woldbye, Skanderborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$29.0$261636$Gift$28.0
+FT-1845$386.0$Gjellerup By$1$gård, 5$Kjersten Marie Lauersdatter$27$Ugift$$tjenestepige$Fødesogn: Lading$$$Ladding, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$27.0$261512$Ugift$26.0
+FT-1845$142.0$Brabrand By$1$hus, 27$Jens Sørensen$19$Ugift$$skrædderlærling$Fødesogn: Veng$$$Wenge, Skanderborg$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$19.0$261598$Ugift$18.0
+FT-1845$247.0$Brabrand By$1$hus, 42$Ane Jensdatter$44$Gift$$hans kone$Fødesogn: Hassing$$$Hassing, Thisted$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$44.0$261959$Gift$43.0
+FT-1845$178.0$Brabrand By$1$gård, 32$Bodil Jensen$19$Ugift$$tjenestepige$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$19.0$261520$Ugift$18.0
+FT-1845$426.0$True By$1$gård, 6$Michel Pedersen$35$Enke$$gårdmand$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$35.0$262098$Enke$34.0
+FT-1845$360.0$Gjellerup By$1$gård, 2$Ole Andersen$21$Ugift$$tjenestekarl$Fødesogn: Veng$$$Wenge, Skanderborg$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$21.0$261390$Ugift$20.0
+FT-1845$16.0$Brabrand By$1$gård, 3$Ane Pedersen$10$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$10.0$261784$Ugift$9.0
+FT-1845$389.0$Gjellerup By$1$gård, 6$Niels Mariussen$7$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$7.0$261588$Ugift$6.0
+FT-1845$553.0$True By$1$gård, 23$Maren Knudsen$19$Ugift$$tjenestepige$Fødesogn: Låsby$$$Laasbye, Skanderborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$19.0$261643$Ugift$18.0
+FT-1845$98.0$Brabrand By$1$gård, 21$Maren Andersdatter$45$Gift$$hans kone$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$45.0$261384$Gift$44.0
+FT-1845$146.0$Brabrand By$1$hus, 28$Søren Nielsen$14$Ugift$$hendes søn$Fødesogn: Framlev Noter: i FT: deres søn$$$Framlev, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$14.0$261622$Ugift$13.0
+FT-1845$268.0$Brabrand By$1$gård, 46$Kjersten Marie Sørensen$28$Ugift$$tjenestepige$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$28.0$261611$Ugift$27.0
+FT-1845$472.0$True By$1$gård, 13$Lauritz Peter Jensen$5$Ugift$$plejesøn, hendes dattersøn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$5.0$261421$Ugift$4.0
+FT-1845$346.0$Brabrand By$1$hus, 60$Ane Marie Nielsen$14$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$14.0$261775$Ugift$13.0
+FT-1845$562.0$True By$1$hus, 25$Anne Stine Sørensen$35$Gift$$hans kone$Fødesogn: Mesing$$$Mesing, Skanderborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$35.0$261860$Gift$34.0
+FT-1845$38.0$Brabrand By$1$gård, 7$Peder Jacobsen$18$Ugift$$tjenestekarl$Fødesogn: Viby$$$Wibye, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$18.0$261577$Ugift$17.0
+FT-1845$239.0$Brabrand By$1$hus, 41$Cidsel Marie Jacobsen$6$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$6.0$261624$Ugift$5.0
+FT-1845$362.0$Gjellerup By$1$gård, 3$Jens Rasmussen$20$Ugift$$hans søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$20.0$261655$Ugift$19.0
+FT-1845$65.0$Brabrand By$2$hus, 15$Jesper Pedersen$41$Gift$$daglejer$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$41.0$261610$Gift$40.0
+FT-1845$145.0$Brabrand By$1$hus, 28$Maren Sørensdatter$42$Gift$$hans kone$Fødesogn: Dover$$$Dover, Skanderborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$42.0$261622$Gift$41.0
+FT-1845$367.0$Gjellerup By$1$gård, 3$Cidsel Marie Rasmussen$4$Ugift$$hans datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$4.0$261655$Ugift$3.0
+FT-1845$274.0$Brabrand By$1$gård, 47$Johan Ternton Hoffman$53$Ugift$$ejerindens broder$Fødesogn: Hamborg Noter: fjollet i 53 år$$$Hamborg$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$53.0$261497$Ugift$52.0
+FT-1845$395.0$Gjellerup By$1$hus, 7$Cidsel Mogensdatter$67$Gift$$hans kone$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$67.0$262118$Gift$66.0
+FT-1845$24.0$Brabrand By$1$hus, 5$Søren Lauersen$71$Gift$$fisker$Fødesogn: Tilst$$$Tiilst, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$71.0$262125$Gift$70.0
+FT-1845$20.0$Brabrand By$1$hus, 4$Niels Ditlevsen$43$Gift$$fisker$Fødesogn: Framlev$$$Framlev, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$43.0$261864$Gift$42.0
+FT-1845$242.0$Brabrand By$1$hus, 41$Jens Peter Rasmussen$18$Ugift$$skrædderlærling$Fødesogn: Trige$$$Trige, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$18.0$261624$Ugift$17.0
+FT-1845$139.0$Brabrand By$1$hus, 27$Ane Johanne Pedersen$6$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$6.0$261598$Ugift$5.0
+FT-1845$230.0$Brabrand By$2$gård, 39$Peder Jensen$14$Ugift$$hendes søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$14.0$261821$Ugift$13.0
+FT-1845$584.0$True By$1$gård, 27$Rasmus Jensen$8$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$8.0$261525$Ugift$7.0
+FT-1845$647.0$True By$1$gård, 37$Søren Pedersen$2$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$2.0$261659$Ugift$1.0
+FT-1845$66.0$Brabrand By$2$hus, 15$Johanne Marie Pedersen$45$Gift$$hans kone$Fødesogn: Brabrand Noter: fornavn jfr. FT 1850$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$45.0$261610$Gift$44.0
+FT-1845$617.0$True By$1$hus, 31$Lauritz Rasmussen$5$Ugift$$hans søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$5.0$261530$Ugift$4.0
+FT-1845$374.0$Gjellerup By$1$gård, 4$Rassemine Jensen$5$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$5.0$261612$Ugift$4.0
+FT-1845$227.0$Brabrand By$1$gård, 39$Ane Magrethe Elisabet Nielsdatter$29$Ugift$$tjenestepige$Fødesogn: Dallerup$$$Sorring, Schanderborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$29.0$261468$Ugift$28.0
+FT-1845$304.0$Brabrand By$1$hus, 52$Niels Peter Pedersen$3$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$3.0$261676$Ugift$2.0
+FT-1845$59.0$Brabrand By$1$hus, 14$Niels Rasmussen$70$Gift$$fisker$Fødesogn: Hasle$$$Hasle, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$70.0$262062$Gift$69.0
+FT-1845$600.0$True By$1$gård, 29$Søren Jensen$22$Ugift$$hans søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$22.0$261662$Ugift$21.0
+FT-1845$288.0$Brabrand By$1$hus, 49$Karen Marie Michelsen$5$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$5.0$261797$Ugift$4.0
+FT-1845$243.0$Brabrand By$1$hus, 41$Niels Rasmussen$16$Ugift$$skrædderlærling$Fødesogn: Veng$$$Wenge, Schanderborg$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$16.0$261624$Ugift$15.0
+FT-1845$319.0$Brabrand By$1$hus, 56$Peder Jacobsen$62$Gift$$daglejer$Fødesogn: Dallerup$$$Dallerup, Skanderborg$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$62.0$262168$Gift$61.0
+FT-1845$39.0$Brabrand By$1$gård, 7$Søren Jensen$17$Ugift$$tjenestekarl$Fødesogn: Brabrand$$$Her i Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$17.0$261577$Ugift$16.0
+FT-1845$677.0$True By$1$hovedgård, 41$Jens Rasmussen$37$Ugift$$tjenestekarl$Fødesogn: Kasted$$$Kasted$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$37.0$261565$Ugift$36.0
+FT-1845$211.0$Brabrand By$1$gård, 37$Karen Andersdatter$15$Ugift$$tjenestepige$Fødesogn: Hasle$$$Hasle, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$15.0$261554$Ugift$14.0
+FT-1845$570.0$True By$1$fattighus, 26$Kjersten Nielsdatter$24$Ugift$$hendes datter, uægte$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$24.0$261480$Ugift$23.0
+FT-1845$299.0$Brabrand By$1$boelsted, 51$Sophie Michelsen$4$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$4.0$261739$Ugift$3.0
+FT-1845$418.0$True By$1$gård, 5$Søren Lauritzen$52$Gift$$gårdmand$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$52.0$261566$Gift$51.0
+FT-1845$419.0$True By$1$gård, 5$Kjersten Nielsdatter$39$Gift$$hans kone$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$39.0$261566$Gift$38.0
+FT-1845$196.0$Brabrand By$1$gård, 35$Anders Jørgensen$1$Ugift$$Jørgen Mørk Sørensens søn$Fødesogn: Brabrand Noter: i FT: udøbt søn$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$1.0$261410$Ugift$0.0
+FT-1845$548.0$True By$2$hus, 22$Anne Cathrine Pedersen$55$Enke$$inderste, ernærer sig ved at spinde og binde$Fødesogn: Låsby$$$Laasbye, Skanderborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$55.0$262172$Enke$54.0
+FT-1845$628.0$True By$1$gård, 34$Anne Cathrine Pedersen$30$Gift$$hans kone$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$30.0$261521$Gift$29.0
+FT-1845$575.0$True By$3$fattighus, 26$Juliane Maria Johansen$5$Ugift$$hendes datter, uægte$Fødesogn: Gødvad$$$Gjødvad, Wiborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$5.0$261760$Ugift$4.0
+FT-1845$154.0$Brabrand By$1$hus, 29$Mette Andersdatter$32$Gift$$hans kone$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$32.0$261545$Gift$31.0
+FT-1845$490.0$True By$1$gård, 16$Anne Cathrine Pedersen$17$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$17.0$261455$Ugift$16.0
+FT-1845$563.0$True By$1$hus, 25$Anne Cathrine Pedersen$9$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$9.0$261860$Ugift$8.0
+FT-1845$173.0$Brabrand By$1$gård, 32$Michel Rasmussen$37$Gift$$gårdmand$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$37.0$261520$Gift$36.0
+FT-1845$337.0$Brabrand By$1$boelsted, 59$Peder Olesen$18$Ugift$$deres søn$Fødesogn: Søften$$$Zeuthen, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$18.0$261400$Ugift$17.0
+FT-1845$131.0$Brabrand By$1$gård, 26$Else Sørensdatter$59$Gift$$hans kone$Fødesogn: Hasle$$$Hasle, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$59.0$261749$Gift$58.0
+FT-1845$19.0$Brabrand By$1$gård, 3$Michel Rasmussen$24$Ugift$$tjenestekarl$Fødesogn: Årslev$$$Aarslev, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$24.0$261784$Ugift$23.0
+FT-1845$189.0$Brabrand By$1$gård, 34$Hans Hendrich Andersen$18$Ugift$$tjenestekarl$Fødesogn: Skørring$$$Skjørring, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$18.0$261671$Ugift$17.0
+FT-1845$350.0$Gjellerup By$1$hus, 1$Jacob Madsen$83$Enke$$lever af sin formue$Fødesogn: Skanderup$$$Skanderup, Skanderborg$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$83.0$261776$Enke$82.0
+FT-1845$422.0$True By$1$gård, 5$Lauritz Sørensen$13$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$13.0$261566$Ugift$12.0
+FT-1845$320.0$Brabrand By$1$hus, 56$Mette Jensdatter$71$Gift$$hans kone$Fødesogn: Dallerup$$$Dallerup, Skanderborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$71.0$262168$Gift$70.0
+FT-1845$64.0$Brabrand By$1$hus, 15$Peder Jensen$3$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$3.0$261570$Ugift$2.0
+FT-1845$8.0$Brabrand By$1$skolen, 2$Søren Pedersen Herskind$61$Gift$$skolelærer$Fødesogn: Skivholme$$$Schivholme, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$61.0$261804$Gift$60.0
+FT-1845$276.0$Brabrand By$1$gård, 47$Simon Rasmussen$29$Ugift$$tjenestekarl$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$29.0$261497$Ugift$28.0
+FT-1845$513.0$True By$1$gård, 19$Jesper Sørensen$57$Gift$$gårdmand, sognefoged$Fødesogn: Vejlby$$$Weilbye, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$57.0$261625$Gift$56.0
+FT-1845$77.0$Brabrand By$1$boelsted, 17$Karen Madsdatter$42$Gift$$hans kone$Fødesogn: Tilst$$$Tiilst, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$42.0$261639$Gift$41.0
+FT-1845$394.0$Gjellerup By$1$hus, 7$Rasmus Christensen$67$Gift$$lever af sin jordlod$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$67.0$262118$Gift$66.0
+FT-1845$366.0$Gjellerup By$1$gård, 3$Niels Rasmussen$13$Ugift$$hans søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$13.0$261655$Ugift$12.0
+FT-1845$12.0$Brabrand By$1$gård, 3$Peder Rasmusen Bering$43$Gift$$gårdmand$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$43.0$261784$Gift$42.0
+FT-1845$679.0$True By$1$hovedgård, 41$Jens Iversen$45$Ugift$$tjenestekarl$Fødesogn: Horsens$$$Horsens$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$45.0$261565$Ugift$44.0
+FT-1845$317.0$Brabrand By$1$hus, 55$Jens Rasmussen$16$Ugift$$deres søn$Fødesogn: Odder$$$Odder, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$16.0$261907$Ugift$15.0
+FT-1845$572.0$True By$2$fattighus, 26$Karen Frandsdatter$78$Enke$$almisselem$Fødesogn: Fårup$$$Faarup, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$78.0$262192$Enke$77.0
+FT-1845$28.0$Brabrand By$1$hus, 6$Anders Jørgensen$11$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$11.0$261666$Ugift$10.0
+FT-1845$25.0$Brabrand By$1$hus, 5$Sidsel Rasmusdatter$67$Gift$$hans kone$Fødesogn: Hasle$$$Hasle, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$67.0$262125$Gift$66.0
+FT-1845$369.0$Gjellerup By$1$gård, 4$Jens Rasmussen$57$Gift$$gårdmand$Fødesogn: Dallerup$$$Dallerup, Skanderborg$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$57.0$261612$Gift$56.0
+FT-1845$105.0$Brabrand By$1$gård, 22$Karen Michelsdatter$12$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$12.0$261657$Ugift$11.0
+FT-1845$546.0$True By$1$hus, 22$Maren Rasmussen$4$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$4.0$261688$Ugift$3.0
+FT-1845$228.0$Brabrand By$2$gård, 39$Maren Sørensdatter$52$Enke$$aftægtskone$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$52.0$261821$Enke$51.0
+FT-1845$111.0$Brabrand By$1$hus, 23$Mette Jensdatter$57$Gift$$hans kone$Fødesogn: Galten$$$Galthen, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$57.0$261781$Gift$56.0
+FT-1845$494.0$True By$1$gård, 16$Niels Pedersen$8$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$8.0$261455$Ugift$7.0
+FT-1845$151.0$Brabrand By$2$hus, 28$Peder Michelsen$2$Ugift$$deres søn, tvilling$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$2.0$261661$Ugift$1.0
+FT-1845$501.0$True By$1$hus, 18$Hans Simmonsen$45$Gift$$inderste, daglejer$Fødesogn: Fårup$$$Faarup, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$45.0$261623$Gift$44.0
+FT-1845$460.0$True By$1$hus, 11$Jespersine Jespersen$4$Ugift$$hendes datter$Fødesogn: Brabrand Noter: i FT: deres datter$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$4.0$261411$Ugift$3.0
+FT-1845$2.0$Brabrand By$1$præstegård, 1$Mariane Grarup$41$Enke$$enke efter comsumptionsbetjent Grarup i Ebeltoft$Fødesogn: Aarhus Noter: sognepræstens steddatter$$$Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$41.0$261472$Enke$40.0
+FT-1845$669.0$True By$1$hovedgård, 41$Morten Petersen$3$Ugift$$deres søn$Fødesogn: Rislev$$$Rislev, Præstøe$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$3.0$261565$Ugift$2.0
+FT-1845$667.0$True By$1$hovedgård, 41$Morten Petersen$28$Gift$$gårdens ejer$Fødesogn: Herlufsholm Noter: Holmstrupgård$$$Herlufsholm, Sorøe$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$28.0$261565$Gift$27.0
+FT-1845$484.0$True By$1$hus, 15$Niels Jensen Møller$47$Gift$$snedker$Fødesogn: Borum$$$Borum, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$47.0$261548$Gift$46.0
+FT-1845$531.0$True By$2$gård, 20$Knud Samuel Jensen$41$Gift$$inderste og daglejer$Fødesogn: Rindum$$$Rindum, Ringkjøbing$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$41.0$261397$Gift$40.0
+FT-1845$545.0$True By$1$hus, 22$Anne Margrethe Thommasdatter$36$Gift$$hans kone$Fødesogn: Hasle$$$Hasle, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$36.0$261688$Gift$35.0
+FT-1845$436.0$True By$1$gård, 7$Niels Rasmussen$6$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$6.0$261504$Ugift$5.0
+FT-1845$618.0$True By$1$hus, 32$Peter Severiin Jensen$40$Gift$$husmand med jord og gartner$Fødesogn: Viborg$$$Wiborg$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$40.0$261664$Gift$39.0
+FT-1845$342.0$Brabrand By$1$boelsted, 59$Edel Kjerstine Andersen$15$Ugift$$tjenestepige$Fødesogn: Lading$$$Ladding, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$15.0$261400$Ugift$14.0
+FT-1845$18.0$Brabrand By$1$gård, 3$Sidsel Rasmussen$17$Ugift$$tjenestepige$Fødesogn: Galten$$$Galthen, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$17.0$261784$Ugift$16.0
+FT-1845$431.0$True By$1$gård, 7$Sidsel Rasmussen$23$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$23.0$261504$Ugift$22.0
+FT-1845$102.0$Brabrand By$1$gård, 21$Jens Sørensen$10$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$10.0$261384$Ugift$9.0
+FT-1845$511.0$True By$3$hus, 18$Maren Rasmussen$33$Gift$$hans kone$Fødesogn: Ormslev$$$Ormslev, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$33.0$261678$Gift$32.0
+FT-1845$1.0$Brabrand By$1$præstegård, 1$Johan Christian Hahn$67$Enke$$sognepræst$Fødesogn: Aarhus$$$Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$67.0$261472$Enke$66.0
+FT-1845$179.0$Brabrand By$1$gård, 32$Johanne Marie Rasmusen$20$Ugift$$tjenestepige$Fødesogn: Galten$$$Galthen, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$20.0$261520$Ugift$19.0
+FT-1845$47.0$Brabrand By$1$hus, 9$Ane Marie Sørensdatter$28.0$Ugift$$væverlærling$Fødesogn: Lemming$$$Lemming, Wiborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$28.0$261592$Ugift$27.0
+FT-1845$424.0$True By$1$gård, 5$Niels Sørensen$6.0$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$6.0$261566$Ugift$5.0
+FT-1845$180.0$Brabrand By$1$gård, 32$Anders Nielsen$17.0$Ugift$$tjenestekarl$Fødesogn: Framlev$$$Framlev, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$17.0$261520$Ugift$16.0
+FT-1845$238.0$Brabrand By$1$hus, 41$Maren Jacobsen$9.0$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$9.0$261624$Ugift$8.0
+FT-1845$681.0$True By$1$hovedgård, 41$Morten Hansen$17.0$Ugift$$tjenestekarl$Fødesogn: Nordby$$$Nordbye, Holbæk$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$17.0$261565$Ugift$16.0
+FT-1845$401.0$True By$1$skolen, 1$Maren Jacobsen$22.0$Ugift$$tjenestepige$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$22.0$261616$Ugift$21.0
+FT-1845$359.0$Gjellerup By$1$gård, 2$Ane Jensdatter$19.0$Ugift$$tjenestepige$Fødesogn: Linå$$$Linaae, Skanderborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$19.0$261390$Ugift$18.0
+FT-1845$149.0$Brabrand By$2$hus, 28$Michel Sørensen$37.0$Gift$$daglejer$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$37.0$261661$Gift$36.0
+FT-1845$301.0$Brabrand By$1$boelsted, 51$Bergitte Pedersdatter$32.0$Ugift$$tjenestepige$Fødesogn: Hørning$$$Hørning, Skanderborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$32.0$261739$Ugift$31.0
+FT-1845$326.0$Brabrand By$2$boelsted, 57$Peder Jensen$70.0$Gift$$aftægtsmand$Fødesogn: Hammel$$$Hammel, Skanderborg$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$70.0$261986$Gift$69.0
+FT-1845$435.0$True By$1$gård, 7$Petrine Rasmussen$7.0$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$7.0$261504$Ugift$6.0
+FT-1845$467.0$True By$2$hus, 12$Søren Laursen$81.0$Gift$$inderste$Fødesogn: Lading$$$Ladding, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$81.0$262205$Gift$80.0
+FT-1845$528.0$True By$1$gård, 20$Kjersten Poulsen$3.0$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$3.0$261685$Ugift$2.0
+FT-1845$532.0$True By$2$gård, 20$Maren Pedersdatter$36.0$Gift$$hans kone$Fødesogn: Skivholme$$$Skivholme, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$36.0$261397$Gift$35.0
+FT-1845$188.0$Brabrand By$1$gård, 34$Michel Sørensen$17.0$Ugift$$tjenestekarl$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$17.0$261671$Ugift$16.0
+FT-1845$133.0$Brabrand By$1$gård, 26$Christen Pedersen$19.0$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$19.0$261749$Ugift$18.0
+FT-1845$199.0$Brabrand By$1$gård, 35$Espen Pedersen$17.0$Ugift$$tjenestekarl$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$17.0$261410$Ugift$16.0
+FT-1845$427.0$True By$1$gård, 6$Maren Michelsdatter$65.0$Enke$$hans moder, medhjælper ved gårdens bestyrelse$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$65.0$262098$Enke$64.0
+FT-1845$110.0$Brabrand By$1$hus, 23$Jens Rasmussen Brixen$64.0$Gift$$fisker$Fødesogn: Hasle Noter: efternavn Briken ?$$$Hasle, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$64.0$261781$Gift$63.0
+FT-1845$566.0$True By$1$hus, 25$Anne Pedersen$2.0$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$2.0$261860$Ugift$1.0
+FT-1845$388.0$Gjellerup By$1$gård, 6$Ingeborg Nielsdatter$40.0$Gift$$hans kone$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$40.0$261588$Gift$39.0
+FT-1845$21.0$Brabrand By$1$hus, 4$Johanne Rasmusdatter$35.0$Gift$$hans kone, væver$Fødesogn: Aarhus$$$Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$35.0$261864$Gift$34.0
+FT-1845$285.0$Brabrand By$1$hus, 49$Michel Sørensen$46.0$Gift$$lever af sin jordlod$Fødesogn: Mårslet$$$Moerslet, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$46.0$261797$Gift$45.0
+FT-1845$675.0$True By$1$hovedgård, 41$Anne Pedersen$24.0$Ugift$$tjenestepige$Fødesogn: Veng$$$Wenge, Skanderborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$24.0$261565$Ugift$23.0
+FT-1845$443.0$True By$1$gård, 8$Mariane Pedersdatter$67.0$Enke$$mandens moder, aftægtskone$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$67.0$261721$Enke$66.0
+FT-1845$303.0$Brabrand By$1$hus, 52$Ingeborg Nielsdatter$27.0$Gift$$hans kone$Fødesogn: Malling$$$Malling, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$27.0$261676$Gift$26.0
+FT-1845$469.0$True By$1$gård, 13$Kjersten Rasmusdatter$63.0$Enke$$enke, ejer gården$Fødesogn: Borum$$$Borum, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$63.0$261421$Enke$62.0
+FT-1845$582.0$True By$1$gård, 27$Mogens Jensen$22.0$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$22.0$261525$Ugift$21.0
+FT-1845$152.0$Brabrand By$2$hus, 28$Niels Michelsen$2.0$Ugift$$deres søn, tvilling$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$2.0$261661$Ugift$1.0
+FT-1845$363.0$Gjellerup By$1$gård, 3$Kjersten Rasmussen$19.0$Ugift$$hans datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$19.0$261655$Ugift$18.0
+FT-1845$509.0$True By$2$hus, 18$Sidsel Andersdatter$64.0$Gift$$hans kone, almisselem$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$64.0$261689$Gift$63.0
+FT-1845$568.0$True By$1$hus, 25$Maren Christensen$21.0$Ugift$$væverlærling$Fødesogn: Årslev$$$Aarslev, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$21.0$261860$Ugift$20.0
+FT-1845$421.0$True By$1$gård, 5$Sidsel Sørensen$16.0$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$16.0$261566$Ugift$15.0
+FT-1845$85.0$Brabrand By$1$hus, 19$Søren Jensen$29.0$Gift$$daglejer$Fødesogn: Lyngby$$$Lyngby, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$29.0$261634$Gift$28.0
+FT-1845$682.0$True By$1$hovedgård, 41$Jens Sørensen$21.0$Ugift$$tjenestekarl$Fødesogn: Hammel$$$Hammel, Skanderborg$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$21.0$261565$Ugift$20.0
+FT-1845$241.0$Brabrand By$1$hus, 41$Johanne Marie Sophie Jacobsen$1.0$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$1.0$261624$Ugift$0.0
+FT-1845$557.0$True By$1$gård, 24$Søren Nielsen$12.0$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$12.0$261399$Ugift$11.0
+FT-1845$400.0$True By$1$skolen, 1$Johanne Christiane Elisa. Thiesen$8.0$Ugift$$deres datter$Fødesogn: Brabrand Noter: Elisabeth$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$8.0$261616$Ugift$7.0
+FT-1845$202.0$Brabrand By$1$gård, 36$Jørgen Frederichsen$3.0$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$3.0$261499$Ugift$2.0
+FT-1845$58.0$Brabrand By$1$hus, 13$Edel Marie Schmidt$2.0$Ugift$$hendes datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$2.0$262023$Ugift$1.0
+FT-1845$3.0$Brabrand By$1$præstegård, 1$Johanne Christiane Gregersen$20.0$Ugift$$plejedatter af sognepræsten$Fødesogn: Odder$$$Odder, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$20.0$261472$Ugift$19.0
+FT-1845$94.0$Brabrand By$1$gård, 20$Søren Jensen$25.0$Ugift$$tjenestekarl$Fødesogn: Ormslev$$$Ormslev, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$25.0$261640$Ugift$24.0
+FT-1845$463.0$True By$1$hus, 12$Johanne Christiane Jensen$32.0$Gift$$hans kone$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$32.0$261816$Gift$31.0
+FT-1845$249.0$Brabrand By$1$hus, 42$Ane Petrea Møller$9.0$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$9.0$261959$Ugift$8.0
+FT-1845$416.0$True By$1$gård, 4$Marius Rasmussen$45.0$Ugift$$tjenestekarl$Fødesogn: Viby$$$Wibye, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$45.0$261637$Ugift$44.0
+FT-1845$387.0$Gjellerup By$1$gård, 6$Marius Rasmussen$39.0$Gift$$gårdmand$Fødesogn: Kolt$$$Koldt, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$39.0$261588$Gift$38.0
+FT-1845$312.0$Brabrand By$1$hus, 54$Mette Enevoldsen$5.0$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$5.0$261648$Ugift$4.0
+FT-1845$287.0$Brabrand By$1$hus, 49$Niels Michelsen$16.0$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$16.0$261797$Ugift$15.0
+FT-1845$329.0$Brabrand By$2$boelsted, 57$Niels Pedersen$11.0$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$11.0$261986$Ugift$10.0
+FT-1845$46.0$Brabrand By$1$hus, 9$Jacob Morthensen$12.0$Ugift$$deres søn$Fødesogn: Brabrand$$$Heri Sognet$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$12.0$261592$Ugift$11.0
+FT-1845$468.0$True By$2$hus, 12$Birthe Jensdatter$69.0$Gift$$hans kone, spinderske$Fødesogn: Sinding$$$Sinding, Wiborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$69.0$262205$Gift$68.0
+FT-1845$449.0$True By$1$gård, 9$Niels Michelsen$18.0$Ugift$$tjenestekarl$Fødesogn: Tilst$$$Tiilst, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$18.0$261606$Ugift$17.0
+FT-1845$642.0$True By$1$gård, 36$Rebekke Rasmussen$23.0$Ugift$$tjenestepige$Fødesogn: Balle$$$Balle, Wiborg$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$23.0$261539$Ugift$22.0
+FT-1845$405.0$True By$1$gård, 2$Kjersten Sørensen$24.0$Ugift$$tjenestepige$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$24.0$261595$Ugift$23.0
+FT-1845$357.0$Gjellerup By$1$gård, 2$Maren Nielsdatter$70.0$Enke$$aftægtskone$Fødesogn: Kasted$$$Casted, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$70.0$261390$Enke$69.0
+FT-1845$639.0$True By$1$gård, 36$Mariane Pedersen$2.0$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$2.0$261539$Ugift$1.0
+FT-1845$505.0$True By$1$hus, 18$Anne Maria Hansen$6.0$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$6.0$261623$Ugift$5.0
+FT-1845$377.0$Gjellerup By$1$gård, 4$Niels Pedersen$15.0$Ugift$$tjenestekarl$Fødesogn: Veng$$$Wenge, Skanderborg$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$15.0$261612$Ugift$14.0
+FT-1845$466.0$True By$1$hus, 12$Maren Jensen$2.0$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$2.0$261816$Ugift$1.0
+FT-1845$482.0$True By$1$gård, 14$Maren Jensen$23.0$Ugift$$deres datter$Fødesogn: Brabrand$$$Heri Sognet$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$23.0$261656$Ugift$22.0
+FT-1845$315.0$Brabrand By$1$hus, 55$Birthe Jensdatter$42.0$Gift$$hans kone$Fødesogn: Odder$$$Odder, Aarhuus$$K$$b2756$Brabrand$Sogn$århus$Hasle$k$42.0$261907$Gift$41.0
+FT-1845$355.0$Gjellerup By$1$gård, 2$Christen Nielsen$22.0$Ugift$$deres søn$Fødesogn: Trige$$$Trige, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$22.0$261390$Ugift$21.0
+FT-1845$282.0$Brabrand By$1$hus, 48$Anders Nielsen$53.0$Gift$$lever af sin jordlod$Fødesogn: Vitten$$$Witthen, Aarhuus$$M$$b2756$Brabrand$Sogn$århus$Hasle$m$53.0$261487$Gift$52.0
