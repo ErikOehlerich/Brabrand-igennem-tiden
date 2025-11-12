@@ -37,7 +37,7 @@
 </head>
 <body>
     <div id="map"></div>
-    <div id="map-title">Projekter af Friis &amp; Moltke i Brabrand og omegn</div>
+    <div id="map-title">Brabrand i gennem tiden</div>
     <script>
         var map = L.map('map', {
             center: [56.158, 10.139],
@@ -380,6 +380,134 @@
             unk.onchange = applyYearFilter;
         }
 
+        // Funktion: indlæs CSV fra en sti og tilføj punkter til lokaliteterLayer
+        function loadCSVToMap(path, layerName) {
+            console.log('Forsøger at indlæse CSV fra:', path);
+            fetch(encodeURI(path)).then(function(resp) {
+                console.log('Fetch response:', resp.status, resp.statusText);
+                if (!resp.ok) throw new Error('Fetch fejlede: ' + resp.status + ' ' + resp.statusText);
+                return resp.text();
+            }).then(function(csvText) {
+                console.log('CSV indlæst, længde:', csvText.length);
+                
+                // Automatisk detektering af separator ($ eller ,)
+                var separator = '$';
+                var lines = csvText.split('\n');
+                if (lines.length > 0) {
+                    var firstLine = lines[0];
+                    var dollarCount = (firstLine.match(/\$/g) || []).length;
+                    var commaCount = (firstLine.match(/,/g) || []).length;
+                    // Brug den separator der forekommer mest i første linje
+                    if (commaCount > dollarCount) {
+                        separator = ',';
+                    }
+                }
+                console.log('Bruger separator:', separator);
+                
+                // Parse CSV med auto-detekteret separator
+                var headers = lines[0].split(separator);
+                var rows = [];
+                
+                for (var i = 1; i < lines.length; i++) {
+                    if (lines[i].trim() === '') continue;
+                    var values;
+                    
+                    if (separator === ',') {
+                        // Simpel CSV parsing for komma-separeret (håndterer anførselstegn)
+                        values = lines[i].match(/(".*?"|[^",]+)(?=\s*,|\s*$)/g) || [];
+                        values = values.map(function(val) {
+                            return val.replace(/^"(.*)"$/, '$1').trim();
+                        });
+                    } else {
+                        // Dollar-separeret parsing
+                        values = lines[i].split(separator);
+                    }
+                    
+                    var row = {};
+                    for (var j = 0; j < headers.length && j < values.length; j++) {
+                        row[headers[j]] = values[j] || '';
+                    }
+                    rows.push(row);
+                }
+
+                console.log('CSV rækker (parsed):', rows.length);
+                if (rows.length === 0) {
+                    console.warn('Ingen rækker fundet i CSV-filen.');
+                    return;
+                }
+
+                // Opret et nyt lag til denne CSV
+                var csvLayer = L.layerGroup();
+                var csvMarkers = [];
+                var added = 0;
+
+                rows.forEach(function(row, i) {
+                    if (i < 3) console.log('Række', i, row); // vis et par rækker til debugging
+
+                    var navn = row['navn'] || '';
+                    var stednavn = row['Stednavn'] || '';
+                    var adresse = row['Adresse'] || row['Matr_nr_adresse'] || '';
+                    var alder = row['Alder'] || row['age'] || '';
+                    var erhverv = row['Erhverv'] || '';
+                    var fødested = row['fødested'] || '';
+                    var køn = row['køn'] || row['sex'] || '';
+                    var civilstand = row['Civilstand'] || row['marital_status'] || '';
+
+                    // For nu placerer vi alle punkter på Brabrand centrum
+                    // I fremtiden kan du tilføje faktiske koordinater til CSV-filerne
+                    var lat = 56.158 + (Math.random() - 0.5) * 0.01; // lille spredning
+                    var lng = 10.139 + (Math.random() - 0.5) * 0.01;
+
+                    // Bestem farve baseret på køn
+                    var fillColor = '#666666'; // fallback
+                    if (køn === 'M' || køn === 'm') {
+                        fillColor = '#4285f4'; // blå for mænd
+                    } else if (køn === 'K' || køn === 'k') {
+                        fillColor = '#ea4335'; // rød for kvinder
+                    }
+
+                    var marker = L.circleMarker([lat, lng], {
+                        radius: 4,
+                        color: fillColor,
+                        weight: 1,
+                        fillColor: fillColor,
+                        fillOpacity: 0.7
+                    });
+
+                    var popup = '<div style="max-width:260px;font-size:13px;line-height:1.3;">' +
+                                (navn ? '<div><strong>Navn:</strong> ' + navn + '</div>' : '') +
+                                (stednavn ? '<div><strong>Sted:</strong> ' + stednavn + '</div>' : '') +
+                                (adresse ? '<div><strong>Adresse:</strong> ' + adresse + '</div>' : '') +
+                                (alder ? '<div><strong>Alder:</strong> ' + alder + '</div>' : '') +
+                                (køn ? '<div><strong>Køn:</strong> ' + køn + '</div>' : '') +
+                                (civilstand ? '<div><strong>Civilstand:</strong> ' + civilstand + '</div>' : '') +
+                                (erhverv ? '<div><strong>Erhverv:</strong> ' + erhverv + '</div>' : '') +
+                                (fødested ? '<div><strong>Fødested:</strong> ' + fødested + '</div>' : '') +
+                                '</div>';
+ 
+                    marker.bindPopup(popup);
+                    csvLayer.addLayer(marker);
+                    csvMarkers.push(marker);
+                    added++;
+                });
+
+                // Tilføj overlay til layer control
+                try { 
+                    layerControl.addOverlay(csvLayer, layerName); 
+                } catch(e) {
+                    console.error('Kunne ikke tilføje overlay:', e);
+                }
+ 
+                console.log('Markers tilføjet fra CSV:', added);
+                // Tilføj laget til kortet (starter aktivt)
+                if (added > 0) csvLayer.addTo(map);
+                else console.warn('Ingen gyldige punkter fundet i CSV-filen.');
+                
+            }).catch(function(err){
+                console.error('Kunne ikke indlæse eller parse CSV:', err);
+            });
+        }
+
         // Funktion: indlæs Excel (xlsx) fra en sti og tilføj punkter til lokaliteterLayer
         function loadExcelToMap(path) {
             console.log('Forsøger at indlæse Excel fra:', path);
@@ -547,32 +675,28 @@
 
         // Indlæs din fil fra mappen "excel"
         loadExcelToMap('./excel/FM.xlsx');
+        
+        // Indlæs CSV-filer fra Folketællinger mappen (originale format)
+        loadCSVToMap('./Folketællinger/Rigsarkivet_folketælling_Brabrand-Sogn_sogn_1840.csv', 'Folketælling 1840');
+        loadCSVToMap('./Folketællinger/Rigsarkivet_folketælling_Brabrand-Sogn_sogn_1845.csv', 'Folketælling 1845');
+        loadCSVToMap('./Folketællinger/Rigsarkivet_folketælling_Brabrand-Sogn_sogn_1850.csv', 'Folketælling 1850');
+        loadCSVToMap('./Folketællinger/Rigsarkivet_folketælling_Brabrand-Sogn_sogn_1860.csv', 'Folketælling 1860');
+        loadCSVToMap('./Folketællinger/Rigsarkivet_folketælling_Brabrand-Sogn_sogn_1880.csv', 'Folketælling 1880');
+        loadCSVToMap('./Folketællinger/Rigsarkivet_folketælling_Brabrand-Sogn_sogn_1885.csv', 'Folketælling 1885');
+        loadCSVToMap('./Folketællinger/Rigsarkivet_folketælling_Brabrand-Sogn_sogn_1901.csv', 'Folketælling 1901');
+        
+        // Prøv også at indlæse Excel-versioner hvis de findes (med koordinater)
+        loadExcelToMap('./Folketællinger_Excel/Rigsarkivet_folketælling_Brabrand-Sogn_sogn_1840.xlsx').catch(() => console.log('Excel version ikke fundet: 1840'));
+        loadExcelToMap('./Folketællinger_Excel/Rigsarkivet_folketælling_Brabrand-Sogn_sogn_1845.xlsx').catch(() => console.log('Excel version ikke fundet: 1845'));
+        loadExcelToMap('./Folketællinger_Excel/Rigsarkivet_folketælling_Brabrand-Sogn_sogn_1850.xlsx').catch(() => console.log('Excel version ikke fundet: 1850'));
+        loadExcelToMap('./Folketællinger_Excel/Rigsarkivet_folketælling_Brabrand-Sogn_sogn_1860.xlsx').catch(() => console.log('Excel version ikke fundet: 1860'));
+        loadExcelToMap('./Folketællinger_Excel/Rigsarkivet_folketælling_Brabrand-Sogn_sogn_1880.xlsx').catch(() => console.log('Excel version ikke fundet: 1880'));
+        loadExcelToMap('./Folketællinger_Excel/Rigsarkivet_folketælling_Brabrand-Sogn_sogn_1885.xlsx').catch(() => console.log('Excel version ikke fundet: 1885'));
+        loadExcelToMap('./Folketællinger_Excel/Rigsarkivet_folketælling_Brabrand-Sogn_sogn_1901.xlsx').catch(() => console.log('Excel version ikke fundet: 1901'));
 
         // Start med OSM som baggrund og historisk kort som overlay
         osm.addTo(map);
         historiskKort.addTo(map);
-        
-        // Legend (bottom-left) med farveforklaring
-        var legend = L.control({position: 'bottomleft'});
-        legend.onAdd = function(map) {
-            var div = L.DomUtil.create('div', 'legend');
-            div.style.background = 'rgba(255,255,255,0.95)';
-            div.style.padding = '6px 8px';
-            div.style.margin = '6px';
-            div.style.border = '1px solid rgba(0,0,0,0.15)';
-            div.style.borderRadius = '4px';
-            div.style.fontSize = '12px';
-            div.style.boxShadow = '0 1px 4px rgba(0,0,0,0.2)';
-            div.innerHTML =
-                '<div style="font-weight:600;margin-bottom:6px;">Farver (Type af byggeri)</div>' +
-                '<div style="margin-bottom:4px;"><span style="display:inline-block;width:12px;height:12px;background:#B22222;margin-right:8px;border:1px solid rgba(0,0,0,0.08);vertical-align:middle"></span>Offentlige bygninger</div>' +
-                '<div style="margin-bottom:4px;"><span style="display:inline-block;width:12px;height:12px;background:#1E90FF;margin-right:8px;border:1px solid rgba(0,0,0,0.08);vertical-align:middle"></span>Erhvervsbyggerier</div>' +
-                '<div style="margin-bottom:4px;"><span style="display:inline-block;width:12px;height:12px;background:#FFD700;margin-right:8px;border:1px solid rgba(0,0,0,0.08);vertical-align:middle"></span>Boliggrupper</div>' +
-                '<div><span style="display:inline-block;width:12px;height:12px;background:#2e7d32;margin-right:8px;border:1px solid rgba(0,0,0,0.08);vertical-align:middle"></span>Enfamilieboliger</div>';
-            L.DomEvent.disableClickPropagation(div);
-            return div;
-        };
-        legend.addTo(map);
 
         // Footer (bottom-right) med kun dit navn
         var footer = L.control({position: 'bottomright'});
