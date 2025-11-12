@@ -39,11 +39,11 @@ foreach ($file in $csvFiles) {
         
         # Opretter PowerShell objekter for hver række
         $data = @()
-        for ($i = 1; $i < $lines.Count; $i++) {
+        for ($i = 1; $i -lt $lines.Count; $i++) {
             $values = $lines[$i] -split '\$'
             $obj = New-Object PSObject
             
-            for ($j = 0; $j < $headers.Count; $j++) {
+            for ($j = 0; $j -lt $headers.Count; $j++) {
                 if ($j -lt $values.Count) {
                     $obj | Add-Member -MemberType NoteProperty -Name $headers[$j] -Value $values[$j]
                 } else {
