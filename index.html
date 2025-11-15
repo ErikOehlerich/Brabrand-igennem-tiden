@@ -927,13 +927,14 @@
                 });
         }
 
-        // Indlæs folketællingsdata fra Excel-filer - SORTERET KRONOLOGISK
-        loadExcelToMap('./Folketællinger/FT_Brabrand_Sogn_sogn_1840.xlsx', 'Folketælling 1840', false);
-        loadExcelToMap('./Folketællinger/FT_Brabrand_Sogn_sogn_1845.xlsx', 'Folketælling 1845', false);
-        loadExcelToMap('./Folketællinger/FT_Brabrand_Sogn_sogn_1850.xlsx', 'Folketælling 1850', false);
-        loadExcelToMap('./Folketællinger/FT_Brabrand_Sogn_sogn_1860.xlsx', 'Folketælling 1860', false);
-        loadExcelToMap('./Folketællinger/FT_Brabrand_Sogn_sogn_1880.xlsx', 'Folketælling 1880', false);
-        loadExcelToMap('./Folketællinger/FT_Brabrand_Sogn_sogn_1901.xlsx', 'Folketælling 1901', false);
+        // Indlæs folketællingsdata fra Excel-filer i kronologisk rækkefølge
+        // Ved at bruge setTimeout sikrer vi at de bliver behandlet i rækkefølge
+        setTimeout(() => loadExcelToMap('./Folketællinger/FT_Brabrand_Sogn_sogn_1840.xlsx', 'Folketælling 1840', false), 100);
+        setTimeout(() => loadExcelToMap('./Folketællinger/FT_Brabrand_Sogn_sogn_1845.xlsx', 'Folketælling 1845', false), 200);
+        setTimeout(() => loadExcelToMap('./Folketællinger/FT_Brabrand_Sogn_sogn_1850.xlsx', 'Folketælling 1850', false), 300);
+        setTimeout(() => loadExcelToMap('./Folketællinger/FT_Brabrand_Sogn_sogn_1860.xlsx', 'Folketælling 1860', false), 400);
+        setTimeout(() => loadExcelToMap('./Folketællinger/FT_Brabrand_Sogn_sogn_1880.xlsx', 'Folketælling 1880', false), 500);
+        setTimeout(() => loadExcelToMap('./Folketællinger/FT_Brabrand_Sogn_sogn_1901.xlsx', 'Folketælling 1901', false), 600);
 
         // Tilføj default basemap til kortet ved start
         osm.addTo(map);
