@@ -868,8 +868,8 @@
                                     popupContent += '<div style="margin-bottom:4px;"><strong>Navn:</strong> ' + navn + '</div>';
                                 }
                                 
-                                // Vis felter i specifik rækkefølge
-                                var fieldOrder = ['Alder', 'age', 'sex', 'Civilstand', 'marital_status', 'Erhverv', 'Stednavn', 'Matr_nr_adresse', 'parish', 'Type', 'county', 'Herred'];
+                                // Vis felter i specifik rækkefølge (kun danske versioner)
+                                var fieldOrder = ['Alder', 'sex', 'Civilstand', 'Erhverv', 'Stednavn', 'Matr_nr_adresse', 'parish', 'Type', 'county', 'Herred'];
                                 
                                 fieldOrder.forEach(h => {
                                     var idx = headers.indexOf(h);
