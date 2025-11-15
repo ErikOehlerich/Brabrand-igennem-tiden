@@ -10,6 +10,10 @@
     <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/leaflet-mouse-position@1.2.0/src/L.Control.MousePosition.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-mouse-position@1.2.0/src/L.Control.MousePosition.css"/>
+    <!-- MarkerCluster plugin -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
+    <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
     <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
     <style>
         #map { height: 100vh; width: 100vw; }
@@ -33,6 +37,38 @@
             box-shadow: 0 1px 4px rgba(0,0,0,0.2);
             pointer-events: none;
         }
+        
+        /* Custom cluster styling */
+        .marker-cluster-small {
+            background-color: rgba(181, 226, 140, 0.8);
+            border: 2px solid rgba(110, 204, 57, 0.8);
+        }
+        .marker-cluster-medium {
+            background-color: rgba(241, 211, 87, 0.8);
+            border: 2px solid rgba(240, 194, 12, 0.8);
+        }
+        .marker-cluster-large {
+            background-color: rgba(253, 156, 115, 0.8);
+            border: 2px solid rgba(241, 128, 23, 0.8);
+        }
+        .marker-cluster {
+            border-radius: 20px;
+        }
+        .marker-cluster div {
+            width: 36px;
+            height: 36px;
+            margin-left: 2px;
+            margin-top: 2px;
+            text-align: center;
+            border-radius: 18px;
+            font: 12px 'Arial', sans-serif;
+            font-weight: bold;
+        }
+        .marker-cluster span {
+            line-height: 36px;
+            color: #fff;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+        }
     </style>
 </head>
 <body>
@@ -42,8 +78,6 @@
         var map = L.map('map', {
             center: [56.158, 10.139],
             zoom: 15,
-            maxBounds: [[55.9, 9.9], [56.4, 10.4]], // Meget løsere bounds
-            maxBoundsViscosity: 0.3, // Blødere grænser
             attributionControl: false // fjern standard Leaflet-attribution
         });
 
@@ -221,23 +255,18 @@
         // koordinatInfo.addTo(map);
         // map.on('click', clickHandler);
 
-        // Opdateret overlay maps — begge historiske lag og koordinat-vælger
+        // Opdateret overlay maps — kronologisk sorteret og koordinat-vælger
         var overlayMaps = {
-            "Brabrand 1980-2001": historiskKort,
-            "Brabrand 1953-1976": historiskKort1953,
             "Brabrand 1840-1890": historiskKort1840,
+            "Brabrand 1953-1976": historiskKort1953,
+            "Brabrand 1980-2001": historiskKort,
             "Koordinat vælger": koordinatGruppe
         };
 
         // Tilføj layer control så menuen med kortlag vises
         var layerControl = L.control.layers(baseMaps, overlayMaps).addTo(map);
 
-        // Start med kun 1980-kortet aktivt. De andre historiske overlays forbliver slukket
-        // i lag-kontrollen, indtil brugeren selv tænder dem.
-        if (historiskKort) {
-            historiskKort.addTo(map);
-            if (typeof historiskKort.setZIndex === 'function') historiskKort.setZIndex(100);
-        }
+        // 1980-kortet ikke aktiveret som standard - kun 1840 er aktiveret længere nede
 
         // Opacity-kontrol til historiske overlay (kompakt, foldbar)
         var opacityControl = L.control({ position: 'topright' });
@@ -315,6 +344,9 @@
             return div;
         };
         yearFilterControl.addTo(map);
+        
+        // Cluster funktion er altid aktiveret - ingen kontrol nødvendig
+        var allClusterLayers = [];
 
         // fold/ud for year filter
         (function(){
@@ -515,10 +547,14 @@
 
         // Funktion: indlæs Excel (xlsx) fra en sti og opret et navngivet lag
         function loadExcelToMap(path, layerName) {
-            console.log('Forsøger at indlæse Excel fra:', path);
+            console.log('🔄 Indlæser Excel:', path);
             return fetch(encodeURI(path)).then(function(resp) {
-                console.log('Fetch response:', resp.status, resp.statusText);
-                if (!resp.ok) throw new Error('Excel fil ikke fundet: ' + path + ' (' + resp.status + ')');
+                console.log('📁 Fetch response for', path, ':', resp.status, resp.statusText);
+                if (!resp.ok) {
+                    console.error('❌ Excel fil ikke fundet:', path, '- Status:', resp.status);
+                    throw new Error('Excel fil ikke fundet: ' + path + ' (' + resp.status + ')');
+                }
+                console.log('✅ Excel fil fundet, indlæser data...');
                 return resp.arrayBuffer();
             }).then(function(ab) {
                 var workbook;
@@ -537,121 +573,220 @@
                     }
                 }
 
-                console.log('Workbook sheets:', workbook.SheetNames);
+                console.log('📊 Workbook sheets:', workbook.SheetNames);
                 var firstSheetName = workbook.SheetNames[0];
+                console.log('📋 Bruger ark:', firstSheetName);
                 var worksheet = workbook.Sheets[firstSheetName];
                 var rows = XLSX.utils.sheet_to_json(worksheet, {defval: ''});
 
-                console.log('Excel rækker (parsed):', rows.length);
+                console.log('📈 Excel rækker (parsed):', rows.length);
                 if (rows.length === 0) {
-                    console.warn('Ingen rækker fundet i arket:', firstSheetName, '-- tjek kolonneoverskrifter.');
+                    console.warn('⚠️ Ingen rækker fundet i arket:', firstSheetName);
+                    return;
+                }
+                
+                // Vis kolonnenavne og første rækker
+                console.log('=== DETALJERET EXCEL DEBUGGING ===' );
+                console.log('🏷️ Alle kolonnenavne:', Object.keys(rows[0]));
+                
+                // Vis første 3 rækker komplet
+                for (var debugRow = 0; debugRow < Math.min(3, rows.length); debugRow++) {
+                    console.log('Række ' + (debugRow + 1) + ':', rows[debugRow]);
+                }
+                
+                // Søg specifikt efter koordinat-relaterede kolonner
+                var coordColumns = [];
+                Object.keys(rows[0]).forEach(function(key) {
+                    var lowerKey = key.toLowerCase();
+                    if (lowerKey.includes('koordinat') || lowerKey.includes('coord') || 
+                        lowerKey.includes('lat') || lowerKey.includes('lng') || 
+                        lowerKey.includes('lon') || lowerKey.includes('bredde') || 
+                        lowerKey.includes('længde')) {
+                        coordColumns.push(key);
+                    }
+                });
+                console.log('📏 Potentielle koordinat-kolonner:', coordColumns);
+                
+                // Vis data for koordinat-kolonner
+                if (coordColumns.length > 0) {
+                    for (var i = 0; i < Math.min(5, rows.length); i++) {
+                        console.log('Række ' + (i+1) + ' koordinat-data:');
+                        coordColumns.forEach(function(col) {
+                            console.log('  ' + col + ':', rows[i][col]);
+                        });
+                    }
+                } else {
+                    console.warn('❌ INGEN koordinat-kolonner fundet!');
                 }
 
-                // Opret et nyt lag specifikt for denne Excel-fil
-                var excelLayer = L.layerGroup();
+                // Opret et nyt cluster-lag specifikt for denne Excel-fil
+                var excelLayer = L.markerClusterGroup({
+                    maxClusterRadius: 50,  // Hvor tæt punkter skal være for at blive clusteret
+                    spiderfyOnMaxZoom: true,  // Vis individuelle markører ved max zoom
+                    showCoverageOnHover: false,  // Skjul coverage område ved hover
+                    zoomToBoundsOnClick: true,  // Zoom til cluster ved klik
+                    iconCreateFunction: function(cluster) {
+                        var count = cluster.getChildCount();
+                        var className = 'marker-cluster ';
+                        
+                        // Forskellige størrelser baseret på antal punkter
+                        if (count < 10) {
+                            className += 'marker-cluster-small';
+                        } else if (count < 100) {
+                            className += 'marker-cluster-medium';
+                        } else {
+                            className += 'marker-cluster-large';
+                        }
+                        
+                        return L.divIcon({
+                            html: '<div><span>' + count + '</span></div>',
+                            className: className,
+                            iconSize: L.point(40, 40)
+                        });
+                    }
+                });
                 var added = 0;
                 rows.forEach(function(row, i) {
-                    if (i < 3) console.log('Række', i, row); // vis et par rækker til debugging
+                    // Hent data fra rækken - tilpasset til folketællings-data
+                    var navn = row['navn'] || '';
+                    var stednavn = row['Stednavn'] || '';
+                    var adresse = row['Adresse'] || row['Matr_nr_adresse'] || '';
+                    var alder = row['Alder'] || row['age'] || '';
+                    var køn = row['køn'] || row['sex'] || '';
+                    var erhverv = row['Erhverv'] || '';
+                    var civilstand = row['Civilstand'] || row['marital_status'] || '';
+                    var fødested = row['fødested'] || '';
 
-                    var projekt = row['Projekt'] || row['Project'] || row['projekt'] || '';
-                    var adresse = row['Adresse'] || row['Address'] || row['adresse'] || '';
-                    var årstal = row['Årstal'] || row['Aarstal'] || row['År'] || row['Year'] || '';
-                    var typeByg = row['Type af byggeri'] || row['Type'] || row['type'] || '';
-                    var note = row['Note'] || row['Bemærkning'] || row['Note/Comment'] || '';
+                    // Søg efter Brabrand, Holmstrupgaard eller Gellerup
+                    var isTargetLocation = false;
+                    var searchTerms = ['brabrand', 'holmstrupgaard', 'gellerup'];
+                    var allText = (navn + ' ' + stednavn + ' ' + adresse + ' ' + fødested).toLowerCase();
+                    
+                    searchTerms.forEach(function(term) {
+                        if (allText.indexOf(term) !== -1) {
+                            isTargetLocation = true;
+                        }
+                    });
+                    
+                    if (isTargetLocation) {
+                        console.log('\n🎯 FUNDET MÅLLOKATION - Række ' + (i+1) + ':');
+                        console.log('   Navn:', navn);
+                        console.log('   Stednavn:', stednavn);
+                        console.log('   Adresse:', adresse);
+                        console.log('   Fødested:', fødested);
+                        console.log('   Alle kolonner:');
+                        Object.keys(row).forEach(function(key) {
+                            console.log('     ' + key + ':', row[key]);
+                        });
+                    }
 
                     var lat = null, lng = null;
-                    // Kun vis punkter hvis der er data i koordinat-kolonnen
                     function parseNumber(v) {
                         if (v === null || v === undefined) return NaN;
                         var s = String(v).trim();
-                        if (s === '') return NaN;
+                        if (s === '' || s === 'undefined' || s === 'null') return NaN;
                         s = s.replace(',', '.'); // decimalkomma -> punktum
                         return parseFloat(s);
                     }
 
-                    // Tjek først koordinat-kolonnen
-                    if (row['Koordinater'] || row['Koordinat'] || row['Coordinates']) {
-                        var coordStr = (row['Koordinater'] || row['Koordinat'] || row['Coordinates']).toString().trim();
-                        // Spring over hvis koordinat-kolonnen er tom
-                        if (coordStr === '' || coordStr === 'undefined' || coordStr === 'null') {
-                            console.log('Springer række over - ingen koordinater:', row['navn'] || 'Ukendt');
-                            return;
-                        }
-                        // Parse koordinater: "lat, lng", "lat;lng" osv.
-                        var m = coordStr.match(/[-+]?\d+[.,]?\d*/g);
-                        if (m && m.length >= 2) {
-                            var a = parseNumber(m[0]);
-                            var b = parseNumber(m[1]);
-                            // best guess: hvis første værdi > 90 antag lng,lat byttet
-                            if (Math.abs(a) > 90 && Math.abs(b) <= 90) {
-                                lng = a; lat = b;
-                            } else {
-                                lat = a; lng = b;
+                    // Søg efter ALLE mulige koordinat-kolonner
+                    var coordValue = null;
+                    var foundCoordColumn = null;
+                    var allKeys = Object.keys(row);
+                    
+                    // Udvid søgningen til at inkludere alle mulige navne
+                    for (var k = 0; k < allKeys.length; k++) {
+                        var key = allKeys[k];
+                        var lowerKey = key.toLowerCase();
+                        
+                        if (lowerKey.includes('koordinat') || lowerKey.includes('coord') || 
+                            lowerKey === 'lat' || lowerKey === 'lng' || lowerKey === 'lon' ||
+                            lowerKey.includes('bredde') || lowerKey.includes('længde') ||
+                            lowerKey.includes('latitude') || lowerKey.includes('longitude')) {
+                            
+                            if (row[key] !== undefined && row[key] !== '' && row[key] !== null) {
+                                coordValue = row[key];
+                                foundCoordColumn = key;
+                                if (isTargetLocation) {
+                                    console.log('   📏 Fundet koordinat i kolonne "' + key + '":', coordValue);
+                                }
+                                break;
                             }
                         }
-                    } else if (row['Lat'] !== undefined && row['Lng'] !== undefined) {
-                        // Fallback til separate Lat/Lng kolonner
-                        lat = parseNumber(row['Lat']);
-                        lng = parseNumber(row['Lng']);
-                        // Spring over hvis begge er tomme
-                        if (!isFinite(lat) || !isFinite(lng)) {
-                            console.log('Springer række over - ingen gyldige Lat/Lng:', row['navn'] || 'Ukendt');
-                            return;
+                    }
+
+                    if (coordValue) {
+                        var coordStr = coordValue.toString().trim();
+                        if (coordStr && coordStr !== 'undefined' && coordStr !== 'null' && coordStr !== '') {
+                            // Simpel parsing - tag bare de første to tal
+                            var m = coordStr.match(/[-+]?\d+[.,]?\d*/g);
+                            if (m && m.length >= 2) {
+                                lat = parseNumber(m[0]);
+                                lng = parseNumber(m[1]);
+                                
+                                console.log('   ✅ FUNDET KOORDINATER for ' + (navn || 'ukendt') + ' på ' + (stednavn || 'ukendt sted') + ': lat=' + lat + ', lng=' + lng);
+                            } else {
+                                console.log('   ❌ Kunne ikke parse koordinater fra: "' + coordStr + '" for ' + (navn || 'ukendt'));
+                            }
+                        } else {
+                            console.log('   ⚠️ Tom koordinat-værdi for ' + (navn || 'ukendt') + ' i kolonne: ' + foundCoordColumn);
                         }
                     } else {
-                        // Ingen koordinater fundet - spring over
-                        console.log('Springer række over - ingen koordinat-kolonner:', row['navn'] || 'Ukendt');
-                        return;
+                        console.log('   ❌ Ingen koordinat-kolonne for ' + (navn || 'ukendt') + ' på ' + (stednavn || 'ukendt sted'));
                     }
 
+                    // Fallback til separate Lat/Lng kolonner
                     if (!isFinite(lat) || !isFinite(lng)) {
-                        console.log('Springer række over - ugyldige koordinater:', row['navn'] || 'Ukendt');
-                        return;
+                        lat = parseNumber(row['Lat'] || row['lat']);
+                        lng = parseNumber(row['Lng'] || row['lng'] || row['Lon'] || row['lon']);
+                        
+                        if (isFinite(lat) && isFinite(lng) && isTargetLocation) {
+                            console.log('   ✅ Bruger separate Lat/Lng kolonner: lat=' + lat + ', lng=' + lng);
+                        }
                     }
 
-                    // Hvis lat/lng byttet (fx lat > 90), prøv at byt
-                    if (Math.abs(lat) > 90 && Math.abs(lng) <= 90) {
-                        console.warn('Ser ud som byttede koordinater, bytter automatisk for række:', row);
-                        var tmp = lat; lat = lng; lng = tmp;
+                    // Tjek om koordinaterne er gyldige tal
+                    if (!isFinite(lat) || !isFinite(lng) || lat === null || lng === null) {
+                        if (isTargetLocation) {
+                            console.log('   ❌ SPRINGER OVER - ingen gyldige koordinater fundet! (lat=' + lat + ', lng=' + lng + ')');
+                        }
+                        return; // Spring over hvis der ikke er gyldige koordinater
+                    }
+                    
+                    if (isTargetLocation) {
+                        console.log('   🎆 OPRETTER MARKER på koordinater: ' + lat + ', ' + lng);
                     }
 
-                    // bestem farve ud fra typen af byggeri
-                    var typeKey = (typeByg || '').toLowerCase();
-                    var fillColor = '#666666'; // fallback (ukendt)
-                    if (typeKey.indexOf('offent') !== -1 || typeKey.indexOf('offentlig') !== -1) {
-                        fillColor = '#B22222'; // røde: Offentlige bygninger
-                    } else if (typeKey.indexOf('erhverv') !== -1) {
-                        fillColor = '#1E90FF'; // blå: Erhvervsbyggerier
-                    } else if (typeKey.indexOf('boliggrupp') !== -1 || typeKey.indexOf('boliggruppe') !== -1) {
-                        fillColor = '#FFD700'; // gul: Boliggrupper
-                    } else if (typeKey.indexOf('enfamil') !== -1 || typeKey.indexOf('en-famil') !== -1 || typeKey.indexOf('en familie') !== -1) {
-                        fillColor = '#2e7d32'; // grøn: Enfamilieboliger
-                    } else if (typeKey.indexOf('bolig') !== -1) {
-                        fillColor = '#FFD700'; // generisk bolig -> gul
+                    // Bestem farve baseret på køn
+                    var fillColor = '#666666'; // fallback
+                    if (køn === 'M' || køn === 'm') {
+                        fillColor = '#4285f4'; // blå for mænd
+                    } else if (køn === 'K' || køn === 'k') {
+                        fillColor = '#ea4335'; // rød for kvinder
                     }
 
                     var marker = L.circleMarker([lat, lng], {
-                        radius: 6,
+                        radius: 5,
                         color: fillColor,
                         weight: 1,
                         fillColor: fillColor,
-                        fillOpacity: 0.9
+                        fillOpacity: 0.8
                     });
 
-                    // Gem koordinater som skjult data på markøren (ikke vist i popup)
+                    // Gem data på markøren
                     marker._coords = { lat: lat, lng: lng };
-                    // Gem årstal på markøren (nummer eller NaN)
-                    var yearNum = parseInt(String(årstal).replace(/[^\d\-]/g, ''), 10);
-                    marker._year = isFinite(yearNum) ? yearNum : NaN;
-                    // Gem øvrige felter (kan bruges senere)
-                    marker._meta = { projekt: projekt, adresse: adresse, type: typeByg, note: note };
+                    marker._year = NaN; // Folketællinger har ikke årstal som sådan
+                    marker._meta = { navn: navn, stednavn: stednavn, adresse: adresse, køn: køn };
 
-                    var popup = '<div style="max-width:260px;font-size:14px;line-height:1.3;">' +
-                                (projekt ? '<div><strong>Projekt:</strong> ' + projekt + '</div>' : '') +
+                    var popup = '<div style="max-width:260px;font-size:13px;line-height:1.3;">' +
+                                (navn ? '<div><strong>Navn:</strong> ' + navn + '</div>' : '') +
+                                (stednavn ? '<div><strong>Sted:</strong> ' + stednavn + '</div>' : '') +
                                 (adresse ? '<div><strong>Adresse:</strong> ' + adresse + '</div>' : '') +
-                                (årstal ? '<div><strong>Årstal:</strong> ' + årstal + '</div>' : '') +
-                                (typeByg ? '<div><strong>Type:</strong> ' + typeByg + '</div>' : '') +
-                                (note ? '<div><strong>Note:</strong> <em>' + note + '</em></div>' : '') +
+                                (alder ? '<div><strong>Alder:</strong> ' + alder + '</div>' : '') +
+                                (køn ? '<div><strong>Køn:</strong> ' + køn + '</div>' : '') +
+                                (civilstand ? '<div><strong>Civilstand:</strong> ' + civilstand + '</div>' : '') +
+                                (erhverv ? '<div><strong>Erhverv:</strong> ' + erhverv + '</div>' : '') +
+                                (fødested ? '<div><strong>Fødested:</strong> ' + fødested + '</div>' : '') +
                                 '</div>';
  
                     marker.bindPopup(popup);
@@ -659,18 +794,23 @@
                     allMarkers.push(marker);
                     excelLayer.addLayer(marker);
                     added++;
+                    
+                    if (isTargetLocation) {
+                        console.log('   ✅ MARKER OPRETTET SUCCESFULDT! Total markers: ' + added);
+                    }
                 });
  
-                // Tilføj overlay med det specifikke navn
-                if (added > 0) {
-                    try { 
-                        layerControl.addOverlay(excelLayer, layerName || 'Excel Data'); 
-                        console.log('Tilføjet lag:', layerName, 'med', added, 'punkter');
-                    } catch(e){
-                        console.error('Kunne ikke tilføje overlay:', e);
+                // Tilføj overlay med det specifikke navn (selv hvis det er tomt)
+                try { 
+                    layerControl.addOverlay(excelLayer, layerName || 'Excel Data'); 
+                    allClusterLayers.push(excelLayer); // Gem til cluster toggle
+                    if (added > 0) {
+                        console.log('✅ Tilføjet cluster-lag:', layerName, 'med', added, 'punkter');
+                    } else {
+                        console.log('📋 Tilføjet tomt lag:', layerName, '(ingen koordinater i Excel-fil)');
                     }
-                } else {
-                    console.warn('Ingen gyldige punkter fundet i Excel-filen:', path);
+                } catch(e){
+                    console.error('Kunne ikke tilføje overlay:', e);
                 }
  
                 console.log('Markers tilføjet fra Excel:', added);
@@ -686,8 +826,9 @@
                     }
                 }
              }).catch(function(err){
-                 console.error('Kunne ikke indlæse Excel-fil:', path, '- Fejl:', err.message);
-                 console.log('Tip: Opret Excel-filen først eller brug CSV-fallback');
+                 console.error('❌ FEJL ved indlæsning af Excel-fil:', path);
+                 console.error('Fejl-besked:', err.message);
+                 console.error('Fuld fejl:', err);
                  return Promise.reject(err);
              });
          }
@@ -711,9 +852,9 @@
         loadExcelToMap('./Folketællinger/FT_Brabrand_Sogn_sogn_1880-csv.xlsx', 'Folketælling 1880');
         loadExcelToMap('./Folketællinger/FT_Brabrand_Sogn_sogn_1901-csv.xlsx', 'Folketælling 1901');
 
-        // Start med OSM som baggrund og historisk kort som overlay
+        // Start med kun OSM som baggrund og 1840-kort som overlay
         osm.addTo(map);
-        historiskKort.addTo(map);
+        historiskKort1840.addTo(map);
 
         // Footer (bottom-right) med kun dit navn
         var footer = L.control({position: 'bottomright'});
