@@ -10,13 +10,25 @@
     <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/leaflet-mouse-position@1.2.0/src/L.Control.MousePosition.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-mouse-position@1.2.0/src/L.Control.MousePosition.css"/>
+    <!-- Chart.js til statistik grafer -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <!-- MarkerCluster plugin -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css"/>
     <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+    <!-- xlsx bibliotek til Excel-filer -->
     <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
     <style>
-        #map { height: 100vh; width: 100vw; }
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+        #map {
+            height: 100vh;
+            width: 100%;
+        }
         .leaflet-control-geocoder {
             background: white;
             border-radius: 4px;
@@ -36,6 +48,48 @@
             font-size: 16px;
             box-shadow: 0 1px 4px rgba(0,0,0,0.2);
             pointer-events: none;
+        }
+        
+        /* Filter kontrol styling */
+        .filter-control {
+            background: rgba(255,255,255,0.95);
+            padding: 8px;
+            margin: 10px;
+            border: 1px solid rgba(0,0,0,0.15);
+            border-radius: 4px;
+            font-size: 12px;
+            max-width: 200px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        .filter-header {
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        .filter-section {
+            margin-bottom: 10px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #eee;
+        }
+        .filter-section:last-child {
+            border-bottom: none;
+        }
+        .filter-section label {
+            display: block;
+            margin: 4px 0;
+            cursor: pointer;
+        }
+        .filter-section input[type="checkbox"] {
+            margin-right: 6px;
+        }
+        .filter-section select {
+            width: 100%;
+            padding: 4px;
+            margin-top: 4px;
         }
         
         /* Custom cluster styling */
@@ -69,11 +123,48 @@
             color: #fff;
             text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
         }
+        
+        /* Statistik panel */
+        .stats-control {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            max-width: 350px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .stats-header {
+            font-weight: 600;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #4CAF50;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+        .chart-container {
+            margin-bottom: 15px;
+            padding: 10px;
+            background: white;
+            border-radius: 4px;
+            border: 1px solid #e0e0e0;
+        }
+        .chart-title {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+            font-size: 14px;
+        }
+        canvas {
+            max-height: 200px;
+        }
     </style>
 </head>
 <body>
     <div id="map"></div>
-    <div id="map-title">Brabrand i gennem tiden</div>
+    <div id="map-title">Brabrand igennem tiden</div>
     <script>
         var map = L.map('map', {
             center: [56.1589639,10.1082219,],
@@ -321,10 +412,235 @@
         // Liste over alle markører (bruges til filtrering)
         var allMarkers = [];
         
-        // Year-filter kode er fjernet
-        
         // Cluster funktion er altid aktiveret - ingen kontrol nødvendig
         var allClusterLayers = [];
+        
+        // Filter state - alle aktiveret fra start
+        var filterState = {
+            sex: { k: true, m: true },
+            ageRange: { min: 0, max: 120 },
+            civilstand: {},
+            erhverv: {},
+            nameSearch: ''
+        };
+        
+        // Samlinger til unikke værdier
+        var uniqueCivilstand = new Set();
+        var uniqueErhverv = new Set();
+
+        // Filter kontrol
+        var filterControl = L.control({ position: 'topleft' });
+        filterControl.onAdd = function(map) {
+            var div = L.DomUtil.create('div', 'filter-control');
+            div.innerHTML = `
+                <div class="filter-header">
+                    <span>Filtre</span>
+                    <span id="filterToggle">▾</span>
+                </div>
+                <div id="filterContent">
+                    <button id="apply-filters" style="width:100%;padding:6px;margin-bottom:8px;cursor:pointer;background:#4CAF50;color:white;border:none;border-radius:3px;font-weight:600;">Anvend filtre</button>
+                    <div class="filter-section">
+                        <strong>Søg efter navn:</strong>
+                        <input type="text" id="filter-name" placeholder="Indtast navn..." style="width:100%;padding:4px;margin-top:4px;border:1px solid #ccc;border-radius:3px;">
+                    </div>
+                    <div class="filter-section">
+                        <strong>Søg adresse:</strong>
+                        <input type="text" id="geocoderInput" placeholder="Indtast adresse..." style="width:100%;padding:4px;margin-top:4px;border:1px solid #ccc;border-radius:3px;font-size:11px;box-sizing:border-box;">
+                        <button id="geocoderBtn" style="width:100%;padding:4px;margin-top:4px;background:#2196F3;color:white;border:none;border-radius:3px;cursor:pointer;font-size:11px;">Søg</button>
+                        <div id="geocoderResults" style="margin-top:4px;font-size:10px;max-height:120px;overflow-y:auto;"></div>
+                    </div>
+                    <div class="filter-section">
+                        <strong>Køn:</strong>
+                        <label><input type="checkbox" id="filter-k" checked> Kvinder</label>
+                        <label><input type="checkbox" id="filter-m" checked> Mænd</label>
+                    </div>
+                    <div class="filter-section">
+                        <strong>Alder:</strong>
+                        <div style="display:flex;gap:4px;margin-top:4px;">
+                            <input type="number" id="filter-age-min" placeholder="Min" min="0" max="120" value="0" style="width:48%;">
+                            <input type="number" id="filter-age-max" placeholder="Max" min="0" max="120" value="120" style="width:48%;">
+                        </div>
+                    </div>
+                    <div class="filter-section">
+                        <strong>Civilstand:</strong>
+                        <div id="civilstand-filters"></div>
+                    </div>
+                    <div class="filter-section">
+                        <strong>Erhverv:</strong>
+                        <button id="deselect-all-erhverv" style="width:100%;padding:4px;margin-top:4px;margin-bottom:4px;background:#ff9800;color:white;border:none;border-radius:3px;cursor:pointer;font-size:11px;">Fravælg alle</button>
+                        <div id="erhverv-filters"></div>
+                    </div>
+                </div>
+            `;
+            L.DomEvent.disableClickPropagation(div);
+            return div;
+        };
+        filterControl.addTo(map);
+
+        // Fold/ud filter
+        setTimeout(function() {
+            document.getElementById('filterToggle').addEventListener('click', function() {
+                var content = document.getElementById('filterContent');
+                var icon = document.getElementById('filterToggle');
+                if (content.style.display === 'none') {
+                    content.style.display = 'block';
+                    icon.textContent = '▾';
+                } else {
+                    content.style.display = 'none';
+                    icon.textContent = '▸';
+                }
+            });
+        }, 100);
+
+        // Funktion til at opdatere filter-checkboxes
+        function updateFilterCheckboxes() {
+            // Civilstand
+            var civilstandDiv = document.getElementById('civilstand-filters');
+            if (civilstandDiv) {
+                civilstandDiv.innerHTML = '';
+                Array.from(uniqueCivilstand).sort().forEach(function(cs) {
+                    if (cs && cs !== '') {
+                        var label = document.createElement('label');
+                        var checkbox = document.createElement('input');
+                        checkbox.type = 'checkbox';
+                        checkbox.checked = true;
+                        if (filterState.civilstand[cs] === undefined) {
+                            filterState.civilstand[cs] = true;
+                        }
+                        checkbox.addEventListener('change', function() {
+                            filterState.civilstand[cs] = this.checked;
+                        });
+                        label.appendChild(checkbox);
+                        label.appendChild(document.createTextNode(' ' + cs));
+                        civilstandDiv.appendChild(label);
+                    }
+                });
+            }
+
+            // Erhverv
+            var erhvervDiv = document.getElementById('erhverv-filters');
+            if (erhvervDiv) {
+                erhvervDiv.innerHTML = '';
+                Array.from(uniqueErhverv).sort().forEach(function(erh) {
+                    if (erh && erh !== '') {
+                        var label = document.createElement('label');
+                        var checkbox = document.createElement('input');
+                        checkbox.type = 'checkbox';
+                        checkbox.className = 'erhverv-checkbox'; // Tilføj class for nem selektion
+                        checkbox.checked = true;
+                        if (filterState.erhverv[erh] === undefined) {
+                            filterState.erhverv[erh] = true;
+                        }
+                        checkbox.addEventListener('change', function() {
+                            filterState.erhverv[erh] = this.checked;
+                        });
+                        label.appendChild(checkbox);
+                        label.appendChild(document.createTextNode(' ' + erh));
+                        erhvervDiv.appendChild(label);
+                    }
+                });
+            }
+        }
+
+        // Fravælg/Vælg alle erhverv knap - TOGGLE funktion
+        setTimeout(function() {
+            var deselectBtn = document.getElementById('deselect-all-erhverv');
+            if (deselectBtn) {
+                deselectBtn.addEventListener('click', function() {
+                    var checkboxes = document.querySelectorAll('.erhverv-checkbox');
+                    
+                    // Tjek om alle er valgt eller ej
+                    var allChecked = Array.from(checkboxes).every(cb => cb.checked);
+                    
+                    if (allChecked) {
+                        // Fravælg alle
+                        checkboxes.forEach(function(checkbox) {
+                            checkbox.checked = false;
+                            checkbox.dispatchEvent(new Event('change'));
+                        });
+                        
+                        Object.keys(filterState.erhverv).forEach(function(key) {
+                            filterState.erhverv[key] = false;
+                        });
+                        
+                        this.textContent = 'Vælg alle';
+                        this.style.background = '#2196F3';
+                    } else {
+                        // Vælg alle
+                        checkboxes.forEach(function(checkbox) {
+                            checkbox.checked = true;
+                            checkbox.dispatchEvent(new Event('change'));
+                        });
+                        
+                        Object.keys(filterState.erhverv).forEach(function(key) {
+                            filterState.erhverv[key] = true;
+                        });
+                        
+                        this.textContent = 'Fravælg alle';
+                        this.style.background = '#ff9800';
+                    }
+                });
+            }
+        }, 200);
+
+        // Anvend filtre
+        function applyFilters() {
+            // Opdater filter state fra inputs
+            filterState.sex.k = document.getElementById('filter-k').checked;
+            filterState.sex.m = document.getElementById('filter-m').checked;
+            filterState.ageRange.min = parseInt(document.getElementById('filter-age-min').value) || 0;
+            filterState.ageRange.max = parseInt(document.getElementById('filter-age-max').value) || 120;
+            filterState.nameSearch = document.getElementById('filter-name').value.toLowerCase().trim();
+
+            // Filtrer alle cluster layers
+            allClusterLayers.forEach(function(clusterLayer) {
+                clusterLayer.clearLayers();
+                allMarkers.forEach(function(markerData) {
+                    var show = true;
+
+                    // Filter navn
+                    if (filterState.nameSearch && markerData.name) {
+                        if (!markerData.name.toLowerCase().includes(filterState.nameSearch)) {
+                            show = false;
+                        }
+                    }
+
+                    // Filter køn
+                    if (markerData.sex === 'k' && !filterState.sex.k) show = false;
+                    if (markerData.sex === 'm' && !filterState.sex.m) show = false;
+
+                    // Filter alder
+                    if (markerData.age !== null && !isNaN(markerData.age)) {
+                        if (markerData.age < filterState.ageRange.min || markerData.age > filterState.ageRange.max) {
+                            show = false;
+                        }
+                    }
+
+                    // Filter civilstand
+                    if (markerData.civilstand && filterState.civilstand[markerData.civilstand] === false) {
+                        show = false;
+                    }
+
+                    // Filter erhverv
+                    if (markerData.erhverv && filterState.erhverv[markerData.erhverv] === false) {
+                        show = false;
+                    }
+
+                    if (show && markerData.clusterGroup === clusterLayer) {
+                        clusterLayer.addLayer(markerData.marker);
+                    }
+                });
+            });
+
+            // Opdater statistik efter filtrering
+            updateStatistics();
+        }
+
+        setTimeout(function() {
+            if (document.getElementById('apply-filters')) {
+                document.getElementById('apply-filters').addEventListener('click', applyFilters);
+            }
+        }, 100);
 
         // Funktion: indlæs CSV fra en sti og opret et navngivet lag (fallback)
         function loadCSVToMap(path, layerName) {
@@ -334,8 +650,13 @@
                     var lines = csv.split('\n');
                     var headers = lines[0].split(',').map(h => h.trim());
                     
-                    // Find kolonneindeks for koordinater
+                    // Find kolonneindeks
                     var coordIndex = headers.findIndex(h => h.toLowerCase() === 'koordinater');
+                    var sexIndex = headers.findIndex(h => h.toLowerCase() === 'sex');
+                    var ageIndex = headers.findIndex(h => h.toLowerCase() === 'age' || h.toLowerCase() === 'alder');
+                    var civilstandIndex = headers.findIndex(h => h.toLowerCase() === 'civilstand' || h.toLowerCase() === 'marital_status');
+                    var erhvervIndex = headers.findIndex(h => h.toLowerCase() === 'erhverv');
+                    var navnIndex = headers.findIndex(h => h.toLowerCase() === 'navn');
                     
                     if (coordIndex === -1) {
                         console.error('Ingen "Koordinater" kolonne fundet i ' + path);
@@ -343,6 +664,22 @@
                     }
                     
                     var markers = L.markerClusterGroup();
+                    
+                    var fieldsToShow = {
+                        'Stednavn': 'Stednavn',
+                        'Matr_nr_adresse': 'Matrikel nr. / Adresse',
+                        'Navn': 'Navn',
+                        'Alder': 'Alder',
+                        'Civilstand': 'Civilstand',
+                        'Erhverv': 'Erhverv',
+                        'parish': 'Sogn',
+                        'Type': 'Type',
+                        'county': 'Amt',
+                        'Herred': 'Herred',
+                        'sex': 'Køn',
+                        'age': 'Alder',
+                        'marital_status': 'Civilstand'
+                    };
                     
                     for (var i = 1; i < lines.length; i++) {
                         if (lines[i].trim() === '') continue;
@@ -356,50 +693,142 @@
                             var lng = parseFloat(parts[1].trim());
                             
                             if (!isNaN(lat) && !isNaN(lng)) {
+                                var sex = sexIndex !== -1 && cells[sexIndex] ? cells[sexIndex].trim().toLowerCase() : '';
+                                var age = ageIndex !== -1 && cells[ageIndex] ? parseFloat(cells[ageIndex].trim()) : null;
+                                var civilstand = civilstandIndex !== -1 && cells[civilstandIndex] ? cells[civilstandIndex].trim() : '';
+                                var erhverv = erhvervIndex !== -1 && cells[erhvervIndex] ? cells[erhvervIndex].trim() : '';
+                                var navn = navnIndex !== -1 && cells[navnIndex] ? cells[navnIndex].trim() : '';
+                                
+                                if (civilstand) uniqueCivilstand.add(civilstand);
+                                if (erhverv) uniqueErhverv.add(erhverv);
+                                
+                                var fillColor = '#2196F3';
+                                var borderColor = '#1976D2';
+                                
+                                if (sex === 'k' || sex === 'kvinde' || sex === 'female') {
+                                    fillColor = '#E91E63';
+                                    borderColor = '#C2185B';
+                                } else if (sex === 'm' || sex === 'mand' || sex === 'male') {
+                                    fillColor = '#2196F3';
+                                    borderColor = '#1976D2';
+                                }
+                                
                                 var popupContent = '<b>' + layerName + '</b><br>';
                                 headers.forEach((h, idx) => {
-                                    if (cells[idx]) {
-                                        popupContent += h + ': ' + cells[idx].trim() + '<br>';
+                                    if (fieldsToShow[h] && cells[idx]) {
+                                        var value = cells[idx].trim();
+                                        if (h === 'sex') {
+                                            if (value.toLowerCase() === 'k') value = 'Kvinde';
+                                            else if (value.toLowerCase() === 'm') value = 'Mand';
+                                        }
+                                        popupContent += fieldsToShow[h] + ': ' + value + '<br>';
                                     }
                                 });
                                 
-                                var marker = L.marker([lat, lng]).bindPopup(popupContent);
+                                var marker = L.circleMarker([lat, lng], {
+                                    radius: 8,
+                                    fillColor: fillColor,
+                                    color: borderColor,
+                                    weight: 2,
+                                    opacity: 1,
+                                    fillOpacity: 0.8
+                                }).bindPopup(popupContent);
+                                
                                 markers.addLayer(marker);
+                                allMarkers.push({
+                                    marker: marker,
+                                    sex: sex,
+                                    age: age,
+                                    civilstand: civilstand,
+                                    erhverv: erhverv,
+                                    name: navn,
+                                    clusterGroup: markers
+                                });
                             }
                         }
                     }
                     
                     allClusterLayers.push(markers);
-                    layerControl.addOverlay(markers, layerName);
+                    layerControl.addOverlay(markers, layerName); // FØRST tilføj til layer control
+                    markers.addTo(map); // SÅ tilføj til kortet
+                    updateFilterCheckboxes();
+                    updateStatistics(); // Opdater statistik når nyt lag indlæses
                 })
                 .catch(err => console.error('Fejl ved indlæsning af CSV ' + path + ':', err));
         }
 
         // Funktion: indlæs Excel (xlsx) fra en sti og opret et navngivet lag
-        function loadExcelToMap(path, layerName) {
+        function loadExcelToMap(path, layerName, autoShow = true) {
             fetch(path)
-                .then(response => response.arrayBuffer())
+                .then(response => {
+                    // Tjek om filen findes
+                    if (!response.ok) {
+                        throw new Error('Fil ikke fundet: ' + path + ' (HTTP ' + response.status + ')');
+                    }
+                    // Tjek content-type
+                    var contentType = response.headers.get('content-type');
+                    console.log('Indlæser ' + path + ' - Content-Type: ' + contentType);
+                    return response.arrayBuffer();
+                })
                 .then(data => {
-                    var workbook = XLSX.read(data, {type: 'array'});
+                    // Tjek om det er tom data
+                    if (!data || data.byteLength === 0) {
+                        throw new Error('Tom fil: ' + path);
+                    }
+                    
+                    var workbook;
+                    try {
+                        workbook = XLSX.read(data, {type: 'array'});
+                    } catch (e) {
+                        throw new Error('Kunne ikke læse Excel-fil (muligvis korrupt eller forkert format): ' + path + ' - ' + e.message);
+                    }
+                    
+                    if (!workbook.SheetNames || workbook.SheetNames.length === 0) {
+                        throw new Error('Excel-fil indeholder ingen sheets: ' + path);
+                    }
+                    
                     var firstSheet = workbook.Sheets[workbook.SheetNames[0]];
                     var jsonData = XLSX.utils.sheet_to_json(firstSheet, {header: 1});
                     
                     if (jsonData.length < 2) {
-                        console.error('Excel-fil er tom eller har ikke nok data: ' + path);
+                        console.warn('Excel-fil er tom eller har ikke nok data: ' + path);
                         return;
                     }
                     
                     var headers = jsonData[0].map(h => String(h).trim());
                     
-                    // Find kolonneindeks for koordinater
                     var coordIndex = headers.findIndex(h => h.toLowerCase() === 'koordinater');
+                    var sexIndex = headers.findIndex(h => h.toLowerCase() === 'sex');
+                    var ageIndex = headers.findIndex(h => h.toLowerCase() === 'age' || h.toLowerCase() === 'alder');
+                    var civilstandIndex = headers.findIndex(h => h.toLowerCase() === 'civilstand' || h.toLowerCase() === 'marital_status');
+                    var erhvervIndex = headers.findIndex(h => h.toLowerCase() === 'erhverv');
+                    var navnIndex = headers.findIndex(h => h.toLowerCase() === 'navn');
                     
                     if (coordIndex === -1) {
                         console.error('Ingen "Koordinater" kolonne fundet i ' + path);
+                        console.log('Fundne kolonner: ' + headers.join(', '));
                         return;
                     }
                     
                     var markers = L.markerClusterGroup();
+                    
+                    var fieldsToShow = {
+                        'Stednavn': 'Stednavn',
+                        'Matr_nr_adresse': 'Matrikel nr. / Adresse',
+                        'Navn': 'Navn',
+                        'Alder': 'Alder',
+                        'Civilstand': 'Civilstand',
+                        'Erhverv': 'Erhverv',
+                        'parish': 'Sogn',
+                        'Type': 'Type',
+                        'county': 'Amt',
+                        'Herred': 'Herred',
+                        'sex': 'Køn',
+                        'age': 'Alder',
+                        'marital_status': 'Civilstand'
+                    };
+                    
+                    var markerCount = 0;
                     
                     for (var i = 1; i < jsonData.length; i++) {
                         var row = jsonData[i];
@@ -408,87 +837,339 @@
                         if (coordStr && coordStr.includes(',')) {
                             var parts = coordStr.split(',');
                             var lat = parseFloat(parts[0].trim());
-                            var lng = parseFloat(parts[1].trim());
+                            var lon = parseFloat(parts[1].trim());
                             
-                            if (!isNaN(lat) && !isNaN(lng)) {
+                            if (!isNaN(lat) && !isNaN(lon)) {
+                                var sex = sexIndex !== -1 && row[sexIndex] ? String(row[sexIndex]).trim().toLowerCase() : '';
+                                var age = ageIndex !== -1 && row[ageIndex] ? parseFloat(row[ageIndex]) : null;
+                                var civilstand = civilstandIndex !== -1 && row[civilstandIndex] ? String(row[civilstandIndex]).trim() : '';
+                                var erhverv = erhvervIndex !== -1 && row[erhvervIndex] ? String(row[erhvervIndex]).trim() : '';
+                                var navn = navnIndex !== -1 && row[navnIndex] ? String(row[navnIndex]).trim() : '';
+                                
+                                if (civilstand) uniqueCivilstand.add(civilstand);
+                                if (erhverv) uniqueErhverv.add(erhverv);
+                                
+                                var fillColor = '#2196F3';
+                                var borderColor = '#1976D2';
+                                
+                                if (sex === 'k' || sex === 'kvinde' || sex === 'female') {
+                                    fillColor = '#E91E63';
+                                    borderColor = '#C2185B';
+                                } else if (sex === 'm' || sex === 'mand' || sex === 'male') {
+                                    fillColor = '#2196F3';
+                                    borderColor = '#1976D2';
+                                }
+                                
                                 var popupContent = '<b>' + layerName + '</b><br>';
                                 headers.forEach((h, idx) => {
-                                    if (row[idx] !== undefined && row[idx] !== null && row[idx] !== '') {
-                                        popupContent += h + ': ' + row[idx] + '<br>';
+                                    if (fieldsToShow[h] && row[idx] !== undefined && row[idx] !== null && row[idx] !== '') {
+                                        var value = String(row[idx]);
+                                        if (h === 'sex') {
+                                            if (value.toLowerCase() === 'k') value = 'Kvinde';
+                                            else if (value.toLowerCase() === 'm') value = 'Mand';
+                                        }
+                                        popupContent += fieldsToShow[h] + ': ' + value + '<br>';
                                     }
                                 });
                                 
-                                var marker = L.marker([lat, lng]).bindPopup(popupContent);
+                                var marker = L.circleMarker([lat, lon], {
+                                    radius: 8,
+                                    fillColor: fillColor,
+                                    color: borderColor,
+                                    weight: 2,
+                                    opacity: 1,
+                                    fillOpacity: 0.8
+                                }).bindPopup(popupContent);
+                                
                                 markers.addLayer(marker);
+                                allMarkers.push({
+                                    marker: marker,
+                                    sex: sex,
+                                    age: age,
+                                    civilstand: civilstand,
+                                    erhverv: erhverv,
+                                    name: navn,
+                                    clusterGroup: markers
+                                });
+                                markerCount++;
                             }
                         }
                     }
                     
                     allClusterLayers.push(markers);
                     layerControl.addOverlay(markers, layerName);
+                    if (autoShow) {
+                        markers.addTo(map);
+                    }
+                    console.log('✓ Indlæst: ' + layerName + ' - ' + markerCount + ' markører');
+                    updateFilterCheckboxes();
+                    updateStatistics(); // Opdater statistik når nyt lag indlæses
                 })
-                .catch(err => console.error('Fejl ved indlæsning af Excel ' + path + ':', err));
+                .catch(err => {
+                    console.error('Fejl ved indlæsning af Excel ' + path + ':', err.message);
+                    console.error('Mulige årsager:');
+                    console.error('1. Filen eksisterer ikke på denne sti');
+                    console.error('2. Filen er ikke en rigtig .xlsx fil (tjek om det er en HTML-fil omdøbt til .xlsx)');
+                    console.error('3. Filen er korrupt');
+                });
         }
 
-        // Excel fil fra mappen "excel" er fjernet da den ikke eksisterer
+        // Indlæs folketællingsdata fra Excel-filer - SORTERET KRONOLOGISK
+        loadExcelToMap('./Folketællinger/FT_Brabrand_Sogn_sogn_1840.xlsx', 'Folketælling 1840', false);
+        loadExcelToMap('./Folketællinger/FT_Brabrand_Sogn_sogn_1845.xlsx', 'Folketælling 1845', false);
+        loadExcelToMap('./Folketællinger/FT_Brabrand_Sogn_sogn_1850.xlsx', 'Folketælling 1850', false);
+        loadExcelToMap('./Folketællinger/FT_Brabrand_Sogn_sogn_1860.xlsx', 'Folketælling 1860', false);
+        loadExcelToMap('./Folketællinger/FT_Brabrand_Sogn_sogn_1880.xlsx', 'Folketælling 1880', false);
+        loadExcelToMap('./Folketællinger/FT_Brabrand_Sogn_sogn_1901.xlsx', 'Folketælling 1901', false);
+
+        // Tilføj default basemap til kortet ved start
+        osm.addTo(map);
         
-        // Funktion til at prøve Excel først, derefter CSV som fallback
-        function loadDataWithFallback(excelPath, csvPath, layerName) {
-            loadExcelToMap(excelPath, layerName).catch(function() {
-                console.log('Excel ikke fundet, prøver CSV:', csvPath);
-                return loadCSVToMap(csvPath, layerName + ' (CSV)');
+        // Tilføj 1840-kortet som standard overlay
+        historiskKort1840.addTo(map);
+
+        // Geocoder søgefunktionalitet (FJERNET geocoderControl.onAdd og geocoderControl.addTo)
+        var currentSearchMarker = null;
+        
+        function performGeocode() {
+            var query = document.getElementById('geocoderInput').value.trim();
+            if (!query) return;
+            
+            var resultsDiv = document.getElementById('geocoderResults');
+            resultsDiv.innerHTML = '<div style="color:#666;">Søger...</div>';
+            
+            // Brug Nominatim API
+            fetch('https://nominatim.openstreetmap.org/search?format=json&q=' + encodeURIComponent(query) + '&limit=5')
+                .then(response => response.json())
+                .then(results => {
+                    if (results.length === 0) {
+                        resultsDiv.innerHTML = '<div style="color:#d9534f;">Ingen resultater fundet</div>';
+                        return;
+                    }
+                    
+                    resultsDiv.innerHTML = '';
+                    results.forEach(function(result) {
+                        var resultDiv = document.createElement('div');
+                        resultDiv.style.padding = '4px';
+                        resultDiv.style.marginBottom = '2px';
+                        resultDiv.style.cursor = 'pointer';
+                        resultDiv.style.borderBottom = '1px solid #eee';
+                        resultDiv.innerHTML = result.display_name;
+                        resultDiv.addEventListener('mouseover', function() { this.style.background = '#f0f0f0'; });
+                        resultDiv.addEventListener('mouseout', function() { this.style.background = 'transparent'; });
+                        resultDiv.addEventListener('click', function() {
+                            var lat = parseFloat(result.lat);
+                            var lon = parseFloat(result.lon);
+                            
+                            // Fjern tidligere markør
+                            if (currentSearchMarker) {
+                                map.removeLayer(currentSearchMarker);
+                            }
+                            
+                            // Tilføj ny markør
+                            currentSearchMarker = L.marker([lat, lon], {
+                                icon: L.icon({
+                                    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+                                    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+                                    iconSize: [25, 41],
+                                    iconAnchor: [12, 41],
+                                    popupAnchor: [1, -34],
+                                    shadowSize: [41, 41]
+                                })
+                            }).addTo(map)
+                                .bindPopup(result.display_name)
+                                .openPopup();
+                            
+                            // Zoom til stedet
+                            map.setView([lat, lon], 15);
+                            
+                            // Fjern markør efter 10 sekunder
+                            setTimeout(function() {
+                                if (currentSearchMarker) {
+                                    map.removeLayer(currentSearchMarker);
+                                    currentSearchMarker = null;
+                                }
+                            }, 10000);
+                        });
+                        resultsDiv.appendChild(resultDiv);
+                    });
+                })
+                .catch(err => {
+                    resultsDiv.innerHTML = '<div style="color:#d9534f;">Fejl ved søgning</div>';
+                    console.error('Geocoder fejl:', err);
+                });
+        }
+
+        // Bind søgeknap og enter-tast
+        setTimeout(function() {
+            document.getElementById('geocoderBtn').addEventListener('click', performGeocode);
+            document.getElementById('geocoderInput').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    performGeocode();
+                }
+            });
+        }, 100);
+
+        // Statistik kontrol
+        var statsControl = L.control({ position: 'bottomleft' });
+        statsControl.onAdd = function(map) {
+            var div = L.DomUtil.create('div', 'stats-control');
+            div.innerHTML = `
+                <div class="stats-header">
+                    <span>📊 Statistik</span>
+                    <span id="statsToggle">▾</span>
+                </div>
+                <div id="statsContent">
+                    <div class="chart-container">
+                        <div class="chart-title">Kønsfordeling</div>
+                        <canvas id="genderChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <div class="chart-title">Aldersfordeling</div>
+                        <canvas id="ageChart"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <div class="chart-title">Ægteskabsstatus</div>
+                        <canvas id="maritalChart"></canvas>
+                    </div>
+                </div>
+            `;
+            L.DomEvent.disableClickPropagation(div);
+            return div;
+        };
+        statsControl.addTo(map);
+
+        // Fold/ud statistik panel
+        setTimeout(function() {
+            var content = document.getElementById('statsContent');
+            var icon = document.getElementById('statsToggle');
+            content.style.display = 'none'; // Start foldet sammen
+            icon.textContent = '▸';
+            
+            document.getElementById('statsToggle').addEventListener('click', function() {
+                if (content.style.display === 'none') {
+                    content.style.display = 'block';
+                    icon.textContent = '▾';
+                    updateStatistics(); // Opdater kun når brugeren åbner panelet
+                } else {
+                    content.style.display = 'none';
+                    icon.textContent = '▸';
+                }
+            });
+        }, 100);
+
+        // Chart.js grafer
+        var genderChart = null;
+        var ageChart = null;
+        var maritalChart = null;
+
+        function updateStatistics() {
+            var genderCount = { k: 0, m: 0 };
+            var ageGroups = { '0-18': 0, '19-35': 0, '36-50': 0, '51-65': 0, '65+': 0 };
+            var maritalStatus = {};
+
+            // Gennemgå alle synlige markører
+            allMarkers.forEach(function(markerData) {
+                // Tjek om markøren er synlig (ikke filtreret væk)
+                var isVisible = false;
+                allClusterLayers.forEach(function(clusterLayer) {
+                    if (map.hasLayer(clusterLayer) && clusterLayer.hasLayer(markerData.marker)) {
+                        isVisible = true;
+                    }
+                });
+
+                if (isVisible) {
+                    // Køn
+                    if (markerData.sex === 'k') genderCount.k++;
+                    else if (markerData.sex === 'm') genderCount.m++;
+
+                    // Alder
+                    if (markerData.age !== null && !isNaN(markerData.age)) {
+                        if (markerData.age <= 18) ageGroups['0-18']++;
+                        else if (markerData.age <= 35) ageGroups['19-35']++;
+                        else if (markerData.age <= 50) ageGroups['36-50']++;
+                        else if (markerData.age <= 65) ageGroups['51-65']++;
+                        else ageGroups['65+']++;
+                    }
+
+                    // Civilstand
+                    if (markerData.civilstand && markerData.civilstand !== '') {
+                        maritalStatus[markerData.civilstand] = (maritalStatus[markerData.civilstand] || 0) + 1;
+                    }
+                }
+            });
+
+            // Opdater kønsfordeling
+            if (genderChart) genderChart.destroy();
+            var genderCtx = document.getElementById('genderChart').getContext('2d');
+            genderChart = new Chart(genderCtx, {
+                type: 'pie',
+                data: {
+                    labels: ['Kvinder', 'Mænd'],
+                    datasets: [{
+                        data: [genderCount.k, genderCount.m],
+                        backgroundColor: ['#E91E63', '#2196F3']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    plugins: {
+                        legend: { position: 'bottom' }
+                    }
+                }
+            });
+
+            // Opdater aldersfordeling
+            if (ageChart) ageChart.destroy();
+            var ageCtx = document.getElementById('ageChart').getContext('2d');
+            ageChart = new Chart(ageCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['0-18', '19-35', '36-50', '51-65', '65+'],
+                    datasets: [{
+                        label: 'Antal personer',
+                        data: Object.values(ageGroups),
+                        backgroundColor: '#4CAF50'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        y: { beginAtZero: true }
+                    }
+                }
+            });
+
+            // Opdater ægteskabsstatus
+            if (maritalChart) maritalChart.destroy();
+            var maritalCtx = document.getElementById('maritalChart').getContext('2d');
+            maritalChart = new Chart(maritalCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: Object.keys(maritalStatus),
+                    datasets: [{
+                        data: Object.values(maritalStatus),
+                        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    plugins: {
+                        legend: { position: 'bottom' }
+                    }
+                }
             });
         }
 
-        // Indlæs Excel-filer direkte (de findes allerede)
-        loadExcelToMap('./Folketællinger/FT_Brabrand_Sogn_sogn_1840-csv.xlsx', 'Folketælling 1840');
-        loadExcelToMap('./Folketællinger/FT_Brabrand_Sogn_sogn_1845-csv.xlsx', 'Folketælling 1845');
-        loadExcelToMap('./Folketællinger/FT_Brabrand_Sogn_sogn_1850-csv.xlsx', 'Folketælling 1850');
-        loadExcelToMap('./Folketællinger/FT_Brabrand_Sogn_sogn_1860-csv.xlsx', 'Folketælling 1860');
-        loadExcelToMap('./Folketællinger/FT_Brabrand_Sogn_sogn_1880-csv.xlsx', 'Folketælling 1880');
-        loadExcelToMap('./Folketællinger/FT_Brabrand_Sogn_sogn_1901-csv.xlsx', 'Folketælling 1901');
-
-        // Start med kun OSM som baggrund og 1840-kort som overlay
-        osm.addTo(map);
-        historiskKort1840.addTo(map);
-
-        // Footer (bottom-right) med kun dit navn
-        var footer = L.control({position: 'bottomright'});
-        footer.onAdd = function(map) {
-            var div = L.DomUtil.create('div', 'map-footer');
-            div.style.background = 'transparent';
-            div.style.padding = '4px 8px';
-            div.style.margin = '6px';
-            div.style.fontSize = '12px';
-            div.style.color = '#222';
-            div.style.opacity = '0.95';
-            div.style.pointerEvents = 'none';
-            div.innerHTML = 'Erik Oehlerich';
-            return div;
-        };
-        footer.addTo(map);
-
-        // Det manuelle skolepunkt er fjernet (marker oprettes nu kun fra Excel-data)
-        // Tilføj søgefunktion
-        var geocoder = L.Control.geocoder({
-            defaultMarkGeocode: false,
-            position: 'topleft',
-            placeholder: 'Søg efter adresse...',
-            geocoder: new L.Control.Geocoder.Nominatim({
-                language: 'da' // Dansk sprog
-            })
-        }).addTo(map);
-
-        // Håndter søgeresultater
-        geocoder.on('markgeocode', function(e) {
-            var bbox = e.geocode.bbox;
-            var poly = L.polygon([
-                bbox.getSouthEast(),
-                bbox.getNorthEast(),
-                bbox.getNorthWest(),
-                bbox.getSouthWest()
-            ]);
-            map.fitBounds(poly.getBounds());
+        // Opdater statistik når lag ændres eller filtre anvendes
+        map.on('overlayadd overlayremove', function() {
+            setTimeout(updateStatistics, 100);
         });
     </script>
 </body>
