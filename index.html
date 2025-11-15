@@ -860,17 +860,27 @@
                                     borderColor = '#1976D2';
                                 }
                                 
-                                var popupContent = '<b>' + layerName + '</b><br>';
+                                var popupContent = '<div style="max-width:280px;font-size:13px;line-height:1.4;font-family:Arial,sans-serif;">';
+                                popupContent += '<div style="font-weight:bold;font-size:14px;margin-bottom:6px;color:#1976D2;">' + layerName + '</div>';
+                                
+                                // Vis navn først hvis det findes
+                                if (navn && navn !== '') {
+                                    popupContent += '<div style="margin-bottom:4px;"><strong>Navn:</strong> ' + navn + '</div>';
+                                }
+                                
                                 headers.forEach((h, idx) => {
-                                    if (fieldsToShow[h] && row[idx] !== undefined && row[idx] !== null && row[idx] !== '') {
+                                    if (fieldsToShow[h] && row[idx] !== undefined && row[idx] !== null && row[idx] !== '' && h !== 'navn') {
                                         var value = String(row[idx]);
                                         if (h === 'sex') {
                                             if (value.toLowerCase() === 'k') value = 'Kvinde';
                                             else if (value.toLowerCase() === 'm') value = 'Mand';
                                         }
-                                        popupContent += fieldsToShow[h] + ': ' + value + '<br>';
+                                        popupContent += '<div style="margin-bottom:3px;"><strong>' + fieldsToShow[h] + ':</strong> ' + value + '</div>';
                                     }
                                 });
+                                
+                                popupContent += '<div style="margin-top:6px;font-size:11px;color:#666;">Koordinater: ' + lat.toFixed(6) + ', ' + lon.toFixed(6) + '</div>';
+                                popupContent += '</div>';
                                 
                                 var marker = L.circleMarker([lat, lon], {
                                     radius: 8,
