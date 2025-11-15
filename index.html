@@ -868,8 +868,12 @@
                                     popupContent += '<div style="margin-bottom:4px;"><strong>Navn:</strong> ' + navn + '</div>';
                                 }
                                 
-                                headers.forEach((h, idx) => {
-                                    if (fieldsToShow[h] && row[idx] !== undefined && row[idx] !== null && row[idx] !== '' && h !== 'navn') {
+                                // Vis felter i specifik rækkefølge
+                                var fieldOrder = ['Alder', 'age', 'sex', 'Civilstand', 'marital_status', 'Erhverv', 'Stednavn', 'Matr_nr_adresse', 'parish', 'Type', 'county', 'Herred'];
+                                
+                                fieldOrder.forEach(h => {
+                                    var idx = headers.indexOf(h);
+                                    if (idx !== -1 && fieldsToShow[h] && row[idx] !== undefined && row[idx] !== null && row[idx] !== '' && h !== 'navn') {
                                         var value = String(row[idx]);
                                         if (h === 'sex') {
                                             if (value.toLowerCase() === 'k') value = 'Kvinde';
