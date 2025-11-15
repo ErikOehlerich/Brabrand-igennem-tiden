@@ -321,518 +321,114 @@
         // Liste over alle markører (bruges til filtrering)
         var allMarkers = [];
         
-        // Year-filter funktioner og UI (kompakt, foldbar)
-        var yearFilterControl = L.control({ position: 'topright' });
-        yearFilterControl.onAdd = function(map) {
-            var div = L.DomUtil.create('div', 'year-filter-control');
-            div.style.background = 'rgba(255,255,255,0.95)';
-            div.style.padding = '4px';
-            div.style.margin = '10px';
-            div.style.border = '1px solid rgba(0,0,0,0.15)';
-            div.style.borderRadius = '4px';
-            div.style.fontSize = '12px';
-            div.style.width = '160px';
-            div.innerHTML = '<div id="yearHeader" style="cursor:pointer;font-weight:600;display:flex;justify-content:space-between;align-items:center;">' +
-                            '<span>Filter år</span><span style="font-size:12px;" id="yearToggleIcon">▾</span></div>' +
-                            '<div id="yearContent" style="display:block;margin-top:6px;font-size:12px;">' +
-                            '<div style="font-size:11px;margin-bottom:4px;">Fra: <span id="yrMinLbl">—</span> Til: <span id="yrMaxLbl">—</span></div>' +
-                            '<input id="yrMin" type="range" min="1900" max="2100" value="1900" style="width:140px;"><br>' +
-                            '<input id="yrMax" type="range" min="1900" max="2100" value="2100" style="width:140px;margin-top:6px;"><br>' +
-                            '<label style="font-size:11px;margin-top:6px;display:block;"><input id="yrUnknown" type="checkbox" checked> Vis ukendte år</label>' +
-                            '</div>';
-            L.DomEvent.disableClickPropagation(div);
-            return div;
-        };
-        yearFilterControl.addTo(map);
+        // Year-filter kode er fjernet
         
         // Cluster funktion er altid aktiveret - ingen kontrol nødvendig
         var allClusterLayers = [];
 
-        // fold/ud for year filter
-        (function(){
-            var hdr = document.getElementById('yearHeader');
-            var content = document.getElementById('yearContent');
-            var icon = document.getElementById('yearToggleIcon');
-            if (hdr && content && icon) {
-                hdr.addEventListener('click', function(){
-                    if (content.style.display === 'none') { content.style.display = 'block'; icon.textContent = '▾'; }
-                    else { content.style.display = 'none'; icon.textContent = '▸'; }
-                });
-            }
-        })();
-
-        function applyYearFilter() {
-            var min = parseInt(document.getElementById('yrMin').value, 10);
-            var max = parseInt(document.getElementById('yrMax').value, 10);
-            var showUnknown = document.getElementById('yrUnknown').checked;
-            allMarkers.forEach(function(m) {
-                var y = m._year;
-                var inRange = false;
-                if (isFinite(y)) inRange = (y >= min && y <= max);
-                else inRange = showUnknown;
-
-                // tilføj/fjern fra lokaliteterLayer
-                if (inRange) {
-                    if (!lokaliteterLayer.hasLayer(m)) lokaliteterLayer.addLayer(m);
-                } else {
-                    if (lokaliteterLayer.hasLayer(m)) lokaliteterLayer.removeLayer(m);
-                }
-            });
-        }
-
-        function updateYearFilterUI(min, max) {
-            var minInput = document.getElementById('yrMin');
-            var maxInput = document.getElementById('yrMax');
-            var minLbl = document.getElementById('yrMinLbl');
-            var maxLbl = document.getElementById('yrMaxLbl');
-            if (!minInput || !maxInput) return;
-            minInput.min = min;
-            minInput.max = max;
-            maxInput.min = min;
-            maxInput.max = max;
-            minInput.value = min;
-            maxInput.value = max;
-            minLbl.textContent = min;
-            maxLbl.textContent = max;
-
-            // events
-            minInput.oninput = function() {
-                var v = parseInt(this.value,10);
-                if (v > parseInt(maxInput.value,10)) { this.value = maxInput.value; v = parseInt(this.value,10); }
-                minLbl.textContent = v;
-                applyYearFilter();
-            };
-            maxInput.oninput = function() {
-                var v = parseInt(this.value,10);
-                if (v < parseInt(minInput.value,10)) { this.value = minInput.value; v = parseInt(this.value,10); }
-                maxLbl.textContent = v;
-                applyYearFilter();
-            };
-            var unk = document.getElementById('yrUnknown');
-            unk.onchange = applyYearFilter;
-        }
-
         // Funktion: indlæs CSV fra en sti og opret et navngivet lag (fallback)
         function loadCSVToMap(path, layerName) {
-            console.log('Forsøger at indlæse CSV fra:', path);
-            return fetch(encodeURI(path)).then(function(resp) {
-                console.log('CSV Fetch response:', resp.status, resp.statusText);
-                if (!resp.ok) throw new Error('CSV fil ikke fundet: ' + path + ' (' + resp.status + ')');
-                return resp.text();
-            }).then(function(csvText) {
-                console.log('CSV indlæst, længde:', csvText.length);
-                
-                // Automatisk detektering af separator ($ eller ,)
-                var separator = '$';
-                var lines = csvText.split('\n');
-                if (lines.length > 0) {
-                    var firstLine = lines[0];
-                    var dollarCount = (firstLine.match(/\$/g) || []).length;
-                    var commaCount = (firstLine.match(/,/g) || []).length;
-                    // Brug den separator der forekommer mest i første linje
-                    if (commaCount > dollarCount) {
-                        separator = ',';
-                    }
-                }
-                console.log('Bruger separator:', separator);
-                
-                // Parse CSV med auto-detekteret separator
-                var headers = lines[0].split(separator);
-                var rows = [];
-                
-                for (var i = 1; i < lines.length; i++) {
-                    if (lines[i].trim() === '') continue;
-                    var values;
+            fetch(path)
+                .then(response => response.text())
+                .then(csv => {
+                    var lines = csv.split('\n');
+                    var headers = lines[0].split(',').map(h => h.trim());
                     
-                    if (separator === ',') {
-                        // Simpel CSV parsing for komma-separeret (håndterer anførselstegn)
-                        values = lines[i].match(/(".*?"|[^",]+)(?=\s*,|\s*$)/g) || [];
-                        values = values.map(function(val) {
-                            return val.replace(/^"(.*)"$/, '$1').trim();
-                        });
-                    } else {
-                        // Dollar-separeret parsing
-                        values = lines[i].split(separator);
+                    // Find kolonneindeks for koordinater
+                    var coordIndex = headers.findIndex(h => h.toLowerCase() === 'koordinater');
+                    
+                    if (coordIndex === -1) {
+                        console.error('Ingen "Koordinater" kolonne fundet i ' + path);
+                        return;
                     }
                     
-                    var row = {};
-                    for (var j = 0; j < headers.length && j < values.length; j++) {
-                        row[headers[j]] = values[j] || '';
+                    var markers = L.markerClusterGroup();
+                    
+                    for (var i = 1; i < lines.length; i++) {
+                        if (lines[i].trim() === '') continue;
+                        
+                        var cells = lines[i].split(',');
+                        var coordStr = cells[coordIndex] ? cells[coordIndex].trim() : '';
+                        
+                        if (coordStr && coordStr.includes(',')) {
+                            var parts = coordStr.split(',');
+                            var lat = parseFloat(parts[0].trim());
+                            var lng = parseFloat(parts[1].trim());
+                            
+                            if (!isNaN(lat) && !isNaN(lng)) {
+                                var popupContent = '<b>' + layerName + '</b><br>';
+                                headers.forEach((h, idx) => {
+                                    if (cells[idx]) {
+                                        popupContent += h + ': ' + cells[idx].trim() + '<br>';
+                                    }
+                                });
+                                
+                                var marker = L.marker([lat, lng]).bindPopup(popupContent);
+                                markers.addLayer(marker);
+                            }
+                        }
                     }
-                    rows.push(row);
-                }
-
-                console.log('CSV rækker (parsed):', rows.length);
-                if (rows.length === 0) {
-                    console.warn('Ingen rækker fundet i CSV-filen.');
-                    return;
-                }
-
-                // Opret et nyt lag til denne CSV
-                var csvLayer = L.layerGroup();
-                var csvMarkers = [];
-                var added = 0;
-
-                // Vis kun de første 10 rækker som eksempel (da CSV'er ikke har koordinater)
-                var maxRows = Math.min(rows.length, 10);
-
-                for (var i = 0; i < maxRows; i++) {
-                    var row = rows[i];
-                    if (i < 3) console.log('CSV række', i, row); // vis et par rækker til debugging
-
-                    var navn = row['navn'] || '';
-                    var stednavn = row['Stednavn'] || '';
-                    var adresse = row['Adresse'] || row['Matr_nr_adresse'] || '';
-                    var alder = row['Alder'] || row['age'] || '';
-                    var erhverv = row['Erhverv'] || '';
-                    var fødested = row['fødested'] || '';
-                    var køn = row['køn'] || row['sex'] || '';
-                    var civilstand = row['Civilstand'] || row['marital_status'] || '';
-
-                    // Placer punkter tilfældigt omkring Brabrand (da CSV'er ikke har koordinater)
-                    var lat = 56.158 + (Math.random() - 0.5) * 0.02; 
-                    var lng = 10.139 + (Math.random() - 0.5) * 0.02;
-
-                    // Bestem farve baseret på køn
-                    var fillColor = '#666666'; // fallback
-                    if (køn === 'M' || køn === 'm') {
-                        fillColor = '#4285f4'; // blå for mænd
-                    } else if (køn === 'K' || køn === 'k') {
-                        fillColor = '#ea4335'; // rød for kvinder
-                    }
-
-                    var marker = L.circleMarker([lat, lng], {
-                        radius: 5,
-                        color: fillColor,
-                        weight: 2,
-                        fillColor: fillColor,
-                        fillOpacity: 0.6
-                    });
-
-                    var popup = '<div style="max-width:260px;font-size:13px;line-height:1.3;">' +
-                                '<div style="color:#d32f2f;font-weight:600;margin-bottom:4px;">⚠️ CSV-data (tilfældig placering)</div>' +
-                                (navn ? '<div><strong>Navn:</strong> ' + navn + '</div>' : '') +
-                                (stednavn ? '<div><strong>Sted:</strong> ' + stednavn + '</div>' : '') +
-                                (adresse ? '<div><strong>Adresse:</strong> ' + adresse + '</div>' : '') +
-                                (alder ? '<div><strong>Alder:</strong> ' + alder + '</div>' : '') +
-                                (køn ? '<div><strong>Køn:</strong> ' + køn + '</div>' : '') +
-                                (civilstand ? '<div><strong>Civilstand:</strong> ' + civilstand + '</div>' : '') +
-                                (erhverv ? '<div><strong>Erhverv:</strong> ' + erhverv + '</div>' : '') +
-                                (fødested ? '<div><strong>Fødested:</strong> ' + fødested + '</div>' : '') +
-                                '<div style="margin-top:6px;font-size:11px;color:#666;">Konverter til Excel for præcise koordinater</div>' +
-                                '</div>';
- 
-                    marker.bindPopup(popup);
-                    allMarkers.push(marker);
-                    csvLayer.addLayer(marker);
-                    csvMarkers.push(marker);
-                    added++;
-                }
-
-                // Tilføj overlay til layer control
-                try { 
-                    layerControl.addOverlay(csvLayer, layerName); 
-                    console.log('Tilføjet CSV-lag:', layerName, 'med', added, 'eksempel-punkter');
-                } catch(e) {
-                    console.error('Kunne ikke tilføje CSV overlay:', e);
-                }
- 
-                console.log('Eksempel-markers tilføjet fra CSV:', added, 'af', rows.length, 'rækker');
-                // Laget starter ikke aktivt - brugeren skal selv tænde det
-                
-            }).catch(function(err){
-                console.error('Kunne ikke indlæse eller parse CSV:', err);
-            });
+                    
+                    allClusterLayers.push(markers);
+                    layerControl.addOverlay(markers, layerName);
+                })
+                .catch(err => console.error('Fejl ved indlæsning af CSV ' + path + ':', err));
         }
 
         // Funktion: indlæs Excel (xlsx) fra en sti og opret et navngivet lag
         function loadExcelToMap(path, layerName) {
-            console.log('🔄 Indlæser Excel:', path);
-            return fetch(encodeURI(path)).then(function(resp) {
-                console.log('📁 Fetch response for', path, ':', resp.status, resp.statusText);
-                if (!resp.ok) {
-                    console.error('❌ Excel fil ikke fundet:', path, '- Status:', resp.status);
-                    throw new Error('Excel fil ikke fundet: ' + path + ' (' + resp.status + ')');
-                }
-                console.log('✅ Excel fil fundet, indlæser data...');
-                return resp.arrayBuffer();
-            }).then(function(ab) {
-                var workbook;
-                try {
-                    workbook = XLSX.read(ab, {type: 'array'});
-                } catch (err) {
-                    console.error('XLSX.read fejlede:', err);
-                    // Prøv fallback som binary string
-                    try {
-                        var s = new Uint8Array(ab);
-                        var binary = Array.prototype.map.call(s, function(ch){ return String.fromCharCode(ch); }).join('');
-                        workbook = XLSX.read(binary, {type: 'binary'});
-                        console.warn('Brugte binary-fallback til at læse workbook');
-                    } catch (err2) {
-                        throw err2;
-                    }
-                }
-
-                console.log('📊 Workbook sheets:', workbook.SheetNames);
-                var firstSheetName = workbook.SheetNames[0];
-                console.log('📋 Bruger ark:', firstSheetName);
-                var worksheet = workbook.Sheets[firstSheetName];
-                var rows = XLSX.utils.sheet_to_json(worksheet, {defval: ''});
-
-                console.log('📈 Excel rækker (parsed):', rows.length);
-                if (rows.length === 0) {
-                    console.warn('⚠️ Ingen rækker fundet i arket:', firstSheetName);
-                    return;
-                }
-                
-                // Vis kolonnenavne og første rækker
-                console.log('=== DETALJERET EXCEL DEBUGGING ===' );
-                console.log('🏷️ Alle kolonnenavne:', Object.keys(rows[0]));
-                
-                // Vis første 3 rækker komplet
-                for (var debugRow = 0; debugRow < Math.min(3, rows.length); debugRow++) {
-                    console.log('Række ' + (debugRow + 1) + ':', rows[debugRow]);
-                }
-                
-                // Søg specifikt efter koordinat-relaterede kolonner
-                var coordColumns = [];
-                Object.keys(rows[0]).forEach(function(key) {
-                    var lowerKey = key.toLowerCase();
-                    if (lowerKey.includes('koordinat') || lowerKey.includes('coord') || 
-                        lowerKey.includes('lat') || lowerKey.includes('lng') || 
-                        lowerKey.includes('lon') || lowerKey.includes('bredde') || 
-                        lowerKey.includes('længde')) {
-                        coordColumns.push(key);
-                    }
-                });
-                console.log('📏 Potentielle koordinat-kolonner:', coordColumns);
-                
-                // Vis data for koordinat-kolonner
-                if (coordColumns.length > 0) {
-                    for (var i = 0; i < Math.min(5, rows.length); i++) {
-                        console.log('Række ' + (i+1) + ' koordinat-data:');
-                        coordColumns.forEach(function(col) {
-                            console.log('  ' + col + ':', rows[i][col]);
-                        });
-                    }
-                } else {
-                    console.warn('❌ INGEN koordinat-kolonner fundet!');
-                }
-
-                // Opret et nyt cluster-lag specifikt for denne Excel-fil
-                var excelLayer = L.markerClusterGroup({
-                    maxClusterRadius: 50,  // Hvor tæt punkter skal være for at blive clusteret
-                    spiderfyOnMaxZoom: true,  // Vis individuelle markører ved max zoom
-                    showCoverageOnHover: false,  // Skjul coverage område ved hover
-                    zoomToBoundsOnClick: true,  // Zoom til cluster ved klik
-                    iconCreateFunction: function(cluster) {
-                        var count = cluster.getChildCount();
-                        var className = 'marker-cluster ';
-                        
-                        // Forskellige størrelser baseret på antal punkter
-                        if (count < 10) {
-                            className += 'marker-cluster-small';
-                        } else if (count < 100) {
-                            className += 'marker-cluster-medium';
-                        } else {
-                            className += 'marker-cluster-large';
-                        }
-                        
-                        return L.divIcon({
-                            html: '<div><span>' + count + '</span></div>',
-                            className: className,
-                            iconSize: L.point(40, 40)
-                        });
-                    }
-                });
-                var added = 0;
-                rows.forEach(function(row, i) {
-                    // Hent data fra rækken - tilpasset til folketællings-data
-                    var navn = row['navn'] || '';
-                    var stednavn = row['Stednavn'] || '';
-                    var adresse = row['Adresse'] || row['Matr_nr_adresse'] || '';
-                    var alder = row['Alder'] || row['age'] || '';
-                    var køn = row['køn'] || row['sex'] || '';
-                    var erhverv = row['Erhverv'] || '';
-                    var civilstand = row['Civilstand'] || row['marital_status'] || '';
-                    var fødested = row['fødested'] || '';
-
-                    // Søg efter Brabrand, Holmstrupgaard eller Gellerup
-                    var isTargetLocation = false;
-                    var searchTerms = ['brabrand', 'holmstrupgaard', 'gellerup'];
-                    var allText = (navn + ' ' + stednavn + ' ' + adresse + ' ' + fødested).toLowerCase();
+            fetch(path)
+                .then(response => response.arrayBuffer())
+                .then(data => {
+                    var workbook = XLSX.read(data, {type: 'array'});
+                    var firstSheet = workbook.Sheets[workbook.SheetNames[0]];
+                    var jsonData = XLSX.utils.sheet_to_json(firstSheet, {header: 1});
                     
-                    searchTerms.forEach(function(term) {
-                        if (allText.indexOf(term) !== -1) {
-                            isTargetLocation = true;
-                        }
-                    });
-                    
-                    if (isTargetLocation) {
-                        console.log('\n🎯 FUNDET MÅLLOKATION - Række ' + (i+1) + ':');
-                        console.log('   Navn:', navn);
-                        console.log('   Stednavn:', stednavn);
-                        console.log('   Adresse:', adresse);
-                        console.log('   Fødested:', fødested);
-                        console.log('   Alle kolonner:');
-                        Object.keys(row).forEach(function(key) {
-                            console.log('     ' + key + ':', row[key]);
-                        });
+                    if (jsonData.length < 2) {
+                        console.error('Excel-fil er tom eller har ikke nok data: ' + path);
+                        return;
                     }
-
-                    var lat = null, lng = null;
-                    function parseNumber(v) {
-                        if (v === null || v === undefined) return NaN;
-                        var s = String(v).trim();
-                        if (s === '' || s === 'undefined' || s === 'null') return NaN;
-                        s = s.replace(',', '.'); // decimalkomma -> punktum
-                        return parseFloat(s);
-                    }
-
-                    // Søg efter ALLE mulige koordinat-kolonner
-                    var coordValue = null;
-                    var foundCoordColumn = null;
-                    var allKeys = Object.keys(row);
                     
-                    // Udvid søgningen til at inkludere alle mulige navne
-                    for (var k = 0; k < allKeys.length; k++) {
-                        var key = allKeys[k];
-                        var lowerKey = key.toLowerCase();
+                    var headers = jsonData[0].map(h => String(h).trim());
+                    
+                    // Find kolonneindeks for koordinater
+                    var coordIndex = headers.findIndex(h => h.toLowerCase() === 'koordinater');
+                    
+                    if (coordIndex === -1) {
+                        console.error('Ingen "Koordinater" kolonne fundet i ' + path);
+                        return;
+                    }
+                    
+                    var markers = L.markerClusterGroup();
+                    
+                    for (var i = 1; i < jsonData.length; i++) {
+                        var row = jsonData[i];
+                        var coordStr = row[coordIndex] ? String(row[coordIndex]).trim() : '';
                         
-                        if (lowerKey.includes('koordinat') || lowerKey.includes('coord') || 
-                            lowerKey === 'lat' || lowerKey === 'lng' || lowerKey === 'lon' ||
-                            lowerKey.includes('bredde') || lowerKey.includes('længde') ||
-                            lowerKey.includes('latitude') || lowerKey.includes('longitude')) {
+                        if (coordStr && coordStr.includes(',')) {
+                            var parts = coordStr.split(',');
+                            var lat = parseFloat(parts[0].trim());
+                            var lng = parseFloat(parts[1].trim());
                             
-                            if (row[key] !== undefined && row[key] !== '' && row[key] !== null) {
-                                coordValue = row[key];
-                                foundCoordColumn = key;
-                                if (isTargetLocation) {
-                                    console.log('   📏 Fundet koordinat i kolonne "' + key + '":', coordValue);
-                                }
-                                break;
-                            }
-                        }
-                    }
-
-                    if (coordValue) {
-                        var coordStr = coordValue.toString().trim();
-                        if (coordStr && coordStr !== 'undefined' && coordStr !== 'null' && coordStr !== '') {
-                            // Simpel parsing - tag bare de første to tal
-                            var m = coordStr.match(/[-+]?\d+[.,]?\d*/g);
-                            if (m && m.length >= 2) {
-                                lat = parseNumber(m[0]);
-                                lng = parseNumber(m[1]);
+                            if (!isNaN(lat) && !isNaN(lng)) {
+                                var popupContent = '<b>' + layerName + '</b><br>';
+                                headers.forEach((h, idx) => {
+                                    if (row[idx] !== undefined && row[idx] !== null && row[idx] !== '') {
+                                        popupContent += h + ': ' + row[idx] + '<br>';
+                                    }
+                                });
                                 
-                                console.log('   ✅ FUNDET KOORDINATER for ' + (navn || 'ukendt') + ' på ' + (stednavn || 'ukendt sted') + ': lat=' + lat + ', lng=' + lng);
-                            } else {
-                                console.log('   ❌ Kunne ikke parse koordinater fra: "' + coordStr + '" for ' + (navn || 'ukendt'));
+                                var marker = L.marker([lat, lng]).bindPopup(popupContent);
+                                markers.addLayer(marker);
                             }
-                        } else {
-                            console.log('   ⚠️ Tom koordinat-værdi for ' + (navn || 'ukendt') + ' i kolonne: ' + foundCoordColumn);
                         }
-                    } else {
-                        console.log('   ❌ Ingen koordinat-kolonne for ' + (navn || 'ukendt') + ' på ' + (stednavn || 'ukendt sted'));
-                    }
-
-                    // Fallback til separate Lat/Lng kolonner
-                    if (!isFinite(lat) || !isFinite(lng)) {
-                        lat = parseNumber(row['Lat'] || row['lat']);
-                        lng = parseNumber(row['Lng'] || row['lng'] || row['Lon'] || row['lon']);
-                        
-                        if (isFinite(lat) && isFinite(lng) && isTargetLocation) {
-                            console.log('   ✅ Bruger separate Lat/Lng kolonner: lat=' + lat + ', lng=' + lng);
-                        }
-                    }
-
-                    // Tjek om koordinaterne er gyldige tal
-                    if (!isFinite(lat) || !isFinite(lng) || lat === null || lng === null) {
-                        if (isTargetLocation) {
-                            console.log('   ❌ SPRINGER OVER - ingen gyldige koordinater fundet! (lat=' + lat + ', lng=' + lng + ')');
-                        }
-                        return; // Spring over hvis der ikke er gyldige koordinater
                     }
                     
-                    if (isTargetLocation) {
-                        console.log('   🎆 OPRETTER MARKER på koordinater: ' + lat + ', ' + lng);
-                    }
-
-                    // Bestem farve baseret på køn
-                    var fillColor = '#666666'; // fallback
-                    if (køn === 'M' || køn === 'm') {
-                        fillColor = '#4285f4'; // blå for mænd
-                    } else if (køn === 'K' || køn === 'k') {
-                        fillColor = '#ea4335'; // rød for kvinder
-                    }
-
-                    var marker = L.circleMarker([lat, lng], {
-                        radius: 5,
-                        color: fillColor,
-                        weight: 1,
-                        fillColor: fillColor,
-                        fillOpacity: 0.8
-                    });
-
-                    // Gem data på markøren
-                    marker._coords = { lat: lat, lng: lng };
-                    marker._year = NaN; // Folketællinger har ikke årstal som sådan
-                    marker._meta = { navn: navn, stednavn: stednavn, adresse: adresse, køn: køn };
-
-                    var popup = '<div style="max-width:280px;font-size:13px;line-height:1.4;font-family:Arial,sans-serif;">' +
-                                (navn ? '<div style="margin-bottom:3px;"><strong>Navn:</strong> ' + navn + '</div>' : '') +
-                                (stednavn ? '<div style="margin-bottom:3px;"><strong>Sted:</strong> ' + stednavn + '</div>' : '') +
-                                (adresse ? '<div style="margin-bottom:3px;"><strong>Adresse:</strong> ' + adresse + '</div>' : '') +
-                                (alder ? '<div style="margin-bottom:3px;"><strong>Alder:</strong> ' + alder + '</div>' : '') +
-                                (køn ? '<div style="margin-bottom:3px;"><strong>Køn:</strong> ' + (køn === 'm' || køn === 'M' ? 'Mand' : køn === 'k' || køn === 'K' ? 'Kvinde' : køn) + '</div>' : '') +
-                                (civilstand ? '<div style="margin-bottom:3px;"><strong>Civilstand:</strong> ' + civilstand + '</div>' : '') +
-                                (erhverv ? '<div style="margin-bottom:3px;"><strong>Erhverv:</strong> ' + erhverv + '</div>' : '') +
-                                (fødested ? '<div style="margin-bottom:3px;"><strong>Fødested:</strong> ' + fødested + '</div>' : '') +
-                                '<div style="margin-top:6px;font-size:11px;color:#666;">Koordinater: ' + lat.toFixed(6) + ', ' + lng.toFixed(6) + '</div>' +
-                                '</div>';
- 
-                    marker.bindPopup(popup);
-                    // Gem i master-listen og i dette specifikke lag
-                    allMarkers.push(marker);
-                    excelLayer.addLayer(marker);
-                    added++;
-                    
-                    if (isTargetLocation) {
-                        console.log('   ✅ MARKER OPRETTET SUCCESFULDT! Total markers: ' + added);
-                    }
-                });
- 
-                // Tilføj overlay med det specifikke navn (selv hvis det er tomt)
-                try { 
-                    layerControl.addOverlay(excelLayer, layerName || 'Excel Data'); 
-                    allClusterLayers.push(excelLayer); // Gem til cluster toggle
-                    if (added > 0) {
-                        console.log('✅ Tilføjet cluster-lag:', layerName, 'med', added, 'punkter');
-                    } else {
-                        console.log('📋 Tilføjet tomt lag:', layerName, '(ingen koordinater i Excel-fil)');
-                    }
-                } catch(e){
-                    console.error('Kunne ikke tilføje overlay:', e);
-                }
- 
-                console.log('Markers tilføjet fra Excel:', added);
-                // Opsæt år-slider hvis vi har årstal (kun første gang)
-                if (allMarkers.length === added) { // Første Excel-fil indlæst
-                    var years = allMarkers.map(function(m){ return m._year; }).filter(isFinite);
-                    if (years.length > 0) {
-                        var minY = Math.min.apply(null, years);
-                        var maxY = Math.max.apply(null, years);
-                        var startMin = 1900;
-                        updateYearFilterUI(startMin, maxY);
-                        applyYearFilter();
-                    }
-                }
-             }).catch(function(err){
-                 console.error('❌ FEJL ved indlæsning af Excel-fil:', path);
-                 console.error('Fejl-besked:', err.message);
-                 console.error('Fuld fejl:', err);
-                 return Promise.reject(err);
-             });
-         }
+                    allClusterLayers.push(markers);
+                    layerControl.addOverlay(markers, layerName);
+                })
+                .catch(err => console.error('Fejl ved indlæsning af Excel ' + path + ':', err));
+        }
 
         // Excel fil fra mappen "excel" er fjernet da den ikke eksisterer
         
