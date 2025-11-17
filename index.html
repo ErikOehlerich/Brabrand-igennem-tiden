@@ -829,10 +829,16 @@
                     };
                     
                     var markerCount = 0;
+                    var skippedRows = 0;
                     
                     for (var i = 1; i < jsonData.length; i++) {
                         var row = jsonData[i];
                         var coordStr = row[coordIndex] ? String(row[coordIndex]).trim() : '';
+                        
+                        // Debug logging
+                        if (i <= 3) {
+                            console.log('Række ' + i + ' koordinater:', coordStr);
+                        }
                         
                         if (coordStr && coordStr.includes(',')) {
                             var parts = coordStr.split(',');
@@ -905,10 +911,21 @@
                                     clusterGroup: markers
                                 });
                                 markerCount++;
+                            } else {
+                                skippedRows++;
+                                if (skippedRows <= 3) {
+                                    console.warn('Ugyldig koordinat i række ' + i + ':', coordStr, 'lat:', lat, 'lon:', lon);
+                                }
+                            }
+                        } else {
+                            skippedRows++;
+                            if (skippedRows <= 3) {
+                                console.warn('Manglende eller ugyldig koordinat i række ' + i + ':', coordStr);
                             }
                         }
                     }
                     
+                    console.log('✓ Indlæst: ' + layerName + ' - ' + markerCount + ' markører, ' + skippedRows + ' rækker sprunget over');
                     allClusterLayers.push(markers);
                     layerControl.addOverlay(markers, layerName);
                     if (autoShow) {
